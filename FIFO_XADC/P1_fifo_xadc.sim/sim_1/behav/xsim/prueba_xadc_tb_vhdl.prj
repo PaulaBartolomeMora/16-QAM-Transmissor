@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../P1_fifo_xadc.ip_user_files/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0.vhd" \
+"../../../../P1_fifo_xadc.ip_user_files/bd/design_1/sim/design_1.vhd" \
+"../../../../P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" \
+
+# Do not sort compile order
+nosort

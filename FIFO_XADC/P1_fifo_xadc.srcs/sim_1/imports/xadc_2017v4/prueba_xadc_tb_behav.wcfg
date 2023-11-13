@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="prueba_xadc_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="prueba_xadc_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="148741001371fs"></ZoomStartTime>
+      <ZoomEndTime time="354741001372fs"></ZoomEndTime>
+      <Cursor1Time time="125894802000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="249"></NameColumnWidth>
+      <ValueColumnWidth column_width="93"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/prueba_xadc_tb/dclk_in_0" type="logic">
+      <obj_property name="ElementShortName">dclk_in_0</obj_property>
+      <obj_property name="ObjectShortName">dclk_in_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba_xadc_tb/eoc_out_0" type="logic">
+      <obj_property name="ElementShortName">eoc_out_0</obj_property>
+      <obj_property name="ObjectShortName">eoc_out_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba_xadc_tb/s_drp_0_den" type="logic">
+      <obj_property name="ElementShortName">s_drp_0_den</obj_property>
+      <obj_property name="ObjectShortName">s_drp_0_den</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba_xadc_tb/s_drp_0_drdy" type="logic">
+      <obj_property name="ElementShortName">s_drp_0_drdy</obj_property>
+      <obj_property name="ObjectShortName">s_drp_0_drdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba_xadc_tb/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba_xadc_tb/slice_out" type="array">
+      <obj_property name="ElementShortName">slice_out[11:0]</obj_property>
+      <obj_property name="ObjectShortName">slice_out[11:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba_xadc_tb/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba_xadc_tb/FIFO_out" type="array">
+      <obj_property name="ElementShortName">FIFO_out[11:0]</obj_property>
+      <obj_property name="ObjectShortName">FIFO_out[11:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba_xadc_tb/almost_full" type="logic">
+      <obj_property name="ElementShortName">almost_full</obj_property>
+      <obj_property name="ObjectShortName">almost_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba_xadc_tb/prog_full" type="logic">
+      <obj_property name="ElementShortName">prog_full</obj_property>
+      <obj_property name="ObjectShortName">prog_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prueba_xadc_tb/dato_i" type="other">
+      <obj_property name="ElementShortName">dato_i</obj_property>
+      <obj_property name="ObjectShortName">dato_i</obj_property>
+   </wvobject>
+</wave_config>

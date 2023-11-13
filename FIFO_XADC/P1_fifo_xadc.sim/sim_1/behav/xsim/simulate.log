@@ -1,0 +1,6 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+Failure: Fin simulacion
+Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/vivado/E1/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
+$finish called at time : 202270855 ps : File "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/vivado/E1/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 210
