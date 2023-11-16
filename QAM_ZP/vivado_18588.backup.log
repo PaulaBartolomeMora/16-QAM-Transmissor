@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Nov 16 12:08:04 2023
+# Process ID: 18588
+# Current directory: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/QAM_ZP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12456 C:\Users\Paula\OneDrive - Universidad de Alcala\Todo\16_QAM_Transmissor\QAM_ZP\QAM_ZP.xpr
+# Log file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/QAM_ZP/vivado.log
+# Journal file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/QAM_ZP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/QAM_ZP/QAM_ZP.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+close [ open {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/QAM_ZP/QAM_ZP.srcs/sources_1/new/mapeado_16QAM_Q.vhd} w ]
+add_files {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/QAM_ZP/QAM_ZP.srcs/sources_1/new/mapeado_16QAM_Q.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 16 12:23:24 2023...

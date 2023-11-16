@@ -1,6 +1,6 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 4ec176a805f84ad7aa2a3401a00f540a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_mapeado_16QAM_I_behav xil_defaultlib.tb_mapeado_16QAM_I -log elaborate.log 
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 4ec176a805f84ad7aa2a3401a00f540a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -12,5 +12,6 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
-Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam_i
-Built simulation snapshot tb_mapeado_16QAM_I_behav
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav

@@ -1,0 +1,3 @@
+Breakpoint File Version 1.0
+61 true C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/QAM_ZP/QAM_ZP.srcs/sim_1/new/tb_mapeado_16QAM.vhd
+57 true C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/QAM_ZP/QAM_ZP.srcs/sim_1/new/tb_mapeado_16QAM.vhd
