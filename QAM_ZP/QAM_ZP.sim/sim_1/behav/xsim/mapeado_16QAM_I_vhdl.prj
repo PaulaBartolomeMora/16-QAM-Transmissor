@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../QAM_ZP.srcs/sources_1/new/mapeado_16QAM_I.vhd" \
-
-# Do not sort compile order
-nosort

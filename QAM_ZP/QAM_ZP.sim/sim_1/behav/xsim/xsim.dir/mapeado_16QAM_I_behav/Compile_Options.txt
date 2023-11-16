@@ -1,1 +1,0 @@
--wto "4ec176a805f84ad7aa2a3401a00f540a" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "mapeado_16QAM_I_behav" "xil_defaultlib.mapeado_16QAM_I" -log "elaborate.log" 
