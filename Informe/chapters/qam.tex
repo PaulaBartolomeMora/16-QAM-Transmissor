@@ -1,0 +1,45 @@
+\chapter{QAM}
+\label{section:qam}
+
+
+%sacar los datos de la FIFO a 2MHz
+%ráfagas de 200 datos
+
+\vspace{3mm}
+
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=1\textwidth]{img/matlab/qam.PNG}
+    	\caption{}
+    	\label{fig:qam}
+    \end{figure}
+    
+\vspace{3mm}
+
+%193 coeficientes
+%tenemos una ventana de 193 datos -> reg de desplazamiento (el actual+192 datos)
+% y_filtro[t0] = sum193(y[ti]*coef[i])
+%a la entrada hay valores enteros con signo(+1,-3,+3,-3)
+
+%a=sfi(rrcfilter(1),16,16) %valor, nbits, nbits decimales)
+%en este caso como los valores son de 0 con algo se ponen 16b decimales
+%el error de precision es 2e-15/2 <- (1/2e-16)/2
+
+%qr=sfi(rrcFilter',16)
+%qr*2e17
+
+%en freq response (en configuracion de vivado) coger gráfica
+%config del filtro:
+%se pone full precision 24, 3 bits signed
+
+
+\vspace{3mm}
+
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=1\textwidth]{img/matlab/rrc.PNG}
+    	\caption{}
+    	\label{fig:rrc}
+    \end{figure}
+    
+\vspace{3mm}

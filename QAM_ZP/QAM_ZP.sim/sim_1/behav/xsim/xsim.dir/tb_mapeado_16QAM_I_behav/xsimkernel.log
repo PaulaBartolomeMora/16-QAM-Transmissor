@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_mapeado_16QAM_I_behav/xsimk.exe -simmode gui -wdb tb_mapeado_16QAM_I_behav.wdb -simrunnum 0 -socket 50832
+Design successfully loaded
+Design Loading Memory Usage: 7528 KB (Peak: 7528 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 8092 KB (Peak: 8092 KB)
+Simulation CPU Usage: 15 ms
