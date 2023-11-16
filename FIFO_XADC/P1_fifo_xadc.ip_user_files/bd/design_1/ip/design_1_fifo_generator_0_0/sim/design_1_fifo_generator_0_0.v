@@ -64,6 +64,8 @@ module design_1_fifo_generator_0_0 (
   full,
   almost_full,
   empty,
+  rd_data_count,
+  wr_data_count,
   prog_full,
   wr_rst_busy,
   rd_rst_busy
@@ -90,6 +92,8 @@ output wire full;
 output wire almost_full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
+output wire [7 : 0] rd_data_count;
+output wire [7 : 0] wr_data_count;
 output wire prog_full;
 output wire wr_rst_busy;
 output wire rd_rst_busy;
@@ -113,14 +117,14 @@ output wire rd_rst_busy;
     .C_HAS_INT_CLK(0),
     .C_HAS_MEMINIT_FILE(0),
     .C_HAS_OVERFLOW(0),
-    .C_HAS_RD_DATA_COUNT(0),
+    .C_HAS_RD_DATA_COUNT(1),
     .C_HAS_RD_RST(0),
     .C_HAS_RST(1),
     .C_HAS_SRST(0),
     .C_HAS_UNDERFLOW(0),
     .C_HAS_VALID(0),
     .C_HAS_WR_ACK(0),
-    .C_HAS_WR_DATA_COUNT(0),
+    .C_HAS_WR_DATA_COUNT(1),
     .C_HAS_WR_RST(0),
     .C_IMPLEMENTATION_TYPE(2),
     .C_INIT_WR_PNTR_VAL(0),
@@ -330,8 +334,8 @@ output wire rd_rst_busy;
     .valid(),
     .underflow(),
     .data_count(),
-    .rd_data_count(),
-    .wr_data_count(),
+    .rd_data_count(rd_data_count),
+    .wr_data_count(wr_data_count),
     .prog_full(prog_full),
     .prog_empty(),
     .sbiterr(),

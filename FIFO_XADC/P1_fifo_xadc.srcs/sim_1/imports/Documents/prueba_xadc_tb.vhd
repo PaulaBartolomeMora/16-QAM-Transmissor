@@ -47,6 +47,8 @@ architecture Behavioral of prueba_xadc_tb is
             wr_en : in STD_LOGIC;
             wr_rst_busy : out STD_LOGIC;
             prog_full : out STD_LOGIC;
+            rd_data_count : out STD_LOGIC_VECTOR ( 7 downto 0 );
+            wr_data_count : out STD_LOGIC_VECTOR ( 7 downto 0 );
             FIFO_out : out STD_LOGIC_VECTOR ( 11 downto 0 )
           );    
     end component;
@@ -83,6 +85,8 @@ architecture Behavioral of prueba_xadc_tb is
     signal wr_rst_busy: STD_LOGIC;
     signal FIFO_out: STD_LOGIC_VECTOR ( 11 downto 0 );
     signal prog_full: STD_LOGIC;
+    signal rd_data_count : STD_LOGIC_VECTOR ( 7 downto 0 );
+    signal wr_data_count : STD_LOGIC_VECTOR ( 7 downto 0 );
     
     --RESET y CLKs
     signal reset_in_0: STD_LOGIC; -- reset XADC y FIFO 
@@ -90,7 +94,6 @@ architecture Behavioral of prueba_xadc_tb is
     constant rd_clk_period : time := 500 ns; -- 2 MHz READ FIFO
     constant wr_clk_period : time := 19.23 ns; -- 52 MHz WRITE FIFO
     
-    signal dato_i: integer :=0;
     
 begin
 
@@ -121,21 +124,12 @@ begin
                            wr_en                 => wr_en,
                            wr_rst_busy           => wr_rst_busy,
                            prog_full             => prog_full,
-                           FIFO_out              => FIFO_out                       
+                           FIFO_out              => FIFO_out,
+                           rd_data_count         => rd_data_count,
+                           wr_data_count         => wr_data_count                 
                            );
 
-
-    --Señal de diente de sierra de valores min/max de 0.3 y 0.8 voltios y frecuencia 10 kHz.
-    --El XADC se configurará con la máxima velocidad (en torno a 1 MSps con un reloj de 100 MHz)
-    --En la memoria FIFO de 4096 x 12 bits se deben ir almacenando de forma continua las muestras capturadas por el XADC (1 muestras / us aprox)
-    --Cuando la memoria esté FULL se comienza la lectura de los datos desde el puerto de lectura de la FIFO con un reloj de 250 MHz
-    --Se leerán todos los datos que haya en la memoria FIFO hasta que se active la señal EMPTY.
-
     ------------------------------------------------------------------------------------------------------------------------------------------------
-    
-    -- inicialización entradas diferenciales
-    --Vp_Vn_0_v_n <= '0';
-    --Vp_Vn_0_v_p <= '0';
 
     -- Write enable for the dynamic reconfiguration port, solo leer datos convertidos no escribir
     s_drp_0_dwe <= '0'; 
@@ -196,10 +190,9 @@ begin
         
         wait until dclk_in_0 = '0'; -- sincroniza en flanco de bajada
          
-        -- frec. conversion aprox 1MS -> frec 10 KHz (modo continuo)
+        -- frec. conversion aprox 1MS -> frec 52 KHz (modo continuo)
         for i in 0 to 200 -- a la espera de 200 datos 
         loop     
-            dato_i <= i;
             wait until eoc_out_0 <= '1' ; -- End of Conversion signal 
             -- Data ready signal for the dynamic reconfiguration port, se espera a que esté disponible el dato
             wait until s_drp_0_drdy = '1';  

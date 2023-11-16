@@ -176,6 +176,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000} \
  ] $rd_clk
+  set rd_data_count [ create_bd_port -dir O -from 7 -to 0 rd_data_count ]
   set rd_en [ create_bd_port -dir I rd_en ]
   set rd_rst_busy [ create_bd_port -dir O rd_rst_busy ]
   set reset_in_0 [ create_bd_port -dir I -type rst reset_in_0 ]
@@ -187,6 +188,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000} \
  ] $wr_clk
+  set wr_data_count [ create_bd_port -dir O -from 7 -to 0 wr_data_count ]
   set wr_en [ create_bd_port -dir I wr_en ]
   set wr_rst_busy [ create_bd_port -dir O wr_rst_busy ]
 
@@ -205,8 +207,10 @@ proc create_root_design { parentCell } {
    CONFIG.Output_Data_Width {12} \
    CONFIG.Output_Depth {256} \
    CONFIG.Programmable_Full_Type {Single_Programmable_Full_Threshold_Constant} \
+   CONFIG.Read_Data_Count {true} \
    CONFIG.Read_Data_Count_Width {8} \
    CONFIG.Reset_Type {Asynchronous_Reset} \
+   CONFIG.Write_Data_Count {true} \
    CONFIG.Write_Data_Count_Width {8} \
  ] $fifo_generator_0
 
@@ -222,7 +226,7 @@ proc create_root_design { parentCell } {
    CONFIG.SIM_FILE_SEL {Default} \
    CONFIG.SINGLE_CHANNEL_ENABLE_CALIBRATION {true} \
    CONFIG.SINGLE_CHANNEL_SELECTION {VP_VN} \
-   CONFIG.STIMULUS_FREQ {14} \
+   CONFIG.STIMULUS_FREQ {13} \
    CONFIG.TEMPERATURE_ALARM_OT_TRIGGER {100.0} \
    CONFIG.USER_TEMP_ALARM {false} \
    CONFIG.VCCAUX_ALARM {false} \
@@ -250,7 +254,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net fifo_generator_0_empty [get_bd_ports empty] [get_bd_pins fifo_generator_0/empty]
   connect_bd_net -net fifo_generator_0_full [get_bd_ports full] [get_bd_pins fifo_generator_0/full]
   connect_bd_net -net fifo_generator_0_prog_full [get_bd_ports prog_full] [get_bd_pins fifo_generator_0/prog_full]
+  connect_bd_net -net fifo_generator_0_rd_data_count [get_bd_ports rd_data_count] [get_bd_pins fifo_generator_0/rd_data_count]
   connect_bd_net -net fifo_generator_0_rd_rst_busy [get_bd_ports rd_rst_busy] [get_bd_pins fifo_generator_0/rd_rst_busy]
+  connect_bd_net -net fifo_generator_0_wr_data_count [get_bd_ports wr_data_count] [get_bd_pins fifo_generator_0/wr_data_count]
   connect_bd_net -net fifo_generator_0_wr_rst_busy [get_bd_ports wr_rst_busy] [get_bd_pins fifo_generator_0/wr_rst_busy]
   connect_bd_net -net rd_clk_1 [get_bd_ports rd_clk] [get_bd_pins fifo_generator_0/rd_clk]
   connect_bd_net -net rd_en_1 [get_bd_ports rd_en] [get_bd_pins fifo_generator_0/rd_en]

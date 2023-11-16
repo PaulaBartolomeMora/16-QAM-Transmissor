@@ -4,7 +4,7 @@
 #  -string -flagsOSRD
 preplace port rd_en -pg 1 -y 470 -defaultsOSRD
 preplace port full -pg 1 -y 240 -defaultsOSRD
-preplace port wr_rst_busy -pg 1 -y 420 -defaultsOSRD
+preplace port wr_rst_busy -pg 1 -y 440 -defaultsOSRD
 preplace port wr_clk -pg 1 -y 510 -defaultsOSRD
 preplace port empty -pg 1 -y 580 -defaultsOSRD
 preplace port rd_clk -pg 1 -y 530 -defaultsOSRD
@@ -12,16 +12,18 @@ preplace port Vp_Vn_0 -pg 1 -y 100 -defaultsOSRD
 preplace port almost_full -pg 1 -y 220 -defaultsOSRD
 preplace port eos_out_0 -pg 1 -y 130 -defaultsOSRD
 preplace port alarm_out_0 -pg 1 -y 110 -defaultsOSRD
-preplace port rd_rst_busy -pg 1 -y 440 -defaultsOSRD
+preplace port rd_rst_busy -pg 1 -y 460 -defaultsOSRD
 preplace port reset_in_0 -pg 1 -y 140 -defaultsOSRD
 preplace port s_drp_0 -pg 1 -y 60 -defaultsOSRD
 preplace port eoc_out_0 -pg 1 -y 90 -defaultsOSRD
-preplace port prog_full -pg 1 -y 400 -defaultsOSRD
+preplace port prog_full -pg 1 -y 420 -defaultsOSRD
 preplace port dclk_in_0 -pg 1 -y 120 -defaultsOSRD
 preplace port wr_en -pg 1 -y 390 -defaultsOSRD
 preplace port ot_out_0 -pg 1 -y 50 -defaultsOSRD
 preplace port busy_out_0 -pg 1 -y 150 -defaultsOSRD
 preplace portBus channel_out_0 -pg 1 -y 70 -defaultsOSRD
+preplace portBus rd_data_count -pg 1 -y 380 -defaultsOSRD
+preplace portBus wr_data_count -pg 1 -y 400 -defaultsOSRD
 preplace portBus FIFO_out -pg 1 -y 600 -defaultsOSRD
 preplace portBus do_out -pg 1 -y 200 -defaultsOSRD
 preplace portBus slice_out -pg 1 -y 260 -defaultsOSRD
@@ -36,22 +38,24 @@ preplace netloc fifo_generator_0_wr_rst_busy 1 2 1 NJ
 preplace netloc xadc_wiz_0_busy_out 1 2 1 NJ
 preplace netloc xadc_wiz_0_ot_out 1 2 1 NJ
 preplace netloc xadc_wiz_0_eos_out 1 2 1 NJ
+preplace netloc fifo_generator_0_rd_data_count 1 2 1 NJ
 preplace netloc rd_clk_1 1 0 2 NJ 530 NJ
 preplace netloc fifo_generator_0_rd_rst_busy 1 2 1 NJ
-preplace netloc fifo_generator_0_almost_full 1 1 2 190 220 NJ
-preplace netloc fifo_generator_0_full 1 1 2 200 240 NJ
+preplace netloc fifo_generator_0_almost_full 1 1 2 240 220 NJ
+preplace netloc fifo_generator_0_full 1 1 2 250 240 NJ
 preplace netloc xadc_wiz_0_eoc_out 1 2 1 NJ
 preplace netloc xadc_wiz_0_alarm_out 1 2 1 NJ
 preplace netloc dclk_in_0_1 1 0 2 NJ 120 NJ
-preplace netloc fifo_generator_0_dout 1 1 2 200 600 NJ
-preplace netloc fifo_generator_0_empty 1 1 2 190 580 NJ
+preplace netloc fifo_generator_0_wr_data_count 1 2 1 NJ
+preplace netloc fifo_generator_0_dout 1 1 2 250 600 NJ
+preplace netloc fifo_generator_0_empty 1 1 2 240 580 NJ
 preplace netloc rd_en_1 1 0 2 NJ 470 NJ
 preplace netloc fifo_generator_0_prog_full 1 2 1 NJ
-preplace netloc reset_in_0_1 1 0 2 NJ 140 180
-preplace netloc xlslice_0_Dout 1 1 2 170 260 NJ
-preplace netloc xadc_wiz_0_do_out 1 0 3 -30 90 200 200 NJ
+preplace netloc reset_in_0_1 1 0 2 NJ 140 230
+preplace netloc xlslice_0_Dout 1 1 2 220 260 NJ
+preplace netloc xadc_wiz_0_do_out 1 0 3 20 90 250 200 NJ
 preplace netloc xadc_wiz_0_channel_out 1 2 1 NJ
-levelinfo -pg 1 -50 70 390 550 -top 0 -bot 730
+levelinfo -pg 1 0 120 400 570 -top 0 -bot 620
 ",
 }
 0

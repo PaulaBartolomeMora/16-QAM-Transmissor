@@ -12,11 +12,11 @@ vmap xlslice_v1_0_1 questa_lib/msim/xlslice_v1_0_1
 vmap fifo_generator_v13_2_1 questa_lib/msim/fifo_generator_v13_2_1
 
 vlog -work xil_defaultlib -64 -sv \
-"D:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-"D:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+"C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -64 -93 \
-"D:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_VCOMP.vhd" \
+"C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0.vhd" \

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Nov 11 10:43:32 2023" VIVADOVERSION="2017.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Nov 13 19:54:19 2023" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="kintex7" DEVICE="7k70t" NAME="design_1" PACKAGE="fbv676" SPEEDGRADE="-1"/>
 
@@ -118,6 +118,16 @@
         <CONNECTION INSTANCE="fifo_generator_0" PORT="prog_full"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" LEFT="7" NAME="rd_data_count" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_rd_data_count">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="fifo_generator_0" PORT="rd_data_count"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="wr_data_count" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_wr_data_count">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_data_count"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -163,14 +173,14 @@
         <PARAMETER NAME="C_HAS_INT_CLK" VALUE="0"/>
         <PARAMETER NAME="C_HAS_MEMINIT_FILE" VALUE="0"/>
         <PARAMETER NAME="C_HAS_OVERFLOW" VALUE="0"/>
-        <PARAMETER NAME="C_HAS_RD_DATA_COUNT" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_RD_DATA_COUNT" VALUE="1"/>
         <PARAMETER NAME="C_HAS_RD_RST" VALUE="0"/>
         <PARAMETER NAME="C_HAS_RST" VALUE="1"/>
         <PARAMETER NAME="C_HAS_SRST" VALUE="0"/>
         <PARAMETER NAME="C_HAS_UNDERFLOW" VALUE="0"/>
         <PARAMETER NAME="C_HAS_VALID" VALUE="0"/>
         <PARAMETER NAME="C_HAS_WR_ACK" VALUE="0"/>
-        <PARAMETER NAME="C_HAS_WR_DATA_COUNT" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_WR_DATA_COUNT" VALUE="1"/>
         <PARAMETER NAME="C_HAS_WR_RST" VALUE="0"/>
         <PARAMETER NAME="C_IMPLEMENTATION_TYPE" VALUE="2"/>
         <PARAMETER NAME="C_INIT_WR_PNTR_VAL" VALUE="0"/>
@@ -383,9 +393,9 @@
         <PARAMETER NAME="Use_Extra_Logic" VALUE="false"/>
         <PARAMETER NAME="Data_Count" VALUE="false"/>
         <PARAMETER NAME="Data_Count_Width" VALUE="8"/>
-        <PARAMETER NAME="Write_Data_Count" VALUE="false"/>
+        <PARAMETER NAME="Write_Data_Count" VALUE="true"/>
         <PARAMETER NAME="Write_Data_Count_Width" VALUE="8"/>
-        <PARAMETER NAME="Read_Data_Count" VALUE="false"/>
+        <PARAMETER NAME="Read_Data_Count" VALUE="true"/>
         <PARAMETER NAME="Read_Data_Count_Width" VALUE="8"/>
         <PARAMETER NAME="Disable_Timing_Violations" VALUE="false"/>
         <PARAMETER NAME="Read_Clock_Frequency" VALUE="1"/>
@@ -567,6 +577,16 @@
             <CONNECTION INSTANCE="External_Ports" PORT="empty"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="7" NAME="rd_data_count" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_rd_data_count">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rd_data_count"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="wr_data_count" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_wr_data_count">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="wr_data_count"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="prog_full" SIGIS="undef" SIGNAME="fifo_generator_0_prog_full">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="prog_full"/>
@@ -692,7 +712,7 @@
         <PARAMETER NAME="NUM_WAVE" VALUE="1"/>
         <PARAMETER NAME="SIM_FILE_NAME" VALUE="design"/>
         <PARAMETER NAME="WAVEFORM_TYPE" VALUE="TRIANGLE"/>
-        <PARAMETER NAME="STIMULUS_FREQ" VALUE="14"/>
+        <PARAMETER NAME="STIMULUS_FREQ" VALUE="13"/>
         <PARAMETER NAME="TIMING_MODE" VALUE="Continuous"/>
         <PARAMETER NAME="STARTUP_CHANNEL_SELECTION" VALUE="single_channel"/>
         <PARAMETER NAME="XADC_STARUP_SELECTION" VALUE="single_channel"/>

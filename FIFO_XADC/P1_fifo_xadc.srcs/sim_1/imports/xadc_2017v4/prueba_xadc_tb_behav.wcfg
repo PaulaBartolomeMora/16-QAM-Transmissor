@@ -11,61 +11,107 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="148741001371fs"></ZoomStartTime>
-      <ZoomEndTime time="354741001372fs"></ZoomEndTime>
-      <Cursor1Time time="125894802000fs"></Cursor1Time>
+      <ZoomStartTime time="54166666333fs"></ZoomStartTime>
+      <ZoomEndTime time="465666666334fs"></ZoomEndTime>
+      <Cursor1Time time="397083333000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="249"></NameColumnWidth>
-      <ValueColumnWidth column_width="93"></ValueColumnWidth>
+      <NameColumnWidth column_width="144"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
-   <wvobject fp_name="/prueba_xadc_tb/dclk_in_0" type="logic">
-      <obj_property name="ElementShortName">dclk_in_0</obj_property>
-      <obj_property name="ObjectShortName">dclk_in_0</obj_property>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group31" type="group">
+      <obj_property name="label">XADC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/prueba_xadc_tb/channel_out_0" type="array">
+         <obj_property name="ElementShortName">channel_out_0[4:0]</obj_property>
+         <obj_property name="ObjectShortName">channel_out_0[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/s_drp_0_daddr" type="array">
+         <obj_property name="ElementShortName">s_drp_0_daddr[6:0]</obj_property>
+         <obj_property name="ObjectShortName">s_drp_0_daddr[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/dclk_in_0" type="logic">
+         <obj_property name="ElementShortName">dclk_in_0</obj_property>
+         <obj_property name="ObjectShortName">dclk_in_0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/eoc_out_0" type="logic">
+         <obj_property name="ElementShortName">eoc_out_0</obj_property>
+         <obj_property name="ObjectShortName">eoc_out_0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/s_drp_0_den" type="logic">
+         <obj_property name="ElementShortName">s_drp_0_den</obj_property>
+         <obj_property name="ObjectShortName">s_drp_0_den</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/s_drp_0_drdy" type="logic">
+         <obj_property name="ElementShortName">s_drp_0_drdy</obj_property>
+         <obj_property name="ObjectShortName">s_drp_0_drdy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/s_drp_0_dwe" type="logic">
+         <obj_property name="ElementShortName">s_drp_0_dwe</obj_property>
+         <obj_property name="ObjectShortName">s_drp_0_dwe</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/do_out" type="array">
+         <obj_property name="ElementShortName">do_out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">do_out[15:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/do_out" type="array">
+         <obj_property name="ElementShortName">do_out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">do_out[15:0]</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/prueba_xadc_tb/eoc_out_0" type="logic">
-      <obj_property name="ElementShortName">eoc_out_0</obj_property>
-      <obj_property name="ObjectShortName">eoc_out_0</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba_xadc_tb/s_drp_0_den" type="logic">
-      <obj_property name="ElementShortName">s_drp_0_den</obj_property>
-      <obj_property name="ObjectShortName">s_drp_0_den</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba_xadc_tb/s_drp_0_drdy" type="logic">
-      <obj_property name="ElementShortName">s_drp_0_drdy</obj_property>
-      <obj_property name="ObjectShortName">s_drp_0_drdy</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba_xadc_tb/wr_en" type="logic">
-      <obj_property name="ElementShortName">wr_en</obj_property>
-      <obj_property name="ObjectShortName">wr_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba_xadc_tb/slice_out" type="array">
-      <obj_property name="ElementShortName">slice_out[11:0]</obj_property>
-      <obj_property name="ObjectShortName">slice_out[11:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba_xadc_tb/rd_en" type="logic">
-      <obj_property name="ElementShortName">rd_en</obj_property>
-      <obj_property name="ObjectShortName">rd_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba_xadc_tb/FIFO_out" type="array">
-      <obj_property name="ElementShortName">FIFO_out[11:0]</obj_property>
-      <obj_property name="ObjectShortName">FIFO_out[11:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba_xadc_tb/almost_full" type="logic">
-      <obj_property name="ElementShortName">almost_full</obj_property>
-      <obj_property name="ObjectShortName">almost_full</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba_xadc_tb/prog_full" type="logic">
-      <obj_property name="ElementShortName">prog_full</obj_property>
-      <obj_property name="ObjectShortName">prog_full</obj_property>
-   </wvobject>
-   <wvobject fp_name="/prueba_xadc_tb/dato_i" type="other">
-      <obj_property name="ElementShortName">dato_i</obj_property>
-      <obj_property name="ObjectShortName">dato_i</obj_property>
+   <wvobject fp_name="group18" type="group">
+      <obj_property name="label">FIFO</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/prueba_xadc_tb/slice_out" type="array">
+         <obj_property name="ElementShortName">slice_out[11:0]</obj_property>
+         <obj_property name="ObjectShortName">slice_out[11:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/wr_en" type="logic">
+         <obj_property name="ElementShortName">wr_en</obj_property>
+         <obj_property name="ObjectShortName">wr_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/almost_full" type="logic">
+         <obj_property name="ElementShortName">almost_full</obj_property>
+         <obj_property name="ObjectShortName">almost_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/prog_full" type="logic">
+         <obj_property name="ElementShortName">prog_full</obj_property>
+         <obj_property name="ObjectShortName">prog_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/full" type="logic">
+         <obj_property name="ElementShortName">full</obj_property>
+         <obj_property name="ObjectShortName">full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/rd_en" type="logic">
+         <obj_property name="ElementShortName">rd_en</obj_property>
+         <obj_property name="ObjectShortName">rd_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/empty" type="logic">
+         <obj_property name="ElementShortName">empty</obj_property>
+         <obj_property name="ObjectShortName">empty</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/FIFO_out" type="array">
+         <obj_property name="ElementShortName">FIFO_out[11:0]</obj_property>
+         <obj_property name="ObjectShortName">FIFO_out[11:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/rd_data_count" type="array">
+         <obj_property name="ElementShortName">rd_data_count[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_data_count[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/prueba_xadc_tb/wr_data_count" type="array">
+         <obj_property name="ElementShortName">wr_data_count[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wr_data_count[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>
