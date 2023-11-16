@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/QAM_ZP/QAM_ZP.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/pbartolome/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/QAM_ZP/QAM_ZP.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="4ec176a805f84ad7aa2a3401a00f540a"/>
@@ -32,7 +32,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="20"/>
+    <Option Name="WTXSimLaunchSim" Val="21"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -58,6 +58,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/new/mapeado_16QAM_I.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -71,7 +72,6 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="mapeado_16QAM_I"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
