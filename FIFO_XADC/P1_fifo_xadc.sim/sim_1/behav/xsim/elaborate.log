@@ -10,9 +10,11 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
 Compiling package ieee.numeric_std
 Compiling package unisim.vcomponents
-Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_signed
 Compiling package ieee.vital_timing
 Compiling package ieee.vital_primitives

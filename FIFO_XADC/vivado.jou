@@ -2,13 +2,104 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Nov 15 11:42:38 2023
-# Process ID: 2712
-# Current directory: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15332 C:\Users\Paula\OneDrive - Universidad de Alcala\Todo\16_QAM_Transmissor\FIFO_XADC\P1_fifo_xadc.xpr
-# Log file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/vivado.log
-# Journal file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC\vivado.jou
+# Start of session at: Fri Nov 17 10:42:47 2023
+# Process ID: 14284
+# Current directory: C:/Users/pbartolome/Downloads/FIFO_XADC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13920 C:\Users\pbartolome\Downloads\FIFO_XADC\P1_fifo_xadc.xpr
+# Log file: C:/Users/pbartolome/Downloads/FIFO_XADC/vivado.log
+# Journal file: C:/Users/pbartolome/Downloads/FIFO_XADC\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.xpr}
+open_project C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.xpr
 update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 173
+close_sim
+launch_simulation
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+run 100 us
+run 1000 us
+run 1000 us
+run 1000 us
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 173
+run 1000 us
+run 1000 us
+close_sim
+launch_simulation
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+run 1000 us
+run 1000 us
+run 1000 us
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 179
+run 1000 us
+run 1000 us
+run 1000 us
+run 1000 us
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 179
+run 1000 us
+close_sim
+launch_simulation
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+run all
+run all
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 179
+run all
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 179
+close_sim
+launch_simulation
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 184
+run 1000 us
+run 1000 us
+run 1000 us
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 181
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+run all
+run all
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 167
+run all
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 172
+restart
+run all
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+run all
+run all
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 172
+run all
+run all
+run all
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 167
+run all
+run all
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 184
+run all
+run all
+run all
+run all
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 181
+run all
+run all
+run all
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 184
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 181
+run all
+close_sim

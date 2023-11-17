@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Users/pbartolome/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="e06165ee33124632814c5567ac626386"/>
@@ -32,7 +32,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="72"/>
+    <Option Name="WTXSimLaunchSim" Val="79"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>

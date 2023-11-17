@@ -2,13 +2,12 @@
 # Webtalk v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu Oct 10 16:36:30 2019
-# Process ID: 14312
-# Current directory: C:/Users/Alumno/Downloads/xadc_2017v4/xadc_2017v4.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Alumno/Downloads/xadc_2017v4/xadc_2017v4.sim/sim_1/behav/xsim/xsim.dir/prueba_xadc_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/Alumno/Downloads/xadc_2017v4/xadc_2017v4.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/Alumno/Downloads/xadc_2017v4/xadc_2017v4.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Fri Nov 17 10:46:03 2023
+# Process ID: 4456
+# Current directory: C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim/xsim.dir/prueba_xadc_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Alumno/Downloads/xadc_2017v4/xadc_2017v4.sim/sim_1/behav/xsim/xsim.dir/prueba_xadc_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Users/Alumno/Downloads/xadc_2017v4/xadc_2017v4.sim/sim_1/behav/xsim/xsim.dir/prueba_xadc_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct 10 16:36:34 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.4/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Thu Oct 10 16:36:34 2019...
+source C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim/xsim.dir/prueba_xadc_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Nov 17 10:46:05 2023...

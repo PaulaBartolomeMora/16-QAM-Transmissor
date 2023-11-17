@@ -1,10 +1,10 @@
 
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.STD_LOGIC_arith.ALL;
+use IEEE.STD_LOGIC_TEXTIO.all;
+use STD.TEXTIO.all;
 use IEEE.NUMERIC_STD.ALL;
 
 library UNISIM;
@@ -52,6 +52,7 @@ architecture Behavioral of prueba_xadc_tb is
             FIFO_out : out STD_LOGIC_VECTOR ( 11 downto 0 )
           );    
     end component;
+    
 
     --XADC
     signal Vp_Vn_0_v_n: STD_LOGIC :='0';
@@ -93,7 +94,6 @@ architecture Behavioral of prueba_xadc_tb is
     constant clk_period : time := 19.23 ns; -- 52 MHz XADC
     constant rd_clk_period : time := 500 ns; -- 2 MHz READ FIFO
     constant wr_clk_period : time := 19.23 ns; -- 52 MHz WRITE FIFO
-    
     
 begin
 
@@ -157,9 +157,14 @@ begin
     wr_en <= s_drp_0_drdy; -- se escribe en la FIFO nuevo dato
     
     ------------------------------------------------------------------------------------------------------------------------------------------------
+
     
     process(rd_clk) -- proceso de lectura FIFO
+    file outfile: text is out "C:\Users\pbartolome\Downloads\FIFO_XADC\FIFO_output.txt";
+    variable line_num: line;
+    variable opened, finished: std_logic := '0'; --indica si se ha comenzado a escribir en el fichero de salida
     begin
+        file_open (outfile, "C:\Users\pbartolome\Downloads\FIFO_XADC\FIFO_output.txt", write_mode);
         if rising_edge(rd_clk) then
             if reset_in_0 = '1' then -- reset XADC = 1
                 rd_en <= '0';
@@ -169,6 +174,14 @@ begin
                 end if;                
                 if empty = '1' then  
                     rd_en <= '0';
+                end if;
+                if rd_en = '1' and finished = '0' then --proceso de escritura del .txt
+                    write (line_num, FIFO_out);
+                    writeline(outfile, line_num);
+                    opened := '1';
+                end if;
+                if opened = '1' and empty = '1' then --primera escritura: se finaliza escritura de .txt tras el primer empty
+                    finished := '1';
                 end if;
             end if;
         end if;

@@ -1,10 +1,20 @@
 Vivado Simulator 2017.4
 Time resolution is 1 ps
 WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+Stopped at time : 0 fs : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
+Stopped at time : 250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
+Stopped at time : 250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 172
+Stopped at time : 500 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
+Stopped at time : 750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
+Stopped at time : 1 us : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
 Failure: Fin simulacion
-Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/pbartolome/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
-$finish called at time : 202270855 ps : File "C:/Users/pbartolome/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 203
-WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
-Failure: Fin simulacion
-Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/pbartolome/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
-$finish called at time : 202270855 ps : File "C:/Users/pbartolome/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 203
+Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
+$finish called at time : 202270855 ps : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 216
+Stopped at time : 204250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
+Stopped at time : 204750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
+Stopped at time : 205250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
+Stopped at time : 205750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
+Stopped at time : 206250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
+Stopped at time : 402250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 184
+Stopped at time : 798250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 184
+Stopped at time : 1194250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 184
