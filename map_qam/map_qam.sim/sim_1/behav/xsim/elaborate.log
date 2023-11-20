@@ -1,10 +1,8 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-122] mapeado_16qam_i remains a black-box since it has no binding entity [C:/Users/pbartolome/Downloads/map_qam/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd:34]
-WARNING: [VRFC 10-122] mapeado_16qam_q remains a black-box since it has no binding entity [C:/Users/pbartolome/Downloads/map_qam/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd:35]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -13,5 +11,10 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
 Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
 Built simulation snapshot tb_mapeado_16QAM_behav

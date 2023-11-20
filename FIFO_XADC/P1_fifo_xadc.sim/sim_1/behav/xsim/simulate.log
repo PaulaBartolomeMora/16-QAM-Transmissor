@@ -1,20 +1,22 @@
 Vivado Simulator 2017.4
 Time resolution is 1 ps
 WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
-Stopped at time : 0 fs : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
-Stopped at time : 250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
-Stopped at time : 250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 172
-Stopped at time : 500 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
-Stopped at time : 750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
-Stopped at time : 1 us : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
 Failure: Fin simulacion
-Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
-$finish called at time : 202270855 ps : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 216
-Stopped at time : 204250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
-Stopped at time : 204750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
-Stopped at time : 205250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
-Stopped at time : 205750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
-Stopped at time : 206250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
-Stopped at time : 402250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 184
-Stopped at time : 798250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 184
-Stopped at time : 1194250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 184
+Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/Paula/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
+$finish called at time : 202270855 ps : File "C:/Users/Paula/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 216
+***** XADC Simulation Analog Data File Format ******
+NAME: design.txt or user file name passed with generic sim_monitor_file
+FORMAT: First line is header line. Valid column name are: TIME TEMP VCCINT VCCAUX VCCBRAM VCCPINT VCCPAUX VCCDDRO VP VN VAUXP[0] VAUXN[0] ....
+TIME must be in first column.
+Time value need to be integer in ns scale
+Analog  value need to be real and contain a decimal  point '.', zero should be 0.0, 3 should be 3.0
+Each line including header line can not have extra space after the last character/digit.
+Each data line must have same number of columns as the header line.
+Comment line start with -- or //
+Example:
+TIME TEMP VCCINT  VP VN VAUXP[0] VAUXN[0]
+000  125.6  1.0  0.7  0.4  0.3  0.6
+200  25.6   0.8  0.5  0.3  0.8  0.2
+Failure:  Analog Data File Error : The time value should be integer in ns scale and the last time value needs bigger than simulation time.
+Time: 492308 ns  Iteration: 0  Process: /prueba_xadc_tb/uut/xadc_wiz_0/U0/READFILE_P  File: D:\Xilinx\Vivado\2017.4\data/vhdl/src/unisims/primitive/XADC.vhd
+$finish called at time : 492308 ns

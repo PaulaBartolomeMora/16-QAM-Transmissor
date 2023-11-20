@@ -160,11 +160,11 @@ begin
 
     
     process(rd_clk) -- proceso de lectura FIFO
-    file outfile: text is out "C:\Users\pbartolome\Downloads\FIFO_XADC\FIFO_output.txt";
+    file outfile: text is out "C:\Users\Paula\Downloads\FIFO_XADC\FIFO_output.txt"; --"C:\Users\pbartolome\Downloads\FIFO_XADC\FIFO_output.txt"
     variable line_num: line;
     variable opened, finished: std_logic := '0'; --indica si se ha comenzado a escribir en el fichero de salida
     begin
-        file_open (outfile, "C:\Users\pbartolome\Downloads\FIFO_XADC\FIFO_output.txt", write_mode);
+        file_open (outfile, "C:\Users\Paula\Downloads\FIFO_XADC\FIFO_output.txt", write_mode); --"C:\Users\pbartolome\Downloads\FIFO_XADC\FIFO_output.txt"
         if rising_edge(rd_clk) then
             if reset_in_0 = '1' then -- reset XADC = 1
                 rd_en <= '0';

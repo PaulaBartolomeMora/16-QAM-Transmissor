@@ -1,6 +1,6 @@
-LIBRARY IEEE;
-USE IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.NUMERIC_STD.ALL;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity mapeado_16QAM_I is
     Port (
@@ -13,12 +13,11 @@ end mapeado_16QAM_I;
 
 architecture Behavioral of mapeado_16QAM_I is
     type Array3Bit is array (0 to 15) of STD_LOGIC_VECTOR(2 downto 0);
-    constant tabla_mapeado_I: Array3Bit := (
-        "000", "001", "010", "011",
-        "100", "101", "110", "111",
-        "000", "001", "010", "011",
-        "100", "101", "110", "111"
-    );
+    constant tabla_mapeado_I: Array3Bit := --codificación gray
+        ("000", "000", "001", "001", 
+         "011", "011", "010", "010",
+         "110", "110", "111", "111", 
+         "101", "101", "100", "100");
     
 begin
     process(clk) 

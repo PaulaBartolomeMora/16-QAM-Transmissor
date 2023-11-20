@@ -1,0 +1,739 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Nov 17 10:42:47 2023
+# Process ID: 14284
+# Current directory: C:/Users/pbartolome/Downloads/FIFO_XADC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13920 C:\Users\pbartolome\Downloads\FIFO_XADC\P1_fifo_xadc.xpr
+# Log file: C:/Users/pbartolome/Downloads/FIFO_XADC/vivado.log
+# Journal file: C:/Users/pbartolome/Downloads/FIFO_XADC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/pbartolome/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'prueba_xadc_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim/design.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj prueba_xadc_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.ip_user_files/bd/design_1/ip/design_1_xlslice_0_0/sim/design_1_xlslice_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xlslice_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.ip_user_files/bd/design_1/ip/design_1_fifo_generator_0_0/sim/design_1_fifo_generator_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_fifo_generator_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj prueba_xadc_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.ip_user_files/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_xadc_wiz_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.ip_user_files/bd/design_1/sim/design_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity prueba_xadc_tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 750.000 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto e06165ee33124632814c5567ac626386 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlslice_v1_0_1 -L fifo_generator_v13_2_1 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot prueba_xadc_tb_behav xil_defaultlib.prueba_xadc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_sync_stag...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_bhv_ver_a...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_CONV_VER(...
+Compiling module fifo_generator_v13_2_1.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1(C_EN_SAFE...
+Compiling module xil_defaultlib.design_1_fifo_generator_0_0
+Compiling architecture xadc_v of entity unisim.XADC [\XADC(init_40="0000000000000011"...]
+Compiling architecture xilinx of entity xil_defaultlib.design_1_xadc_wiz_0_0 [design_1_xadc_wiz_0_0_default]
+Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_WIDTH...
+Compiling module xil_defaultlib.design_1_xlslice_0_0
+Compiling architecture structure of entity xil_defaultlib.design_1 [design_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.prueba_xadc_tb
+Built simulation snapshot prueba_xadc_tb_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim/xsim.dir/prueba_xadc_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Nov 17 10:44:24 2023...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 750.000 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "prueba_xadc_tb_behav -key {Behavioral:sim_1:Functional:prueba_xadc_tb} -tclbatch {prueba_xadc_tb.tcl} -view {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'prueba_xadc_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 766.238 ; gain = 21.078
+run 100 us
+run 100 us
+run 100 us
+Failure: Fin simulacion
+Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
+$finish called at time : 202270855 ps : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 210
+run 100 us
+run 100 us
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 173
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 804.023 ; gain = 17.828
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'prueba_xadc_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim/design.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj prueba_xadc_tb_vlog.prj"
+"xvhdl --incr --relax -prj prueba_xadc_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity prueba_xadc_tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 804.023 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto e06165ee33124632814c5567ac626386 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlslice_v1_0_1 -L fifo_generator_v13_2_1 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot prueba_xadc_tb_behav xil_defaultlib.prueba_xadc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_sync_stag...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_bhv_ver_a...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_CONV_VER(...
+Compiling module fifo_generator_v13_2_1.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1(C_EN_SAFE...
+Compiling module xil_defaultlib.design_1_fifo_generator_0_0
+Compiling architecture xadc_v of entity unisim.XADC [\XADC(init_40="0000000000000011"...]
+Compiling architecture xilinx of entity xil_defaultlib.design_1_xadc_wiz_0_0 [design_1_xadc_wiz_0_0_default]
+Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_WIDTH...
+Compiling module xil_defaultlib.design_1_xlslice_0_0
+Compiling architecture structure of entity xil_defaultlib.design_1 [design_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.prueba_xadc_tb
+Built simulation snapshot prueba_xadc_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 804.023 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "prueba_xadc_tb_behav -key {Behavioral:sim_1:Functional:prueba_xadc_tb} -tclbatch {prueba_xadc_tb.tcl} -view {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+Stopped at time : 250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 173
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'prueba_xadc_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 804.023 ; gain = 0.000
+run 100 us
+Stopped at time : 750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 173
+run 1000 us
+Stopped at time : 1250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 173
+run 1000 us
+Stopped at time : 1750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 173
+run 1000 us
+Stopped at time : 2250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 173
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 173
+run 1000 us
+Failure: Fin simulacion
+Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
+$finish called at time : 202270855 ps : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 209
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'prueba_xadc_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim/design.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj prueba_xadc_tb_vlog.prj"
+"xvhdl --incr --relax -prj prueba_xadc_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity prueba_xadc_tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 804.023 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto e06165ee33124632814c5567ac626386 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlslice_v1_0_1 -L fifo_generator_v13_2_1 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot prueba_xadc_tb_behav xil_defaultlib.prueba_xadc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_sync_stag...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_bhv_ver_a...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_CONV_VER(...
+Compiling module fifo_generator_v13_2_1.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1(C_EN_SAFE...
+Compiling module xil_defaultlib.design_1_fifo_generator_0_0
+Compiling architecture xadc_v of entity unisim.XADC [\XADC(init_40="0000000000000011"...]
+Compiling architecture xilinx of entity xil_defaultlib.design_1_xadc_wiz_0_0 [design_1_xadc_wiz_0_0_default]
+Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_WIDTH...
+Compiling module xil_defaultlib.design_1_xlslice_0_0
+Compiling architecture structure of entity xil_defaultlib.design_1 [design_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.prueba_xadc_tb
+Built simulation snapshot prueba_xadc_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 804.023 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "prueba_xadc_tb_behav -key {Behavioral:sim_1:Functional:prueba_xadc_tb} -tclbatch {prueba_xadc_tb.tcl} -view {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'prueba_xadc_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 804.023 ; gain = 0.000
+run 1000 us
+Failure: Fin simulacion
+Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
+$finish called at time : 202270855 ps : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 211
+run 1000 us
+run 1000 us
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 179
+run 1000 us
+Stopped at time : 2202750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 179
+run 1000 us
+Stopped at time : 2203250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 179
+run 1000 us
+Stopped at time : 2203750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 179
+run 1000 us
+Stopped at time : 2204250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 179
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 179
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'prueba_xadc_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim/design.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj prueba_xadc_tb_vlog.prj"
+"xvhdl --incr --relax -prj prueba_xadc_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity prueba_xadc_tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 804.023 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto e06165ee33124632814c5567ac626386 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlslice_v1_0_1 -L fifo_generator_v13_2_1 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot prueba_xadc_tb_behav xil_defaultlib.prueba_xadc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_sync_stag...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_bhv_ver_a...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_CONV_VER(...
+Compiling module fifo_generator_v13_2_1.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1(C_EN_SAFE...
+Compiling module xil_defaultlib.design_1_fifo_generator_0_0
+Compiling architecture xadc_v of entity unisim.XADC [\XADC(init_40="0000000000000011"...]
+Compiling architecture xilinx of entity xil_defaultlib.design_1_xadc_wiz_0_0 [design_1_xadc_wiz_0_0_default]
+Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_WIDTH...
+Compiling module xil_defaultlib.design_1_xlslice_0_0
+Compiling architecture structure of entity xil_defaultlib.design_1 [design_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.prueba_xadc_tb
+Built simulation snapshot prueba_xadc_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 804.023 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "prueba_xadc_tb_behav -key {Behavioral:sim_1:Functional:prueba_xadc_tb} -tclbatch {prueba_xadc_tb.tcl} -view {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'prueba_xadc_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 804.023 ; gain = 0.000
+run all
+Failure: Fin simulacion
+Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
+$finish called at time : 202270855 ps : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 211
+run all
+WARNING: [Simulator 45-29] Cannot open source file /wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/fifo_generator_v13_2/simulation/fifo_generator_vlog_beh.v: file does not exist.
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 805.480 ; gain = 0.000
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 179
+run all
+Stopped at time : 17628250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 179
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 179
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'prueba_xadc_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim/design.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj prueba_xadc_tb_vlog.prj"
+"xvhdl --incr --relax -prj prueba_xadc_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity prueba_xadc_tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 805.480 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto e06165ee33124632814c5567ac626386 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlslice_v1_0_1 -L fifo_generator_v13_2_1 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot prueba_xadc_tb_behav xil_defaultlib.prueba_xadc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_sync_stag...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_bhv_ver_a...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_CONV_VER(...
+Compiling module fifo_generator_v13_2_1.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1(C_EN_SAFE...
+Compiling module xil_defaultlib.design_1_fifo_generator_0_0
+Compiling architecture xadc_v of entity unisim.XADC [\XADC(init_40="0000000000000011"...]
+Compiling architecture xilinx of entity xil_defaultlib.design_1_xadc_wiz_0_0 [design_1_xadc_wiz_0_0_default]
+Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_WIDTH...
+Compiling module xil_defaultlib.design_1_xlslice_0_0
+Compiling architecture structure of entity xil_defaultlib.design_1 [design_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.prueba_xadc_tb
+Built simulation snapshot prueba_xadc_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 805.480 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "prueba_xadc_tb_behav -key {Behavioral:sim_1:Functional:prueba_xadc_tb} -tclbatch {prueba_xadc_tb.tcl} -view {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'prueba_xadc_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 807.242 ; gain = 1.762
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 184
+run 1000 us
+Failure: Fin simulacion
+Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
+$finish called at time : 202270855 ps : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 216
+run 1000 us
+run 1000 us
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 181
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'prueba_xadc_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim/design.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj prueba_xadc_tb_vlog.prj"
+"xvhdl --incr --relax -prj prueba_xadc_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity prueba_xadc_tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 807.781 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto e06165ee33124632814c5567ac626386 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlslice_v1_0_1 -L fifo_generator_v13_2_1 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot prueba_xadc_tb_behav xil_defaultlib.prueba_xadc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_sync_stag...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_bhv_ver_a...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_CONV_VER(...
+Compiling module fifo_generator_v13_2_1.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1(C_EN_SAFE...
+Compiling module xil_defaultlib.design_1_fifo_generator_0_0
+Compiling architecture xadc_v of entity unisim.XADC [\XADC(init_40="0000000000000011"...]
+Compiling architecture xilinx of entity xil_defaultlib.design_1_xadc_wiz_0_0 [design_1_xadc_wiz_0_0_default]
+Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_WIDTH...
+Compiling module xil_defaultlib.design_1_xlslice_0_0
+Compiling architecture structure of entity xil_defaultlib.design_1 [design_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.prueba_xadc_tb
+Built simulation snapshot prueba_xadc_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 807.781 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "prueba_xadc_tb_behav -key {Behavioral:sim_1:Functional:prueba_xadc_tb} -tclbatch {prueba_xadc_tb.tcl} -view {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+WARNING: [Simulator 45-24] Previous breakpoint at line 184 in file 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd' not restored because it is no longer a breakable line.
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'prueba_xadc_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 807.781 ; gain = 0.000
+run all
+Failure: Fin simulacion
+Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
+$finish called at time : 202270855 ps : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 218
+run all
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 808.781 ; gain = 0.000
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 167
+run all
+Stopped at time : 15931750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 172
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+Stopped at time : 0 fs : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
+run all
+Stopped at time : 250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'prueba_xadc_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim/design.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj prueba_xadc_tb_vlog.prj"
+"xvhdl --incr --relax -prj prueba_xadc_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity prueba_xadc_tb
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 809.227 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto e06165ee33124632814c5567ac626386 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlslice_v1_0_1 -L fifo_generator_v13_2_1 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot prueba_xadc_tb_behav xil_defaultlib.prueba_xadc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_sync_stag...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_bhv_ver_a...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_CONV_VER(...
+Compiling module fifo_generator_v13_2_1.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1(C_EN_SAFE...
+Compiling module xil_defaultlib.design_1_fifo_generator_0_0
+Compiling architecture xadc_v of entity unisim.XADC [\XADC(init_40="0000000000000011"...]
+Compiling architecture xilinx of entity xil_defaultlib.design_1_xadc_wiz_0_0 [design_1_xadc_wiz_0_0_default]
+Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_WIDTH...
+Compiling module xil_defaultlib.design_1_xlslice_0_0
+Compiling architecture structure of entity xil_defaultlib.design_1 [design_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.prueba_xadc_tb
+Built simulation snapshot prueba_xadc_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 809.227 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "prueba_xadc_tb_behav -key {Behavioral:sim_1:Functional:prueba_xadc_tb} -tclbatch {prueba_xadc_tb.tcl} -view {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg
+source prueba_xadc_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+Stopped at time : 0 fs : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'prueba_xadc_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 811.949 ; gain = 2.723
+run all
+Stopped at time : 250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
+run all
+Stopped at time : 250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 172
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 172
+run all
+Stopped at time : 500 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
+run all
+Stopped at time : 750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
+run all
+Stopped at time : 1 us : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 167
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 167
+run all
+Failure: Fin simulacion
+Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
+$finish called at time : 202270855 ps : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 216
+run all
+Stopped at time : 204250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 184
+run all
+Stopped at time : 204750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
+run all
+Stopped at time : 205250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
+run all
+Stopped at time : 205750 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
+run all
+Stopped at time : 206250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 181
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 181
+run all
+Stopped at time : 402250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 184
+run all
+Stopped at time : 798250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 184
+run all
+Stopped at time : 1194250 ns : File "C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 184
+remove_bps -file {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} -line 184
+add_bp {C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd} 181
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 17 11:07:27 2023...

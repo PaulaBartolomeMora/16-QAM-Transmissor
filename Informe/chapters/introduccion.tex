@@ -7,12 +7,14 @@ El presente trabajo tiene como objetivo principal el desarrollo de un sistema de
 
 \begin{itemize}
     \item \textbf{Captura XADC y Memoria FIFO:} En esta primera etapa se realizará la captura de una señal triangular y se procederán a almacenar los datos de entrada en una memoria FIFO.
-    \item \textbf{Mapeado QAM y Zero Padding: } Como siguiente paso a seguir, se generará el mapeado de 16-QAM y se implementará un Zero-Padding 1:32. 
-    \item \textbf{Filtrado Root Raised Cosine: } Tras aplicar Zero Padding, se deberá generar y aplicar a cada rama I/Q el filtrado pulse shaping del “root raised cosine” (RRC).
-    \item \textbf{Mezclador DDS y Multiplicadores: ----------}
-    \item \textbf{Sumador: ----------}
-    \item \textbf{Rx: ----------}
-
+    \item \textbf{Modulador 16-QAM:}
+        \begin{itemize}
+            \item \textbf{Mapeado QAM y Zero Padding: } Como siguiente paso a seguir, se generará el mapeado de 16-QAM y se implementará un Zero-Padding 1:32. 
+            \item \textbf{Filtrado Root Raised Cosine: } Tras aplicar Zero Padding, se deberá generar y aplicar a cada rama I/Q el filtrado pulse shaping del “root raised cosine” (RRC).
+            \item \textbf{Mezclador DDS y Multiplicadores: ----------}
+            \item \textbf{Sumador: ----------}
+            \item \textbf{Rx: ----------}
+        \end{itemize}
     
 \end{itemize}
 
@@ -37,11 +39,14 @@ Para lograr tanto un correcto funcionamiento de cada bloque electrónico como la
 
 %1.	Obtención de los datos convertidos del ADC – simulación señal de entrada 
 %2.	Lógica de control de lectura/escritura de los datos de la FIFO. Comprobación del bloque FIFO 
+
 %3.	Bloque de mapeado 16QAM y zero-padding 
 %4.	Bloque de filtrado pulse shaping - RRC 
 %5.	Generación de las sinusoides coseno/-seno mediante bloque DDS a 576 MHz 
+
 %6.	Bloque de multiplicación y suma de señales de transmisión I/Q. Comprobación de datos. 
-%7.	Configuración y uso del bloque MMCM en el diseño 
+%7.	Configuración y uso del bloque MMCM en el diseño
+
 %8.	Codificación de ficheros testbench y pruebas realizadas para la verificación del funcionamiento junto con el simulador Matlab. 
 %9. Realización de un diseño modular que funcione correctamente en su conjunto 
 %10. Inclusión de otras alternativas/opciones adicionales en el diseño planteado

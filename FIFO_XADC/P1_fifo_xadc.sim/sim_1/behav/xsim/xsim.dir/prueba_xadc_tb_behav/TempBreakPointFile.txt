@@ -1,2 +1,1 @@
 Breakpoint File Version 1.0
-181 true C:/Users/pbartolome/Downloads/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
