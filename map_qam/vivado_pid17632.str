@@ -1,0 +1,81 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 17632
+License: Customer
+
+Current time: 	Mon Dec 11 11:09:24 CET 2023
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 37 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Paula
+User home directory: C:/Users/Paula
+User working directory: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam
+User country: 	ES
+User language: 	es
+User locale: 	es_ES
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2017.4
+RDI_DATADIR: D:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: D:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Paula/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Paula/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Paula/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/vivado.log
+Vivado journal file location: 	C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/vivado.jou
+Engine tmp dir: 	C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/.Xil/Vivado-17632-DESKTOP-Q5AUOQS
+
+GUI allocated memory:	134 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 488 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 47 MB (+46543kb) [00:00:13]
+// [Engine Memory]: 466 MB (+337299kb) [00:00:13]
+// Opening Vivado Project: C:\Users\Paula\OneDrive - Universidad de Alcala\Todo\map_qam\map_qam.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/map_qam.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 64 MB (+15304kb) [00:00:17]
+// [Engine Memory]: 492 MB (+2584kb) [00:00:17]
+// HMemoryUtils.trashcanNow. Engine heap size: 509 MB. GUI used memory: 36 MB. Current time: 12/11/23 11:09:26 AM CET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 521 MB (+4415kb) [00:00:19]
+// [Engine Memory]: 559 MB (+12242kb) [00:00:21]
+// Tcl Message: open_project {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/map_qam.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'. 
+// Project name: map_qam; location: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam; part: xc7k70tfbg484-2L
+// Tcl Message: open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 707.422 ; gain = 61.531 
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET

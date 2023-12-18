@@ -1,0 +1,129 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 21320
+License: Customer
+
+Current time: 	Sun Dec 03 16:15:18 CET 2023
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 24 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Paula
+User home directory: C:/Users/Paula
+User working directory: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/vivado/Filter
+User country: 	ES
+User language: 	es
+User locale: 	es_ES
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2017.4
+RDI_DATADIR: D:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: D:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Paula/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Paula/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Paula/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/vivado/Filter/vivado.log
+Vivado journal file location: 	C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/vivado/Filter/vivado.jou
+Engine tmp dir: 	C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/vivado/Filter/.Xil/Vivado-21320-DESKTOP-Q5AUOQS
+
+GUI allocated memory:	171 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 514 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 69 MB (+70379kb) [00:00:16]
+// [Engine Memory]: 485 MB (+356645kb) [00:00:16]
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Paula\OneDrive - Universidad de Alcala\Todo\vivado\Filter\Filter.xpr. Version: Vivado v2017.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/vivado/Filter/Filter.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 550 MB. GUI used memory: 36 MB. Current time: 12/3/23 4:15:20 PM CET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 562 MB (+55336kb) [00:00:21]
+// [Engine Memory]: 594 MB (+4263kb) [00:00:23]
+// Tcl Message: open_project {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/vivado/Filter/Filter.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/pbartolome/OneDrive - Universidad de Alcala/Todo/vivado/Filter' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'. 
+// Project name: Filter; location: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/vivado/Filter; part: xc7k70tfbg484-2L
+// Tcl Message: open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 755.281 ; gain = 70.984 
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // B (D, cj)
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (fir_compiler_0.xci) elapsed time: 0.6s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fir_compiler_0 (fir_compiler_0.xci)]", 1, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fir_compiler_0 (fir_compiler_0.xci)]", 1, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// N (cj):  Re-customize IP : addNotify
+// TclEventType: LOAD_FEATURE
+// [Engine Memory]: 627 MB (+3810kb) [00:00:43]
+// r (cj): Re-customize IP: addNotify
+// [Engine Memory]: 659 MB (+210kb) [00:00:45]
+// Elapsed time: 12 seconds
+dismissDialog("Re-customize IP"); // N (cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 659 MB. GUI used memory: 52 MB. Current time: 12/3/23 4:15:46 PM CET
+// Elapsed time: 20 seconds
+dismissDialog("Re-customize IP"); // r (cj)
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fir_compiler_0 (fir_compiler_0.xci)]", 1, false); // B (D, cj)
+// [GUI Memory]: 75 MB (+1833kb) [00:01:28]
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// Elapsed time: 95 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fir_compiler_0 (fir_compiler_0.xci)]", 1, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fir_compiler_0 (fir_compiler_0.xci)]", 1, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// N (cj):  Re-customize IP : addNotify
+// r (cj): Re-customize IP: addNotify
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (D, cj)
+dismissDialog("Re-customize IP"); // N (cj)
+// [GUI Memory]: 81 MB (+2738kb) [00:03:18]
+// [GUI Memory]: 85 MB (+138kb) [00:03:38]
+// [GUI Memory]: 90 MB (+377kb) [00:04:08]
+// Elapsed time: 77 seconds
+dismissDialog("Re-customize IP"); // r (cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fir_compiler_0 (fir_compiler_0.xci)]", 1, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // B (D, cj) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // B (D, cj) - Popup Trigger - Node
+// [GUI Memory]: 99 MB (+4588kb) [00:04:40]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fir_compiler_0 (fir_compiler_0.xci)]", 1); // B (D, cj)
+// x (cj): Show IP Hierarchy: addNotify
+dismissDialog("Show IP Hierarchy"); // x (cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fir_compiler_0 (fir_compiler_0.xci)]", 1); // B (D, cj)
+// x (cj): Show IP Hierarchy: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Show IP Hierarchy"); // x (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 105 MB (+934kb) [00:04:47]

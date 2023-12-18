@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x0" bd:device="xc7k70tfbg484-2L" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.4" bd:top="qam16" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>qam16</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>CLK.CLK</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>clk</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>192000000</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>RST.RST_0</spirit:name>
+        <spirit:displayName>Reset</spirit:displayName>
+        <spirit:description>Reset</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>RST</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>rst_0</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters/>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="qam16_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>clk</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>ce</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>entrada_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>11</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>entrada_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>11</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rst_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>qam16_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>fir_compiler_I</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="fir_compiler" spirit:vendor="xilinx.com" spirit:version="7.2"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">qam16_fir_compiler_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CoefficientVector">-870, -789, -694, -584, -462, -327, -180, -24, 140, 310, 486, 664, 842, 1019, 1191, 1357, 1515, 1661, 1793, 1910, 2008, 2087, 2143, 2176, 2183, 2163, 2116, 2040, 1936, 1802, 1640, 1449, 1231, 986, 717, 426, 114, -215, -558, -913, -1276, -1642, -2008, -2369, -2722, -3061, -3382, -3680, -3950, -4189, -4391, -4552, -4668, -4736, -4750, -4709, -4609, -4448, -4224, -3934, -3578, -3156, -2667, -2111, -1490, -805, -59, 745, 1606, 2518, 3477, 4478, 5517, 6588, 7684, 8799, 9927, 11060, 12192, 13315, 14423, 15508, 16562, 17579, 18553, 19475, 20341, 21143, 21877, 22538, 23120, 23620, 24033, 24358, 24592, 24733, 24780, 24733, 24592, 24358, 24033, 23620, 23120, 22538, 21877, 21143, 20341, 19475, 18553, 17579, 16562, 15508, 14423, 13315, 12192, 11060, 9927, 8799, 7684, 6588, 5517, 4478, 3477, 2518, 1606, 745, -59, -805, -1490, -2111, -2667, -3156, -3578, -3934, -4224, -4448, -4609, -4709, -4750, -4736, -4668, -4552, -4391, -4189, -3950, -3680, -3382, -3061, -2722, -2369, -2008, -1642, -1276, -913, -558, -215, 114, 426, 717, 986, 1231, 1449, 1640, 1802, 1936, 2040, 2116, 2163, 2183, 2176, 2143, 2087, 2008, 1910, 1793, 1661, 1515, 1357, 1191, 1019, 842, 664, 486, 310, 140, -24, -180, -327, -462, -584, -694, -789, -870</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Sets">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Clock_Frequency">192</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Sign">Signed</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Quantization">Integer_Coefficients</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Width">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Fractional_Bits">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Structure">Inferred</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Data_Width">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Rounding_Mode">Full_Precision</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Width">53</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Filter_Architecture">Systolic_Multiply_Accumulate</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>fir_compiler_Q</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="fir_compiler" spirit:vendor="xilinx.com" spirit:version="7.2"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">qam16_fir_compiler_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CoefficientVector">-870, -789, -694, -584, -462, -327, -180, -24, 140, 310, 486, 664, 842, 1019, 1191, 1357, 1515, 1661, 1793, 1910, 2008, 2087, 2143, 2176, 2183, 2163, 2116, 2040, 1936, 1802, 1640, 1449, 1231, 986, 717, 426, 114, -215, -558, -913, -1276, -1642, -2008, -2369, -2722, -3061, -3382, -3680, -3950, -4189, -4391, -4552, -4668, -4736, -4750, -4709, -4609, -4448, -4224, -3934, -3578, -3156, -2667, -2111, -1490, -805, -59, 745, 1606, 2518, 3477, 4478, 5517, 6588, 7684, 8799, 9927, 11060, 12192, 13315, 14423, 15508, 16562, 17579, 18553, 19475, 20341, 21143, 21877, 22538, 23120, 23620, 24033, 24358, 24592, 24733, 24780, 24733, 24592, 24358, 24033, 23620, 23120, 22538, 21877, 21143, 20341, 19475, 18553, 17579, 16562, 15508, 14423, 13315, 12192, 11060, 9927, 8799, 7684, 6588, 5517, 4478, 3477, 2518, 1606, 745, -59, -805, -1490, -2111, -2667, -3156, -3578, -3934, -4224, -4448, -4609, -4709, -4750, -4736, -4668, -4552, -4391, -4189, -3950, -3680, -3382, -3061, -2722, -2369, -2008, -1642, -1276, -913, -558, -215, 114, 426, 717, 986, 1231, 1449, 1640, 1802, 1936, 2040, 2116, 2163, 2183, 2176, 2143, 2087, 2008, 1910, 1793, 1661, 1515, 1357, 1191, 1019, 842, 664, 486, 310, 140, -24, -180, -327, -462, -584, -694, -789, -870</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Sets">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Clock_Frequency">192</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Sign">Signed</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Quantization">Integer_Coefficients</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Width">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Fractional_Bits">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Structure">Inferred</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Data_Width">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Rounding_Mode">Full_Precision</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Width">53</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Filter_Architecture">Systolic_Multiply_Accumulate</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>mapeado_16QAM_I_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="mapeado_16QAM_I" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">qam16_mapeado_16QAM_I_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">mapeado_16QAM_I</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>mapeado_16QAM_Q_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="mapeado_16QAM_Q" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">qam16_mapeado_16QAM_Q_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">mapeado_16QAM_Q</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>clk_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="fir_compiler_Q" spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="fir_compiler_I" spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_I_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_Q_0" spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ce_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="ce"/>
+        <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_I_0" spirit:portRef="ce"/>
+        <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_Q_0" spirit:portRef="ce"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>entrada_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="entrada_0"/>
+        <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_Q_0" spirit:portRef="entrada"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>entrada_1_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="entrada_1"/>
+        <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_I_0" spirit:portRef="entrada"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rst_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="rst_0"/>
+        <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_I_0" spirit:portRef="rst"/>
+        <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_Q_0" spirit:portRef="rst"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>mapeado_16QAM_I_0_salida</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_I_0" spirit:portRef="salida"/>
+        <spirit:internalPortReference spirit:componentRef="fir_compiler_I" spirit:portRef="s_axis_data_tdata"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>mapeado_16QAM_Q_0_salida</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_Q_0" spirit:portRef="salida"/>
+        <spirit:internalPortReference spirit:componentRef="fir_compiler_Q" spirit:portRef="s_axis_data_tdata"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>

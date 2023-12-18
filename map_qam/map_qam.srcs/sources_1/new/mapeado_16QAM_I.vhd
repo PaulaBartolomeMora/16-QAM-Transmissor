@@ -22,18 +22,26 @@ architecture Behavioral of mapeado_16QAM_I is
 begin
     process(clk) 
         variable contador : integer := 0; -- 0 1 2 => 4*contador+3 downto 4*contador
+        variable cont_32 : integer := 0; -- 6MHz
         variable captured_bits : std_logic_vector(3 downto 0) := "0000";
     begin
         if rising_edge(clk) then
         if rst = '1' then
             contador := 0; 
+            cont_32 := 0; 
             salida <= "000"; 
         else
-            captured_bits := entrada(4*contador+3 downto 4*contador);
-            salida <= tabla_mapeado_I(to_integer(unsigned(captured_bits))); 
-            contador := contador + 1; -- variable que tras el reset 0, 1 , 2
-            if contador = 3 then 
-                contador := 0; 
+            if cont_32 = 32 then 
+                cont_32 := 0;
+                captured_bits := entrada(4*contador+3 downto 4*contador);
+                salida <= tabla_mapeado_I(to_integer(unsigned(captured_bits))); 
+                contador := contador + 1; -- variable que tras el reset 0, 1 , 2
+                if contador = 3 then 
+                    contador := 0; 
+                end if;
+            else
+                cont_32 := cont_32 + 1;
+                salida <= "000";
             end if;
         end if;
     end if;         

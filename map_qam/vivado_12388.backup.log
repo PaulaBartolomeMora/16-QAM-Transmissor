@@ -1,0 +1,1184 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Dec 11 11:20:38 2023
+# Process ID: 12388
+# Current directory: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18912 C:\Users\Paula\OneDrive - Universidad de Alcala\Todo\map_qam - copia\map_qam.xpr
+# Log file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/vivado.log
+# Journal file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+update_module_reference qam16_zp_0_0
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Adding cell -- xilinx.com:module_ref:mapeado_16QAM_Q:1.0 - mapeado_16QAM_Q_0
+Adding cell -- xilinx.com:module_ref:mapeado_16QAM_I:1.0 - mapeado_16QAM_I_0
+Adding cell -- xilinx.com:module_ref:zp:1.0 - zp_0
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_I
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_Q
+Successfully read diagram <qam16> from BD file <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd>
+Upgrading 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd'
+INFO: [IP_Flow 19-1972] Upgraded qam16_zp_0_0 from zp_v1_0 1.0 to zp_v1_0 1.0
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_I' width 3 differs from original width 32
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_Q' width 3 differs from original width 32
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'qam16_zp_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'qam16_zp_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/ui/bd_ddfcd8c2.ui> 
+upgrade_ip: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 864.465 ; gain = 94.035
+update_module_reference: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 864.465 ; gain = 95.438
+update_module_reference qam16_zp_0_0
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd'
+INFO: [IP_Flow 19-1972] Upgraded qam16_zp_0_0 from zp_v1_0 1.0 to zp_v1_0 1.0
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/new/mapeado_16QAM_I.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mapeado_16QAM_I
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/new/mapeado_16QAM_Q.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mapeado_16QAM_Q
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/new/zp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity zp
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture behavioral of entity xil_defaultlib.zp [zp_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+ERROR: [Common 17-165] Too many positional options when parsing '-notrace', please type 'webtalk -help' for usage info.
+
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 909.184 ; gain = 22.668
+run 1000 us
+save_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+save_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/new/zp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity zp
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture behavioral of entity xil_defaultlib.zp [zp_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+WARNING: Simulation object /tb_mapeado_16QAM/cont_out was not found in the design.
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 930.117 ; gain = 1.348
+open_bd_design {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd}
+update_module_reference qam16_zp_0_0
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd'
+INFO: [IP_Flow 19-1972] Upgraded qam16_zp_0_0 from zp_v1_0 1.0 to zp_v1_0 1.0
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/ui/bd_ddfcd8c2.ui> 
+regenerate_bd_layout
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+save_bd_design
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/ui/bd_ddfcd8c2.ui> 
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+WARNING: Simulation object /tb_mapeado_16QAM/cont_out was not found in the design.
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 933.422 ; gain = 0.000
+run 1000 us
+save_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+open_bd_design {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd}
+update_module_reference qam16_zp_0_0
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd'
+INFO: [IP_Flow 19-1972] Upgraded qam16_zp_0_0 from zp_v1_0 1.0 to zp_v1_0 1.0
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'contador_out'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'qam16_zp_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'qam16_zp_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/ui/bd_ddfcd8c2.ui> 
+startgroup
+make_bd_pins_external  [get_bd_pins zp_0/contador_out]
+endgroup
+regenerate_bd_layout
+open_bd_design {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd}
+update_module_reference qam16_zp_0_0
+CRITICAL WARNING: [IP_Flow 19-4635] Port 'contador_out': VHDL port type 'INTEGER' is not supported in this release.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd'
+INFO: [IP_Flow 19-1972] Upgraded qam16_zp_0_0 from zp_v1_0 1.0 to zp_v1_0 1.0
+WARNING: [IP_Flow 19-4706] Upgraded port 'contador_out' width 32 differs from original width 1
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'qam16_zp_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'qam16_zp_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/ui/bd_ddfcd8c2.ui> 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/new/zp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity zp
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture behavioral of entity xil_defaultlib.zp [zp_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 940.223 ; gain = 0.000
+run 1000 us
+open_bd_design {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 940.223 ; gain = 0.000
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture behavioral of entity xil_defaultlib.zp [zp_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 940.555 ; gain = 0.332
+run 1000 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+save_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture behavioral of entity xil_defaultlib.zp [zp_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 942.727 ; gain = 0.641
+run 1000 us
+save_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture behavioral of entity xil_defaultlib.zp [zp_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 943.934 ; gain = 0.645
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture behavioral of entity xil_defaultlib.zp [zp_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 947.418 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture behavioral of entity xil_defaultlib.zp [zp_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 947.418 ; gain = 0.000
+run 1000 us
+save_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/new/zp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity zp
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture behavioral of entity xil_defaultlib.zp [zp_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 952.348 ; gain = 0.000
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+ERROR: [VRFC 10-91] clk_period is not declared [C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd:91]
+ERROR: [VRFC 10-2123] 0 definitions of operator "*" match here [C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd:91]
+ERROR: [VRFC 10-91] clk_period is not declared [C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd:95]
+ERROR: [VRFC 10-2123] 0 definitions of operator "*" match here [C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd:95]
+ERROR: [VRFC 10-1504] unit testbench ignored due to previous errors [C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd:12]
+INFO: [VRFC 10-240] VHDL file C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_module_reference qam16_zp_0_0
+CRITICAL WARNING: [IP_Flow 19-4635] Port 'contador_out': VHDL port type 'INTEGER' is not supported in this release.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd'
+INFO: [IP_Flow 19-1972] Upgraded qam16_zp_0_0 from zp_v1_0 1.0 to zp_v1_0 1.0
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+ERROR: [VRFC 10-91] clk_period is not declared [C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd:91]
+ERROR: [VRFC 10-2123] 0 definitions of operator "*" match here [C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd:91]
+ERROR: [VRFC 10-91] clk_period is not declared [C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd:95]
+ERROR: [VRFC 10-2123] 0 definitions of operator "*" match here [C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd:95]
+ERROR: [VRFC 10-1504] unit testbench ignored due to previous errors [C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd:12]
+INFO: [VRFC 10-240] VHDL file C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture behavioral of entity xil_defaultlib.zp [zp_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 956.906 ; gain = 0.000
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/new/mapeado_16QAM_I.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mapeado_16QAM_I
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture behavioral of entity xil_defaultlib.zp [zp_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 956.906 ; gain = 0.000
+run 1000 us
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/new/mapeado_16QAM_I.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mapeado_16QAM_I
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/new/mapeado_16QAM_Q.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mapeado_16QAM_Q
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture behavioral of entity xil_defaultlib.zp [zp_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 957.590 ; gain = 0.469
+update_compile_order -fileset sources_1
+run 1000 us
+open_bd_design {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd}
+update_module_reference qam16_mapeado_16QAM_I_0_0
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst' as interface 'rst'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd'
+INFO: [IP_Flow 19-1972] Upgraded qam16_mapeado_16QAM_I_0_0 from mapeado_16QAM_I_v1_0 1.0 to mapeado_16QAM_I_v1_0 1.0
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+update_module_reference qam16_mapeado_16QAM_Q_0_0
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst' as interface 'rst'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd'
+INFO: [IP_Flow 19-1972] Upgraded qam16_mapeado_16QAM_Q_0_0 from mapeado_16QAM_Q_v1_0 1.0 to mapeado_16QAM_Q_v1_0 1.0
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+delete_bd_objs [get_bd_nets zp_0_contador_out] [get_bd_nets mapeado_16QAM_I_0_salida] [get_bd_nets mapeado_16QAM_Q_0_salida] [get_bd_nets zp_0_out_I] [get_bd_nets zp_0_out_Q] [get_bd_cells zp_0]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets zp_0_contador_out] [get_bd_nets mapeado_16QAM_I_0_salida] [get_bd_nets mapeado_16QAM_Q_0_salida] [get_bd_nets zp_0_out_I] [get_bd_nets zp_0_out_Q] [get_bd_cells zp_0]'
+delete_bd_objs [get_bd_nets zp_0_contador_out] [get_bd_nets mapeado_16QAM_I_0_salida] [get_bd_nets mapeado_16QAM_Q_0_salida] [get_bd_nets zp_0_out_I] [get_bd_nets zp_0_out_Q] [get_bd_cells zp_0]
+connect_bd_net [get_bd_pins mapeado_16QAM_I_0/salida] [get_bd_pins fir_compiler_I/s_axis_data_tdata]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_I/s_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_DATA
+delete_bd_objs [get_bd_nets mapeado_16QAM_I_0_salida]
+connect_bd_net [get_bd_pins mapeado_16QAM_I_0/salida] [get_bd_pins fir_compiler_I/s_axis_data_tdata]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_I/s_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_DATA
+connect_bd_net [get_bd_pins mapeado_16QAM_Q_0/salida] [get_bd_pins fir_compiler_Q/s_axis_data_tdata]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_Q/s_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_DATA
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+save_bd_design
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/ip/qam16_zp_0_0/qam16_zp_0_0.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 967.246 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_mapeado_16QAM' in fileset 'sim_1'...
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sources_1/bd/qam16/ip/qam16_zp_0_0/qam16_zp_0_0.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_mapeado_16QAM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mapeado_16QAM
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
+Built simulation snapshot tb_mapeado_16QAM_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_mapeado_16QAM_behav -key {Behavioral:sim_1:Functional:tb_mapeado_16QAM} -tclbatch {tb_mapeado_16QAM.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+WARNING: Simulation object /tb_mapeado_16QAM/contador_out was not found in the design.
+source tb_mapeado_16QAM.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mapeado_16QAM_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 967.246 ; gain = 0.000
+run 1000 us
+save_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam - copia/tb_mapeado_16QAM_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 11 16:17:23 2023...
