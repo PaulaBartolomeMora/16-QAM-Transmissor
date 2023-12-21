@@ -2,79 +2,58 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu Dec 21 09:39:49 2023
-# Process ID: 12752
+# Start of session at: Thu Dec 21 10:57:04 2023
+# Process ID: 9808
 # Current directory: C:/Users/Paula/Downloads/map_qam_enviado
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21972 C:\Users\Paula\Downloads\map_qam_enviado\map_qam.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5896 C:\Users\Paula\Downloads\map_qam_enviado\map_qam.xpr
 # Log file: C:/Users/Paula/Downloads/map_qam_enviado/vivado.log
 # Journal file: C:/Users/Paula/Downloads/map_qam_enviado\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Paula/Downloads/map_qam_enviado/map_qam.xpr
 update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
+source tb_qam16_wrapper.tcl
+run 1000 ms
+close_sim
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
+source tb_qam16_wrapper.tcl
+run 1000 ms
+run 1000 ms
+close_sim
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
+source tb_qam16_wrapper.tcl
+run 1000 ms
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
+source tb_qam16_wrapper.tcl
+run 1000 ms
+save_wave_config {C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}
 open_bd_design {C:/Users/Paula/Downloads/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}
-launch_simulation
-open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav.wcfg
-open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
-source tb_qam16_wrapper.tcl
-run all
-set_property is_enabled false [get_files  C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav.wcfg]
 close_sim
 launch_simulation
 open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
 source tb_qam16_wrapper.tcl
-run 1000 ms
-add_bp {C:/Users/Paula/Downloads/map_qam_enviado/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd} 117
-restart
-run all
-add_bp {C:/Users/Paula/Downloads/map_qam_enviado/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd} 125
 run all
 close_sim
 launch_simulation
 open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
 source tb_qam16_wrapper.tcl
-run 1000 ms
-close_sim
-launch_simulation
-open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
-source tb_qam16_wrapper.tcl
+run all
 save_wave_config {C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}
 close_sim
 launch_simulation
 open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
 source tb_qam16_wrapper.tcl
-run 1000 ms
-close_sim
-launch_simulation
-open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
-source tb_qam16_wrapper.tcl
+run all
+run all
+run 1000 us
+run 1000 us
+run all
 save_wave_config {C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}
-save_wave_config {C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}
-add_bp {C:/Users/Paula/Downloads/map_qam_enviado/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd} 99
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-remove_bps -file {C:/Users/Paula/Downloads/map_qam_enviado/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd} -line 99
-run 1000 ms
-save_wave_config {C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}
-close_sim
-launch_simulation
-open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
-source tb_qam16_wrapper.tcl
-run 1000 ms
-run 1000 ms
-run 1000 ms
-run 1000 ms
-run 1000 ms
-run 1000 ms
-run all
-close_sim
-launch_simulation
-open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
-source tb_qam16_wrapper.tcl
-run 1000 ms
 close_sim
