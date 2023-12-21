@@ -1,0 +1,8 @@
+vhdl xil_defaultlib  \
+"../../../bd/qam16/ip/qam16_mapeado_16QAM_Q_0_0/sim/qam16_mapeado_16QAM_Q_0_0.vhd" \
+"../../../bd/qam16/ip/qam16_mapeado_16QAM_I_0_0/sim/qam16_mapeado_16QAM_I_0_0.vhd" \
+"../../../bd/qam16/ip/qam16_fir_compiler_0_0/sim/qam16_fir_compiler_0_0.vhd" \
+"../../../bd/qam16/ip/qam16_fir_compiler_0_1/sim/qam16_fir_compiler_0_1.vhd" \
+"../../../bd/qam16/sim/qam16.vhd" \
+
+nosort

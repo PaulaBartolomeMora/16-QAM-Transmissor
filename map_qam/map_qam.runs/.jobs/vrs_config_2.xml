@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="qam16_mapeado_16QAM_Q_0_0_synth_1" LaunchDir="C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/map_qam.runs/qam16_mapeado_16QAM_Q_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="qam16_mapeado_16QAM_I_0_0_synth_1" LaunchDir="C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/map_qam.runs/qam16_mapeado_16QAM_I_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="qam16_fir_compiler_0_0_synth_1" LaunchDir="C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/map_qam.runs/qam16_fir_compiler_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="qam16_fir_compiler_0_1_synth_1" LaunchDir="C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/map_qam.runs/qam16_fir_compiler_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="qam16_fir_compiler_0_0_synth_1"/>
+	</Run>
+</Runs>
+

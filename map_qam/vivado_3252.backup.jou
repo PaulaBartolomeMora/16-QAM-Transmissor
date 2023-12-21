@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Dec 18 09:48:04 2023
+# Process ID: 3252
+# Current directory: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12132 C:\Users\Paula\OneDrive - Universidad de Alcala\Todo\map_qam\map_qam.xpr
+# Log file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/vivado.log
+# Journal file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/map_qam.xpr}
+update_compile_order -fileset sources_1
+update_module_reference qam16_mapeado_16QAM_I_0_0
+update_module_reference qam16_mapeado_16QAM_Q_0_0
+update_module_reference qam16_mapeado_16QAM_Q_0_0
+launch_simulation
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+run 1000 us
+close_sim
+launch_simulation
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+run 1000 us
+open_bd_design {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/map_qam.srcs/sources_1/bd/qam16/qam16.bd}
+delete_bd_objs [get_bd_nets mapeado_16QAM_I_0_salida]
+startgroup
+create_bd_port -dir I -from 7 -to 0 prueba
+connect_bd_net [get_bd_pins /fir_compiler_I/s_axis_data_tdata] [get_bd_ports prueba]
+endgroup
+close_sim
+save_bd_design
+launch_simulation
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+run 1000 us
+close_sim
+launch_simulation
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/tb_mapeado_16QAM_behav.wcfg}
+source tb_mapeado_16QAM.tcl
+run 1000 us
+run 1000 us
+run 1000 us
+open_bd_design {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/map_qam.srcs/sources_1/bd/qam16/qam16.bd}
+delete_bd_objs [get_bd_nets prueba_1]
+delete_bd_objs [get_bd_ports prueba]
+connect_bd_net [get_bd_pins mapeado_16QAM_I_0/salida] [get_bd_pins fir_compiler_I/s_axis_data_tdata]
+save_bd_design
+open_bd_design {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam/map_qam.srcs/sources_1/bd/qam16/qam16.bd}
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+save_bd_design
+set_property location {2 559 195} [get_bd_cells fir_compiler_I]
+regenerate_bd_layout
+set_property location {1 312 567} [get_bd_cells fir_compiler_I]
+set_property location {1 238 761} [get_bd_cells fir_compiler_Q]
+regenerate_bd_layout
+regenerate_bd_layout
+save_bd_design
+close_sim

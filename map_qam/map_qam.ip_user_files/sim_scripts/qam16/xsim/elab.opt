@@ -1,0 +1,1 @@
+--relax --debug typical --mt auto -L xil_defaultlib -L xbip_utils_v3_0_8 -L axi_utils_v2_0_4 -L fir_compiler_v7_2_10 -L secureip -L xpm --snapshot qam16 xil_defaultlib.qam16 -log elaborate.log

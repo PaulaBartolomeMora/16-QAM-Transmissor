@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x0" bd:device="xc7k70tfbg484-2L" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.4" bd:top="qam16" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x34080C28978D5878" bd:device="xc7k70tfbg484-2L" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2017.4" bd:top="qam16" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -34,6 +34,38 @@
           <spirit:parameter>
             <spirit:name>FREQ_HZ</spirit:name>
             <spirit:value>192000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>qam16_clk</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>ASSOCIATED_RESET</spirit:name>
+            <spirit:value>rst_0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -54,7 +86,17 @@
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
-        <spirit:parameters/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>POLARITY</spirit:name>
+            <spirit:value>ACTIVE_LOW</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
       </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:model>
@@ -79,17 +121,7 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>entrada_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-            <spirit:vector>
-              <spirit:left>11</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>entrada_1</spirit:name>
+          <spirit:name>entrada</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
             <spirit:vector>
@@ -102,6 +134,82 @@
           <spirit:name>rst_0</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>m_axis_data_tdata_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>23</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>m_axis_data_tdata_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>23</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>m_axis_data_tvalid_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>m_axis_data_tvalid_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>s_axis_data_tready_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>s_axis_data_tvalid_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>s_axis_data_tvalid_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>s_axis_data_tready_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>salida_I</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>salida_Q</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
           </spirit:wire>
         </spirit:port>
       </spirit:ports>
@@ -119,17 +227,20 @@
         <spirit:componentRef spirit:library="ip" spirit:name="fir_compiler" spirit:vendor="xilinx.com" spirit:version="7.2"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">qam16_fir_compiler_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CoefficientVector">-870, -789, -694, -584, -462, -327, -180, -24, 140, 310, 486, 664, 842, 1019, 1191, 1357, 1515, 1661, 1793, 1910, 2008, 2087, 2143, 2176, 2183, 2163, 2116, 2040, 1936, 1802, 1640, 1449, 1231, 986, 717, 426, 114, -215, -558, -913, -1276, -1642, -2008, -2369, -2722, -3061, -3382, -3680, -3950, -4189, -4391, -4552, -4668, -4736, -4750, -4709, -4609, -4448, -4224, -3934, -3578, -3156, -2667, -2111, -1490, -805, -59, 745, 1606, 2518, 3477, 4478, 5517, 6588, 7684, 8799, 9927, 11060, 12192, 13315, 14423, 15508, 16562, 17579, 18553, 19475, 20341, 21143, 21877, 22538, 23120, 23620, 24033, 24358, 24592, 24733, 24780, 24733, 24592, 24358, 24033, 23620, 23120, 22538, 21877, 21143, 20341, 19475, 18553, 17579, 16562, 15508, 14423, 13315, 12192, 11060, 9927, 8799, 7684, 6588, 5517, 4478, 3477, 2518, 1606, 745, -59, -805, -1490, -2111, -2667, -3156, -3578, -3934, -4224, -4448, -4609, -4709, -4750, -4736, -4668, -4552, -4391, -4189, -3950, -3680, -3382, -3061, -2722, -2369, -2008, -1642, -1276, -913, -558, -215, 114, 426, 717, 986, 1231, 1449, 1640, 1802, 1936, 2040, 2116, 2163, 2183, 2176, 2143, 2087, 2008, 1910, 1793, 1661, 1515, 1357, 1191, 1019, 842, 664, 486, 310, 140, -24, -180, -327, -462, -584, -694, -789, -870</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CoefficientSource">Vector</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CoefficientVector">-0.00663867853767272,-0.00602169653714084,-0.00529347118529176,-0.00445824548864446,-0.0035218321918853,-0.00249160301669963,-0.00137645802195132,-0.000186774814536972,0.00106566242199441,0.00236775386984364,0.00370519453152383,0.00506260348947667,0.00642367101778738,0.00777132235261769,0.0090878966959861,0.0103553398069446,0.0115554083279177,0.012669883804758,0.0136807941895475,0.0145706404677674,0.0153226259283814,0.0159208854985838,0.0163507124961381,0.0165987801127473,0.0166533549328094,0.0165044998139274,0.0161442635090165,0.0155668544947696,0.014768796587225,0.013749064071461,0.0125091942479061,0.011053375500908,0.00938850922421195,0.00752424419069521,0.00547298222760699,0.00324985435090727,0.0008726668200585,-0.00163818310544666,-0.00425982159788389,-0.00696704243769444,-0.00973248015553795,-0.0125268110281898,-0.0153189804897603,-0.0180764552029428,-0.0207654977318963,-0.0233514614725648,-0.0257991032311911,-0.0280729106007981,-0.0301374410715249,-0.0319576696267094,-0.0334993414249872,-0.0347293260515622,-0.0356159697409923,-0.0361294419306986,-0.0362420724999499,-0.0359286760838307,-0.0351668599258157,-0.0339373118457097,-0.0322240650511184,-0.0300147367090889,-0.0273007374184814,-0.0240774489809469,-0.0203443681566915,-0.0161052144076532,-0.0113679999722271,-0.00614506097870744,-0.000453048685568026,0.00568711966851974,0.0122503505174283,0.0192075038255421,0.0265255624422642,0.0341678398365667,0.0420942246950265,0.0502614604788459,0.0586234576638146,0.0671316360361168,0.0757352940902648,0.0843820022769118,0.093018016581241,0.101588708680126,0.110039008730984,0.118313856689522,0.126358657939291,0.134119738944527,0.141544798610179,0.148583351049813,0.155187155523179,0.161310629410294,0.166911240236868,0.171949872955418,0.17639116891563,0.180203833224029,0.18336090749422,0.185840005321611,0.18762350817729,0.188698719800761,0.189057977576521,0.188698719800761,0.18762350817729,0.185840005321611,0.18336090749422,0.180203833224029,0.17639116891563,0.171949872955418,0.166911240236868,0.161310629410294,0.155187155523179,0.148583351049813,0.141544798610179,0.134119738944527,0.126358657939291,0.118313856689522,0.110039008730984,0.101588708680126,0.093018016581241,0.0843820022769118,0.0757352940902648,0.0671316360361168,0.0586234576638146,0.0502614604788459,0.0420942246950265,0.0341678398365667,0.0265255624422642,0.0192075038255421,0.0122503505174283,0.00568711966851974,-0.000453048685568026,-0.00614506097870744,-0.0113679999722271,-0.0161052144076532,-0.0203443681566915,-0.0240774489809469,-0.0273007374184814,-0.0300147367090889,-0.0322240650511184,-0.0339373118457097,-0.0351668599258157,-0.0359286760838307,-0.0362420724999499,-0.0361294419306986,-0.0356159697409923,-0.0347293260515622,-0.0334993414249872,-0.0319576696267094,-0.0301374410715249,-0.0280729106007981,-0.0257991032311911,-0.0233514614725648,-0.0207654977318963,-0.0180764552029428,-0.0153189804897603,-0.0125268110281898,-0.00973248015553795,-0.00696704243769444,-0.00425982159788389,-0.00163818310544666,0.0008726668200585,0.00324985435090727,0.00547298222760699,0.00752424419069521,0.00938850922421195,0.011053375500908,0.0125091942479061,0.013749064071461,0.014768796587225,0.0155668544947696,0.0161442635090165,0.0165044998139274,0.0166533549328094,0.0165987801127473,0.0163507124961381,0.0159208854985838,0.0153226259283814,0.0145706404677674,0.0136807941895475,0.012669883804758,0.0115554083279177,0.0103553398069446,0.0090878966959861,0.00777132235261769,0.00642367101778738,0.00506260348947667,0.00370519453152383,0.00236775386984364,0.00106566242199441,-0.000186774814536972,-0.00137645802195132,-0.00249160301669963,-0.0035218321918853,-0.00445824548864446,-0.00529347118529176,-0.00602169653714084,-0.00663867853767272</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Coefficient_Sets">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Clock_Frequency">192</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Coefficient_Sign">Signed</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Quantization">Integer_Coefficients</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Coefficient_Width">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Coefficient_Fractional_Bits">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Coefficient_Structure">Inferred</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Data_Width">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Output_Rounding_Mode">Full_Precision</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Output_Width">53</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Quantization">Quantize_Only</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Width">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="BestPrecision">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Fractional_Bits">17</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Structure">Symmetric</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Data_Width">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Data_Fractional_Bits">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Rounding_Mode">Truncate_LSBs</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Width">24</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Filter_Architecture">Systolic_Multiply_Accumulate</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
@@ -138,17 +249,18 @@
         <spirit:componentRef spirit:library="ip" spirit:name="fir_compiler" spirit:vendor="xilinx.com" spirit:version="7.2"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">qam16_fir_compiler_0_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CoefficientVector">-870, -789, -694, -584, -462, -327, -180, -24, 140, 310, 486, 664, 842, 1019, 1191, 1357, 1515, 1661, 1793, 1910, 2008, 2087, 2143, 2176, 2183, 2163, 2116, 2040, 1936, 1802, 1640, 1449, 1231, 986, 717, 426, 114, -215, -558, -913, -1276, -1642, -2008, -2369, -2722, -3061, -3382, -3680, -3950, -4189, -4391, -4552, -4668, -4736, -4750, -4709, -4609, -4448, -4224, -3934, -3578, -3156, -2667, -2111, -1490, -805, -59, 745, 1606, 2518, 3477, 4478, 5517, 6588, 7684, 8799, 9927, 11060, 12192, 13315, 14423, 15508, 16562, 17579, 18553, 19475, 20341, 21143, 21877, 22538, 23120, 23620, 24033, 24358, 24592, 24733, 24780, 24733, 24592, 24358, 24033, 23620, 23120, 22538, 21877, 21143, 20341, 19475, 18553, 17579, 16562, 15508, 14423, 13315, 12192, 11060, 9927, 8799, 7684, 6588, 5517, 4478, 3477, 2518, 1606, 745, -59, -805, -1490, -2111, -2667, -3156, -3578, -3934, -4224, -4448, -4609, -4709, -4750, -4736, -4668, -4552, -4391, -4189, -3950, -3680, -3382, -3061, -2722, -2369, -2008, -1642, -1276, -913, -558, -215, 114, 426, 717, 986, 1231, 1449, 1640, 1802, 1936, 2040, 2116, 2163, 2183, 2176, 2143, 2087, 2008, 1910, 1793, 1661, 1515, 1357, 1191, 1019, 842, 664, 486, 310, 140, -24, -180, -327, -462, -584, -694, -789, -870</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CoefficientVector">-0.00663867853767272,-0.00602169653714084,-0.00529347118529176,-0.00445824548864446,-0.0035218321918853,-0.00249160301669963,-0.00137645802195132,-0.000186774814536972,0.00106566242199441,0.00236775386984364,0.00370519453152383,0.00506260348947667,0.00642367101778738,0.00777132235261769,0.0090878966959861,0.0103553398069446,0.0115554083279177,0.012669883804758,0.0136807941895475,0.0145706404677674,0.0153226259283814,0.0159208854985838,0.0163507124961381,0.0165987801127473,0.0166533549328094,0.0165044998139274,0.0161442635090165,0.0155668544947696,0.014768796587225,0.013749064071461,0.0125091942479061,0.011053375500908,0.00938850922421195,0.00752424419069521,0.00547298222760699,0.00324985435090727,0.0008726668200585,-0.00163818310544666,-0.00425982159788389,-0.00696704243769444,-0.00973248015553795,-0.0125268110281898,-0.0153189804897603,-0.0180764552029428,-0.0207654977318963,-0.0233514614725648,-0.0257991032311911,-0.0280729106007981,-0.0301374410715249,-0.0319576696267094,-0.0334993414249872,-0.0347293260515622,-0.0356159697409923,-0.0361294419306986,-0.0362420724999499,-0.0359286760838307,-0.0351668599258157,-0.0339373118457097,-0.0322240650511184,-0.0300147367090889,-0.0273007374184814,-0.0240774489809469,-0.0203443681566915,-0.0161052144076532,-0.0113679999722271,-0.00614506097870744,-0.000453048685568026,0.00568711966851974,0.0122503505174283,0.0192075038255421,0.0265255624422642,0.0341678398365667,0.0420942246950265,0.0502614604788459,0.0586234576638146,0.0671316360361168,0.0757352940902648,0.0843820022769118,0.093018016581241,0.101588708680126,0.110039008730984,0.118313856689522,0.126358657939291,0.134119738944527,0.141544798610179,0.148583351049813,0.155187155523179,0.161310629410294,0.166911240236868,0.171949872955418,0.17639116891563,0.180203833224029,0.18336090749422,0.185840005321611,0.18762350817729,0.188698719800761,0.189057977576521,0.188698719800761,0.18762350817729,0.185840005321611,0.18336090749422,0.180203833224029,0.17639116891563,0.171949872955418,0.166911240236868,0.161310629410294,0.155187155523179,0.148583351049813,0.141544798610179,0.134119738944527,0.126358657939291,0.118313856689522,0.110039008730984,0.101588708680126,0.093018016581241,0.0843820022769118,0.0757352940902648,0.0671316360361168,0.0586234576638146,0.0502614604788459,0.0420942246950265,0.0341678398365667,0.0265255624422642,0.0192075038255421,0.0122503505174283,0.00568711966851974,-0.000453048685568026,-0.00614506097870744,-0.0113679999722271,-0.0161052144076532,-0.0203443681566915,-0.0240774489809469,-0.0273007374184814,-0.0300147367090889,-0.0322240650511184,-0.0339373118457097,-0.0351668599258157,-0.0359286760838307,-0.0362420724999499,-0.0361294419306986,-0.0356159697409923,-0.0347293260515622,-0.0334993414249872,-0.0319576696267094,-0.0301374410715249,-0.0280729106007981,-0.0257991032311911,-0.0233514614725648,-0.0207654977318963,-0.0180764552029428,-0.0153189804897603,-0.0125268110281898,-0.00973248015553795,-0.00696704243769444,-0.00425982159788389,-0.00163818310544666,0.0008726668200585,0.00324985435090727,0.00547298222760699,0.00752424419069521,0.00938850922421195,0.011053375500908,0.0125091942479061,0.013749064071461,0.014768796587225,0.0155668544947696,0.0161442635090165,0.0165044998139274,0.0166533549328094,0.0165987801127473,0.0163507124961381,0.0159208854985838,0.0153226259283814,0.0145706404677674,0.0136807941895475,0.012669883804758,0.0115554083279177,0.0103553398069446,0.0090878966959861,0.00777132235261769,0.00642367101778738,0.00506260348947667,0.00370519453152383,0.00236775386984364,0.00106566242199441,-0.000186774814536972,-0.00137645802195132,-0.00249160301669963,-0.0035218321918853,-0.00445824548864446,-0.00529347118529176,-0.00602169653714084,-0.00663867853767272</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Coefficient_Sets">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Clock_Frequency">192</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Coefficient_Sign">Signed</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Quantization">Integer_Coefficients</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Coefficient_Width">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Coefficient_Fractional_Bits">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Coefficient_Structure">Inferred</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Data_Width">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Output_Rounding_Mode">Full_Precision</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Output_Width">53</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Quantization">Quantize_Only</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Width">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Fractional_Bits">17</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Coefficient_Structure">Symmetric</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Data_Width">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Data_Fractional_Bits">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Rounding_Mode">Truncate_LSBs</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Width">23</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Filter_Architecture">Systolic_Multiply_Accumulate</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
@@ -191,14 +303,10 @@
         <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_Q_0" spirit:portRef="ce"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>entrada_0_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="entrada_0"/>
-        <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_Q_0" spirit:portRef="entrada"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>entrada_1_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="entrada_1"/>
+        <spirit:externalPortReference spirit:portRef="entrada"/>
         <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_I_0" spirit:portRef="entrada"/>
+        <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_Q_0" spirit:portRef="entrada"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_0_1</spirit:name>
@@ -207,13 +315,55 @@
         <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_Q_0" spirit:portRef="rst"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
+        <spirit:name>fir_compiler_I_m_axis_data_tdata</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fir_compiler_I" spirit:portRef="m_axis_data_tdata"/>
+        <spirit:externalPortReference spirit:portRef="m_axis_data_tdata_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fir_compiler_Q_m_axis_data_tdata</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fir_compiler_Q" spirit:portRef="m_axis_data_tdata"/>
+        <spirit:externalPortReference spirit:portRef="m_axis_data_tdata_1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fir_compiler_I_m_axis_data_tvalid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fir_compiler_I" spirit:portRef="m_axis_data_tvalid"/>
+        <spirit:externalPortReference spirit:portRef="m_axis_data_tvalid_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fir_compiler_Q_m_axis_data_tvalid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fir_compiler_Q" spirit:portRef="m_axis_data_tvalid"/>
+        <spirit:externalPortReference spirit:portRef="m_axis_data_tvalid_1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fir_compiler_Q_s_axis_data_tready</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fir_compiler_Q" spirit:portRef="s_axis_data_tready"/>
+        <spirit:externalPortReference spirit:portRef="s_axis_data_tready_1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>s_axis_data_tvalid_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="s_axis_data_tvalid_0"/>
+        <spirit:internalPortReference spirit:componentRef="fir_compiler_Q" spirit:portRef="s_axis_data_tvalid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>s_axis_data_tvalid_1_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="s_axis_data_tvalid_1"/>
+        <spirit:internalPortReference spirit:componentRef="fir_compiler_I" spirit:portRef="s_axis_data_tvalid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fir_compiler_I_s_axis_data_tready</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fir_compiler_I" spirit:portRef="s_axis_data_tready"/>
+        <spirit:externalPortReference spirit:portRef="s_axis_data_tready_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
         <spirit:name>mapeado_16QAM_I_0_salida</spirit:name>
         <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_I_0" spirit:portRef="salida"/>
+        <spirit:externalPortReference spirit:portRef="salida_I"/>
         <spirit:internalPortReference spirit:componentRef="fir_compiler_I" spirit:portRef="s_axis_data_tdata"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mapeado_16QAM_Q_0_salida</spirit:name>
         <spirit:internalPortReference spirit:componentRef="mapeado_16QAM_Q_0" spirit:portRef="salida"/>
+        <spirit:externalPortReference spirit:portRef="salida_Q"/>
         <spirit:internalPortReference spirit:componentRef="fir_compiler_Q" spirit:portRef="s_axis_data_tdata"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>

@@ -1,8 +1,20 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_mapeado_16QAM_behav xil_defaultlib.tb_mapeado_16QAM -log elaborate.log 
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_8 -L axi_utils_v2_0_4 -L fir_compiler_v7_2_10 -L secureip -L xpm --snapshot tb_qam16_wrapper_behav xil_defaultlib.tb_qam16_wrapper -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2001]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2002]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2003]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1993]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1994]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1995]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2001]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2002]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2003]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1993]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1994]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1995]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -14,7 +26,56 @@ Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
 Compiling package ieee.std_logic_textio
+Compiling package unisim.vcomponents
+Compiling package xbip_utils_v3_0_8.xbip_utils_v3_0_8_pkg
+Compiling package fir_compiler_v7_2_10.fir_compiler_v7_2_10_viv_comp
+Compiling package fir_compiler_v7_2_10.globals_pkg
+Compiling package fir_compiler_v7_2_10.components
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_4.global_util_pkg
+Compiling package axi_utils_v2_0_4.axi_utils_comps
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture xilinx of entity axi_utils_v2_0_4.glb_srl_fifo [\glb_srl_fifo(width=8,has_ifx=tr...]
+Compiling architecture xilinx of entity axi_utils_v2_0_4.glb_ifx_slave [\glb_ifx_slave(has_ifx=true)\]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.dpt_mem [\dpt_mem(c_xdevicefamily="kintex...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.filt_mem [\filt_mem(c_xdevicefamily="kinte...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.sp_mem [\sp_mem(c_xdevicefamily="kintex7...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.filt_mem [\filt_mem(c_xdevicefamily="kinte...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.buff [\buff(c_xdevicefamily="kintex7",...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.calc [\calc(c_xdevicefamily="kintex7",...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.addsub_mult_accum [\addsub_mult_accum(c_xdevicefami...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=7,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.single_rate [\single_rate(c_xdevicefamily="ki...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.fir_compiler_v7_2_10_viv [\fir_compiler_v7_2_10_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_10.fir_compiler_v7_2_10 [\fir_compiler_v7_2_10(c_xdevicef...]
+Compiling architecture qam16_fir_compiler_0_0_arch of entity xil_defaultlib.qam16_fir_compiler_0_0 [qam16_fir_compiler_0_0_default]
+Compiling architecture synth of entity fir_compiler_v7_2_10.single_rate [\single_rate(c_xdevicefamily="ki...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.fir_compiler_v7_2_10_viv [\fir_compiler_v7_2_10_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_10.fir_compiler_v7_2_10 [\fir_compiler_v7_2_10(c_xdevicef...]
+Compiling architecture qam16_fir_compiler_0_1_arch of entity xil_defaultlib.qam16_fir_compiler_0_1 [qam16_fir_compiler_0_1_default]
 Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture qam16_mapeado_16qam_i_0_0_arch of entity xil_defaultlib.qam16_mapeado_16QAM_I_0_0 [qam16_mapeado_16qam_i_0_0_defaul...]
 Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
-Compiling architecture testbench of entity xil_defaultlib.tb_mapeado_16qam
-Built simulation snapshot tb_mapeado_16QAM_behav
+Compiling architecture qam16_mapeado_16qam_q_0_0_arch of entity xil_defaultlib.qam16_mapeado_16QAM_Q_0_0 [qam16_mapeado_16qam_q_0_0_defaul...]
+Compiling architecture structure of entity xil_defaultlib.qam16 [qam16_default]
+Compiling architecture structure of entity xil_defaultlib.qam16_wrapper [qam16_wrapper_default]
+Compiling architecture tb of entity xil_defaultlib.tb_qam16_wrapper
+Built simulation snapshot tb_qam16_wrapper_behav

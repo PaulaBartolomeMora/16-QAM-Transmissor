@@ -7,7 +7,7 @@ entity mapeado_16QAM_I is
         clk : in STD_LOGIC; -- Entrada de reloj a 78 MHz
         ce, rst : in STD_LOGIC; -- Entrada de reset síncrono y clock_enable (1 de 32)
         entrada : in STD_LOGIC_VECTOR(11 downto 0); -- Señal entrada 12 bits se mantiene 3 ciclos
-        salida : out STD_LOGIC_VECTOR(2 downto 0) -- Salida de (-3,-1,1,3) en 3 bits ) 
+        salida : out STD_LOGIC_VECTOR(7 downto 0) -- Salida de (-3,-1,1,3) en 3 bits, extendida a 8 bits ) 
     ); 
 end mapeado_16QAM_I;
 
@@ -24,24 +24,27 @@ begin
         variable contador : integer := 0; -- 0 1 2 => 4*contador+3 downto 4*contador
         variable cont_32 : integer := 0; -- 6MHz
         variable captured_bits : std_logic_vector(3 downto 0) := "0000";
+        variable aux_salida : std_logic_vector(2 downto 0):= "000";
     begin
         if rising_edge(clk) then
         if rst = '1' then
             contador := 0; 
             cont_32 := 0; 
-            salida <= "000"; 
+            salida <= (others => '0'); 
         else
             if cont_32 = 32 then 
                 cont_32 := 0;
                 captured_bits := entrada(4*contador+3 downto 4*contador);
-                salida <= tabla_mapeado_I(to_integer(unsigned(captured_bits))); 
+                aux_salida := tabla_mapeado_I(to_integer(unsigned(captured_bits))); 
+                salida(2 downto 0) <= aux_salida; --salida extendida a 8 bits
+                salida(7 downto 3) <= (others => aux_salida(2));
                 contador := contador + 1; -- variable que tras el reset 0, 1 , 2
                 if contador = 3 then 
                     contador := 0; 
                 end if;
             else
                 cont_32 := cont_32 + 1;
-                salida <= "000";
+                salida <= (others => '0');
             end if;
         end if;
     end if;         

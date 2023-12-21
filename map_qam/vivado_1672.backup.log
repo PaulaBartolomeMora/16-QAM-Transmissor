@@ -1,0 +1,514 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Dec 21 09:16:18 2023
+# Process ID: 1672
+# Current directory: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19872 C:\Users\Paula\OneDrive - Universidad de Alcala\Todo\map_qam_enviado\map_qam.xpr
+# Log file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/vivado.log
+# Journal file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 756.664 ; gain = 65.020
+update_compile_order -fileset sources_1
+generate_target all [get_files  {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}]
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_I Data_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_I Data_Fractional_Bits has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_Q Data_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_Q Data_Fractional_Bits has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+WARNING: [BD 41-927] Following properties on pin /mapeado_16QAM_I_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=qam16_clk 
+WARNING: [BD 41-927] Following properties on pin /mapeado_16QAM_Q_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=qam16_clk 
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+VHDL Output written to : C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/synth/qam16.vhd
+VHDL Output written to : C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/sim/qam16.vhd
+VHDL Output written to : C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hdl/qam16_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mapeado_16QAM_Q_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mapeado_16QAM_I_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_I .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_Q .
+Exporting to file C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hw_handoff/qam16.hwh
+Generated Block Design Tcl file C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hw_handoff/qam16_bd.tcl
+Generated Hardware Definition File C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/synth/qam16.hwdef
+generate_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 897.805 ; gain = 116.590
+catch { config_ip_cache -export [get_ips -all qam16_fir_compiler_0_0] }
+catch { config_ip_cache -export [get_ips -all qam16_fir_compiler_0_1] }
+export_ip_user_files -of_objects [get_files {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}]
+launch_runs -jobs 4 {qam16_fir_compiler_0_0_synth_1 qam16_fir_compiler_0_1_synth_1 qam16_mapeado_16QAM_Q_0_0_synth_1 qam16_mapeado_16QAM_I_0_0_synth_1}
+[Thu Dec 21 09:20:33 2023] Launched qam16_fir_compiler_0_0_synth_1, qam16_fir_compiler_0_1_synth_1, qam16_mapeado_16QAM_Q_0_0_synth_1, qam16_mapeado_16QAM_I_0_0_synth_1...
+Run output will be captured here:
+qam16_fir_compiler_0_0_synth_1: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.runs/qam16_fir_compiler_0_0_synth_1/runme.log
+qam16_fir_compiler_0_1_synth_1: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.runs/qam16_fir_compiler_0_1_synth_1/runme.log
+qam16_mapeado_16QAM_Q_0_0_synth_1: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.runs/qam16_mapeado_16QAM_Q_0_0_synth_1/runme.log
+qam16_mapeado_16QAM_I_0_0_synth_1: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.runs/qam16_mapeado_16QAM_I_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}] -directory {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files} -ipstatic_source_dir {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/modelsim} {questa=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/questa} {riviera=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/riviera} {activehdl=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+open_bd_design {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_I
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_Q
+Adding cell -- xilinx.com:module_ref:mapeado_16QAM_I:1.0 - mapeado_16QAM_I_0
+Adding cell -- xilinx.com:module_ref:mapeado_16QAM_Q:1.0 - mapeado_16QAM_Q_0
+Successfully read diagram <qam16> from BD file <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd>
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 983.074 ; gain = 65.719
+delete_bd_objs [get_bd_nets entrada_0_1] [get_bd_ports entrada_0]
+connect_bd_net [get_bd_ports entrada_1] [get_bd_pins mapeado_16QAM_Q_0/entrada]
+set_property name entrada [get_bd_ports entrada_1]
+generate_target all [get_files  {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}]
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_I Data_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_I Data_Fractional_Bits has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_Q Data_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_Q Data_Fractional_Bits has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+WARNING: [BD 41-927] Following properties on pin /mapeado_16QAM_I_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=qam16_clk 
+WARNING: [BD 41-927] Following properties on pin /mapeado_16QAM_Q_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=qam16_clk 
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/ui/bd_ddfcd8c2.ui> 
+VHDL Output written to : C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/synth/qam16.vhd
+VHDL Output written to : C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/sim/qam16.vhd
+VHDL Output written to : C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hdl/qam16_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mapeado_16QAM_Q_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mapeado_16QAM_I_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_I .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_Q .
+Exporting to file C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hw_handoff/qam16.hwh
+Generated Block Design Tcl file C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hw_handoff/qam16_bd.tcl
+Generated Hardware Definition File C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/synth/qam16.hwdef
+catch { config_ip_cache -export [get_ips -all qam16_fir_compiler_0_0] }
+catch { config_ip_cache -export [get_ips -all qam16_fir_compiler_0_1] }
+export_ip_user_files -of_objects [get_files {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}]
+launch_runs -jobs 4 {qam16_fir_compiler_0_0_synth_1 qam16_fir_compiler_0_1_synth_1}
+[Thu Dec 21 09:22:03 2023] Launched qam16_fir_compiler_0_0_synth_1, qam16_fir_compiler_0_1_synth_1...
+Run output will be captured here:
+qam16_fir_compiler_0_0_synth_1: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.runs/qam16_fir_compiler_0_0_synth_1/runme.log
+qam16_fir_compiler_0_1_synth_1: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.runs/qam16_fir_compiler_0_1_synth_1/runme.log
+export_simulation -of_objects [get_files {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}] -directory {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files} -ipstatic_source_dir {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/modelsim} {questa=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/questa} {riviera=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/riviera} {activehdl=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}] -top
+generate_target all [get_files  {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}]
+INFO: [BD 41-1637] Generated targets are already up-to-date for bd-design 'qam16' - hence not re-generating.
+catch { config_ip_cache -export [get_ips -all qam16_fir_compiler_0_0] }
+catch { config_ip_cache -export [get_ips -all qam16_fir_compiler_0_1] }
+export_ip_user_files -of_objects [get_files {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}]
+launch_runs -jobs 4 {qam16_fir_compiler_0_0_synth_1 qam16_fir_compiler_0_1_synth_1}
+[Thu Dec 21 09:22:46 2023] Launched qam16_fir_compiler_0_0_synth_1, qam16_fir_compiler_0_1_synth_1...
+Run output will be captured here:
+qam16_fir_compiler_0_0_synth_1: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.runs/qam16_fir_compiler_0_0_synth_1/runme.log
+qam16_fir_compiler_0_1_synth_1: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.runs/qam16_fir_compiler_0_1_synth_1/runme.log
+export_simulation -of_objects [get_files {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}] -directory {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files} -ipstatic_source_dir {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/modelsim} {questa=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/questa} {riviera=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/riviera} {activehdl=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}]
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.runs/qam16_mapeado_16QAM_Q_0_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.runs/qam16_mapeado_16QAM_I_0_0_synth_1
+
+set_property synth_checkpoint_mode None [get_files  {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}]
+generate_target all [get_files  {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}]
+INFO: [BD 41-1662] The design 'qam16.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/synth/qam16.vhd
+VHDL Output written to : C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/sim/qam16.vhd
+VHDL Output written to : C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hdl/qam16_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mapeado_16QAM_Q_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mapeado_16QAM_I_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_I .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_Q .
+Exporting to file C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hw_handoff/qam16.hwh
+Generated Block Design Tcl file C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hw_handoff/qam16_bd.tcl
+Generated Hardware Definition File C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/synth/qam16.hwdef
+export_ip_user_files -of_objects [get_files {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}] -directory {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files} -ipstatic_source_dir {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/modelsim} {questa=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/questa} {riviera=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/riviera} {activehdl=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+delete_bd_objs [get_bd_nets mapeado_16QAM_I_0_salida]
+startgroup
+make_bd_pins_external  [get_bd_cells mapeado_16QAM_I_0]
+make_bd_intf_pins_external  [get_bd_cells mapeado_16QAM_I_0]
+INFO: [BD 5-409] No interface pins to be made external for /mapeado_16QAM_I_0
+endgroup
+connect_bd_net [get_bd_pins fir_compiler_I/s_axis_data_tdata] [get_bd_pins mapeado_16QAM_I_0/salida]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_I/s_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_DATA
+set_property name salida_I [get_bd_ports salida_0]
+delete_bd_objs [get_bd_nets mapeado_16QAM_Q_0_salida]
+startgroup
+make_bd_pins_external  [get_bd_pins mapeado_16QAM_Q_0/salida]
+endgroup
+set_property name salida_Q [get_bd_ports salida_0]
+connect_bd_net [get_bd_pins fir_compiler_Q/s_axis_data_tdata] [get_bd_pins mapeado_16QAM_Q_0/salida]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_Q/s_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_DATA
+save_bd_design
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/ui/bd_ddfcd8c2.ui> 
+generate_target all [get_files  {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}]
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_I Data_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_I Data_Fractional_Bits has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_Q Data_Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_Q Data_Fractional_Bits has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+WARNING: [BD 41-927] Following properties on pin /mapeado_16QAM_I_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=qam16_clk 
+WARNING: [BD 41-927] Following properties on pin /mapeado_16QAM_Q_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=qam16_clk 
+Wrote  : <C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd> 
+VHDL Output written to : C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/synth/qam16.vhd
+VHDL Output written to : C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/sim/qam16.vhd
+VHDL Output written to : C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hdl/qam16_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mapeado_16QAM_Q_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mapeado_16QAM_I_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_I .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_Q .
+Exporting to file C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hw_handoff/qam16.hwh
+Generated Block Design Tcl file C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hw_handoff/qam16_bd.tcl
+Generated Hardware Definition File C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/synth/qam16.hwdef
+export_ip_user_files -of_objects [get_files {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/qam16.bd}}] -directory {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files} -ipstatic_source_dir {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/modelsim} {questa=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/questa} {riviera=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/riviera} {activehdl=C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_qam16_wrapper' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim/qam16_fir_compiler_0_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim/qam16_fir_compiler_0_1.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim/FIFO_output.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim/QAM_output.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --relax -prj tb_qam16_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/new/mapeado_16QAM_Q.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mapeado_16QAM_Q
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/new/mapeado_16QAM_I.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mapeado_16QAM_I
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/bd/qam16/ip/qam16_mapeado_16QAM_Q_0_0/sim/qam16_mapeado_16QAM_Q_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity qam16_mapeado_16QAM_Q_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/bd/qam16/ip/qam16_mapeado_16QAM_I_0_0/sim/qam16_mapeado_16QAM_I_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity qam16_mapeado_16QAM_I_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/bd/qam16/ip/qam16_fir_compiler_0_0/sim/qam16_fir_compiler_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity qam16_fir_compiler_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/bd/qam16/ip/qam16_fir_compiler_0_1/sim/qam16_fir_compiler_0_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity qam16_fir_compiler_0_1
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/bd/qam16/sim/qam16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity qam16
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hdl/qam16_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity qam16_wrapper
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_qam16_wrapper
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_8 -L axi_utils_v2_0_4 -L fir_compiler_v7_2_10 -L secureip -L xpm --snapshot tb_qam16_wrapper_behav xil_defaultlib.tb_qam16_wrapper -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2001]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2002]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2003]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1993]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1994]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1995]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2001]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2002]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2003]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1993]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1994]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1995]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling package unisim.vcomponents
+Compiling package xbip_utils_v3_0_8.xbip_utils_v3_0_8_pkg
+Compiling package fir_compiler_v7_2_10.fir_compiler_v7_2_10_viv_comp
+Compiling package fir_compiler_v7_2_10.globals_pkg
+Compiling package fir_compiler_v7_2_10.components
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_4.global_util_pkg
+Compiling package axi_utils_v2_0_4.axi_utils_comps
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture xilinx of entity axi_utils_v2_0_4.glb_srl_fifo [\glb_srl_fifo(width=8,has_ifx=tr...]
+Compiling architecture xilinx of entity axi_utils_v2_0_4.glb_ifx_slave [\glb_ifx_slave(has_ifx=true)\]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.dpt_mem [\dpt_mem(c_xdevicefamily="kintex...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.filt_mem [\filt_mem(c_xdevicefamily="kinte...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.sp_mem [\sp_mem(c_xdevicefamily="kintex7...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.filt_mem [\filt_mem(c_xdevicefamily="kinte...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.buff [\buff(c_xdevicefamily="kintex7",...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.calc [\calc(c_xdevicefamily="kintex7",...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.addsub_mult_accum [\addsub_mult_accum(c_xdevicefami...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=7,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.single_rate [\single_rate(c_xdevicefamily="ki...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.fir_compiler_v7_2_10_viv [\fir_compiler_v7_2_10_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_10.fir_compiler_v7_2_10 [\fir_compiler_v7_2_10(c_xdevicef...]
+Compiling architecture qam16_fir_compiler_0_0_arch of entity xil_defaultlib.qam16_fir_compiler_0_0 [qam16_fir_compiler_0_0_default]
+Compiling architecture synth of entity fir_compiler_v7_2_10.single_rate [\single_rate(c_xdevicefamily="ki...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.fir_compiler_v7_2_10_viv [\fir_compiler_v7_2_10_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_10.fir_compiler_v7_2_10 [\fir_compiler_v7_2_10(c_xdevicef...]
+Compiling architecture qam16_fir_compiler_0_1_arch of entity xil_defaultlib.qam16_fir_compiler_0_1 [qam16_fir_compiler_0_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture qam16_mapeado_16qam_i_0_0_arch of entity xil_defaultlib.qam16_mapeado_16QAM_I_0_0 [qam16_mapeado_16qam_i_0_0_defaul...]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture qam16_mapeado_16qam_q_0_0_arch of entity xil_defaultlib.qam16_mapeado_16QAM_Q_0_0 [qam16_mapeado_16qam_q_0_0_defaul...]
+Compiling architecture structure of entity xil_defaultlib.qam16 [qam16_default]
+Compiling architecture structure of entity xil_defaultlib.qam16_wrapper [qam16_wrapper_default]
+Compiling architecture tb of entity xil_defaultlib.tb_qam16_wrapper
+Built simulation snapshot tb_qam16_wrapper_behav
+ERROR: [Common 17-165] Too many positional options when parsing '-notrace', please type 'webtalk -help' for usage info.
+
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:39 . Memory (MB): peak = 1205.684 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '39' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_qam16_wrapper_behav -key {Behavioral:sim_1:Functional:tb_qam16_wrapper} -tclbatch {tb_qam16_wrapper.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/tb_mapeado_16QAM_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/tb_mapeado_16QAM_behav.wcfg}
+WARNING: Simulation object /tb_mapeado_16QAM/clk was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/rst was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/ce was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/cont_in was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/entrada was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/salida_Q was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/salida_I was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/s_axis_data_tvalid_0 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/s_axis_data_tvalid_1 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/s_axis_data_tready_0 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/s_axis_data_tready_1 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/m_axis_data_tvalid_0 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/m_axis_data_tvalid_1 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/m_axis_data_tdata_0 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/m_axis_data_tdata_1 was not found in the design.
+source tb_qam16_wrapper.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_qam16_wrapper_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:48 . Memory (MB): peak = 1234.867 ; gain = 29.184
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+run all
+run all
+run all
+create_wave_config
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+run all
+save_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}
+add_files -fileset sim_1 -norecurse {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}}
+set_property xsim.view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/tb_mapeado_16QAM_behav.wcfg} {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}} [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_qam16_wrapper' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim/qam16_fir_compiler_0_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim/qam16_fir_compiler_0_1.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim/FIFO_output.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim/QAM_output.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim'
+"xvhdl --relax -prj tb_qam16_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/new/mapeado_16QAM_Q.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mapeado_16QAM_Q
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/new/mapeado_16QAM_I.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mapeado_16QAM_I
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/bd/qam16/ip/qam16_mapeado_16QAM_Q_0_0/sim/qam16_mapeado_16QAM_Q_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity qam16_mapeado_16QAM_Q_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/bd/qam16/ip/qam16_mapeado_16QAM_I_0_0/sim/qam16_mapeado_16QAM_I_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity qam16_mapeado_16QAM_I_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/bd/qam16/ip/qam16_fir_compiler_0_0/sim/qam16_fir_compiler_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity qam16_fir_compiler_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/bd/qam16/ip/qam16_fir_compiler_0_1/sim/qam16_fir_compiler_0_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity qam16_fir_compiler_0_1
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.ip_user_files/bd/qam16/sim/qam16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity qam16
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sources_1/bd/qam16/hdl/qam16_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity qam16_wrapper
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_qam16_wrapper
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fa628f42c5f4497dafeea3dc78a09eaf --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_8 -L axi_utils_v2_0_4 -L fir_compiler_v7_2_10 -L secureip -L xpm --snapshot tb_qam16_wrapper_behav xil_defaultlib.tb_qam16_wrapper -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2001]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2002]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2003]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1993]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1994]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1995]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2001]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2002]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2003]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1993]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1994]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:1995]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_textio
+Compiling package unisim.vcomponents
+Compiling package xbip_utils_v3_0_8.xbip_utils_v3_0_8_pkg
+Compiling package fir_compiler_v7_2_10.fir_compiler_v7_2_10_viv_comp
+Compiling package fir_compiler_v7_2_10.globals_pkg
+Compiling package fir_compiler_v7_2_10.components
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_4.global_util_pkg
+Compiling package axi_utils_v2_0_4.axi_utils_comps
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture xilinx of entity axi_utils_v2_0_4.glb_srl_fifo [\glb_srl_fifo(width=8,has_ifx=tr...]
+Compiling architecture xilinx of entity axi_utils_v2_0_4.glb_ifx_slave [\glb_ifx_slave(has_ifx=true)\]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.dpt_mem [\dpt_mem(c_xdevicefamily="kintex...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.filt_mem [\filt_mem(c_xdevicefamily="kinte...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.sp_mem [\sp_mem(c_xdevicefamily="kintex7...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.filt_mem [\filt_mem(c_xdevicefamily="kinte...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.buff [\buff(c_xdevicefamily="kintex7",...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.calc [\calc(c_xdevicefamily="kintex7",...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.addsub_mult_accum [\addsub_mult_accum(c_xdevicefami...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.delay [\delay(c_delay_len=7,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.single_rate [\single_rate(c_xdevicefamily="ki...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.fir_compiler_v7_2_10_viv [\fir_compiler_v7_2_10_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_10.fir_compiler_v7_2_10 [\fir_compiler_v7_2_10(c_xdevicef...]
+Compiling architecture qam16_fir_compiler_0_0_arch of entity xil_defaultlib.qam16_fir_compiler_0_0 [qam16_fir_compiler_0_0_default]
+Compiling architecture synth of entity fir_compiler_v7_2_10.single_rate [\single_rate(c_xdevicefamily="ki...]
+Compiling architecture synth of entity fir_compiler_v7_2_10.fir_compiler_v7_2_10_viv [\fir_compiler_v7_2_10_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_10.fir_compiler_v7_2_10 [\fir_compiler_v7_2_10(c_xdevicef...]
+Compiling architecture qam16_fir_compiler_0_1_arch of entity xil_defaultlib.qam16_fir_compiler_0_1 [qam16_fir_compiler_0_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_I [mapeado_16qam_i_default]
+Compiling architecture qam16_mapeado_16qam_i_0_0_arch of entity xil_defaultlib.qam16_mapeado_16QAM_I_0_0 [qam16_mapeado_16qam_i_0_0_defaul...]
+Compiling architecture behavioral of entity xil_defaultlib.mapeado_16QAM_Q [mapeado_16qam_q_default]
+Compiling architecture qam16_mapeado_16qam_q_0_0_arch of entity xil_defaultlib.qam16_mapeado_16QAM_Q_0_0 [qam16_mapeado_16qam_q_0_0_defaul...]
+Compiling architecture structure of entity xil_defaultlib.qam16 [qam16_default]
+Compiling architecture structure of entity xil_defaultlib.qam16_wrapper [qam16_wrapper_default]
+Compiling architecture tb of entity xil_defaultlib.tb_qam16_wrapper
+Built simulation snapshot tb_qam16_wrapper_behav
+ERROR: [Common 17-165] Too many positional options when parsing '-notrace', please type 'webtalk -help' for usage info.
+
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:37 . Memory (MB): peak = 1234.867 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '37' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/map_qam.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_qam16_wrapper_behav -key {Behavioral:sim_1:Functional:tb_qam16_wrapper} -tclbatch {tb_qam16_wrapper.tcl} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/tb_mapeado_16QAM_behav.wcfg}} -view {{C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/tb_mapeado_16QAM_behav.wcfg}
+WARNING: Simulation object /tb_mapeado_16QAM/clk was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/rst was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/ce was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/cont_in was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/entrada was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/salida_Q was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/salida_I was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/s_axis_data_tvalid_0 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/s_axis_data_tvalid_1 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/s_axis_data_tready_0 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/s_axis_data_tready_1 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/m_axis_data_tvalid_0 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/m_axis_data_tvalid_1 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/m_axis_data_tdata_0 was not found in the design.
+WARNING: Simulation object /tb_mapeado_16QAM/m_axis_data_tdata_1 was not found in the design.
+open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}
+source tb_qam16_wrapper.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_qam16_wrapper_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:43 . Memory (MB): peak = 1234.867 ; gain = 0.000
+run 1000 ms
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 21 09:39:21 2023...
