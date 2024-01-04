@@ -1,0 +1,79 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 82afaa96a0be45a794b994c63437d643 --debug typical --relax --mt 2 -L xbip_utils_v3_0_8 -L axi_utils_v2_0_4 -L xbip_pipe_v3_0_4 -L xbip_bram18k_v3_0_4 -L mult_gen_v12_0_13 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_4 -L xbip_dsp48_multadd_v3_0_4 -L dds_compiler_v6_0_15 -L xil_defaultlib -L xbip_dsp48_macro_v3_0_15 -L xlslice_v1_0_1 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_mezclador_behav xil_defaultlib.tb_mezclador xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_textio
+Compiling package unisim.vcomponents
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_8.xbip_utils_v3_0_8_pkg
+Compiling package xbip_utils_v3_0_8.xcc_utils_v3_0
+Compiling package dds_compiler_v6_0_15.dds_compiler_v6_0_15_viv_comp
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package dds_compiler_v6_0_15.pkg_dds_compiler_v6_0_15
+Compiling package dds_compiler_v6_0_15.dds_compiler_v6_0_15_hdl_comps
+Compiling package xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv_comp
+Compiling package axi_utils_v2_0_4.axi_utils_v2_0_4_pkg
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_4.global_util_pkg
+Compiling package axi_utils_v2_0_4.axi_utils_comps
+Compiling package ieee.std_logic_unsigned
+Compiling package dds_compiler_v6_0_15.pkg_betas
+Compiling package dds_compiler_v6_0_15.pkg_alphas
+Compiling package xbip_dsp48_macro_v3_0_15.xbip_dsp48_macro_v3_0_15_viv_com...
+Compiling package xbip_dsp48_macro_v3_0_15.xbip_dsp48_macro_v3_0_15_pkg
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_FROM=...
+Compiling module xil_defaultlib.design_1_xlslice_0_0
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_15.dds_compiler_v6_0_15_rdy [\dds_compiler_v6_0_15_rdy(c_has_...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_15.pipe_add [\pipe_add(c_width=16,c_seg_width...]
+Compiling architecture synth of entity dds_compiler_v6_0_15.accum [\accum(c_xdevicefamily="kintex7"...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_15.sin_cos [\sin_cos(c_xdevicefamily="kintex...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_has_ce=1...]
+Compiling architecture synth of entity dds_compiler_v6_0_15.dds_compiler_v6_0_15_core [\dds_compiler_v6_0_15_core(c_xde...]
+Compiling architecture synth of entity dds_compiler_v6_0_15.dds_compiler_v6_0_15_viv [\dds_compiler_v6_0_15_viv(c_xdev...]
+Compiling architecture xilinx of entity dds_compiler_v6_0_15.dds_compiler_v6_0_15 [\dds_compiler_v6_0_15(c_xdevicef...]
+Compiling architecture design_1_dds_compiler_0_0_arch of entity xil_defaultlib.design_1_dds_compiler_0_0 [design_1_dds_compiler_0_0_defaul...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_width=24...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_width=11...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=2,adreg=0,areg...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e1_wrapper_v3_0 [\xbip_dsp48e1_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_width=18...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(1,1)(1,1)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_latency=...]
+Compiling architecture synth of entity xbip_dsp48_macro_v3_0_15.xbip_dsp48_macro_synth [\xbip_dsp48_macro_synth(c_xdevic...]
+Compiling architecture synth of entity xbip_dsp48_macro_v3_0_15.xbip_dsp48_macro_v3_0_15_viv [\xbip_dsp48_macro_v3_0_15_viv(c_...]
+Compiling architecture xilinx of entity xbip_dsp48_macro_v3_0_15.xbip_dsp48_macro_v3_0_15 [\xbip_dsp48_macro_v3_0_15(c_xdev...]
+Compiling architecture design_1_xbip_dsp48_macro_0_0_arch of entity xil_defaultlib.design_1_xbip_dsp48_macro_0_0 [design_1_xbip_dsp48_macro_0_0_de...]
+Compiling architecture design_1_xbip_dsp48_macro_0_2_arch of entity xil_defaultlib.design_1_xbip_dsp48_macro_0_2 [design_1_xbip_dsp48_macro_0_2_de...]
+Compiling module xlslice_v1_0_1.xlslice_v1_0_1_xlslice(DIN_FROM=...
+Compiling module xil_defaultlib.design_1_xlslice_0_1
+Compiling architecture structure of entity xil_defaultlib.design_1 [design_1_default]
+Compiling architecture tb of entity xil_defaultlib.tb_mezclador
+Built simulation snapshot tb_mezclador_behav

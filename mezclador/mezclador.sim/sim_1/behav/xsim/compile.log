@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/bd/design_1/ip/design_1_xlslice_0_0/sim/design_1_xlslice_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xlslice_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/bd/design_1/ip/design_1_xlslice_0_1/sim/design_1_xlslice_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xlslice_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Paula/Downloads/mezclador/mezclador.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/bd/design_1/ip/design_1_dds_compiler_0_0/sim/design_1_dds_compiler_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_dds_compiler_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/bd/design_1/sim/design_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/bd/design_1/ip/design_1_xbip_dsp48_macro_0_0/sim/design_1_xbip_dsp48_macro_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_xbip_dsp48_macro_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/bd/design_1/ip/design_1_xbip_dsp48_macro_0_2/sim/design_1_xbip_dsp48_macro_0_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_xbip_dsp48_macro_0_2
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sim_1/new/tb_mezclador.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_mezclador

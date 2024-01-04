@@ -1,0 +1,321 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jan  3 10:59:16 2024
+# Process ID: 12448
+# Current directory: C:/Users/Paula/Downloads/mezclador
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17176 C:\Users\Paula\Downloads\mezclador\mezclador.xpr
+# Log file: C:/Users/Paula/Downloads/mezclador/vivado.log
+# Journal file: C:/Users/Paula/Downloads/mezclador\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Paula/Downloads/mezclador/mezclador.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd}
+regenerate_bd_layout
+set_property -dict [list CONFIG.DDS_Clock_Rate {576} CONFIG.Channels {2} CONFIG.Phase_Increment {Fixed} CONFIG.Phase_offset {None} CONFIG.Negative_Sine {true} CONFIG.Output_Frequency1 {100} CONFIG.Output_Frequency2 {100} CONFIG.Frequency_Resolution {0.4} CONFIG.Noise_Shaping {Auto} CONFIG.Phase_Width {30} CONFIG.Output_Width {8} CONFIG.DATA_Has_TLAST {Not_Required} CONFIG.S_PHASE_Has_TUSER {Not_Required} CONFIG.M_DATA_Has_TUSER {Not_Required} CONFIG.M_PHASE_Has_TUSER {Not_Required} CONFIG.Latency {5} CONFIG.PINC1 {10110001110001110001110001110} CONFIG.PINC2 {10110001110001110001110001110}] [get_bd_cells dds_compiler_0]
+save_bd_design
+startgroup
+make_bd_pins_external  [get_bd_pins dds_compiler_0/aclk]
+endgroup
+set_property CONFIG.FREQ_HZ 192000000 [get_bd_ports aclk_0]
+set_property name clk [get_bd_ports aclk_0]
+startgroup
+make_bd_pins_external  [get_bd_cells dds_compiler_0]
+make_bd_intf_pins_external  [get_bd_cells dds_compiler_0]
+endgroup
+save_bd_design
+make_wrapper -files [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+generate_target Simulation [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files -ipstatic_source_dir C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/modelsim} {questa=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/questa} {riviera=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/riviera} {activehdl=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source design_1_wrapper.tcl
+run 1000 us
+file mkdir C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sim_1/new/tb_mezclador.vhd w ]
+add_files -fileset sim_1 C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sim_1/new/tb_mezclador.vhd
+update_compile_order -fileset sim_1
+open_bd_design {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd}
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_design_1_wrapper.tcl
+open_bd_design {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd}
+save_wave_config {C:/Users/Paula/Downloads/mezclador/tb_design_1_wrapper_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Paula/Downloads/mezclador/tb_design_1_wrapper_behav.wcfg
+set_property xsim.view C:/Users/Paula/Downloads/mezclador/tb_design_1_wrapper_behav.wcfg [get_filesets sim_1]
+save_wave_config {C:/Users/Paula/Downloads/mezclador/tb_design_1_wrapper_behav.wcfg}
+update_compile_order -fileset sim_1
+open_bd_design {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mult_gen:12.0 mult_gen_0
+endgroup
+delete_bd_objs [get_bd_cells mult_gen_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xbip_dsp48_macro:3.0 xbip_dsp48_macro_0
+endgroup
+set_property location {2.5 490 -152} [get_bd_cells xbip_dsp48_macro_0]
+regenerate_bd_layout
+copy_bd_objs /  [get_bd_cells {xbip_dsp48_macro_0}]
+regenerate_bd_layout
+startgroup
+make_bd_pins_external  [get_bd_pins xbip_dsp48_macro_0/A]
+endgroup
+set_property name Salida_RRC_I [get_bd_ports A_0]
+startgroup
+make_bd_pins_external  [get_bd_pins xbip_dsp48_macro_1/A]
+endgroup
+set_property name Salida_RRC_Q [get_bd_ports A_0]
+connect_bd_net [get_bd_ports clk] [get_bd_pins xbip_dsp48_macro_1/CLK]
+connect_bd_net [get_bd_ports clk] [get_bd_pins xbip_dsp48_macro_0/CLK]
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.a_width.VALUE_SRC USER CONFIG.b_width.VALUE_SRC USER] [get_bd_cells xbip_dsp48_macro_0]
+set_property -dict [list CONFIG.instruction1 {A*B} CONFIG.a_width {24} CONFIG.areg_3 {true} CONFIG.areg_4 {true} CONFIG.breg_3 {true} CONFIG.breg_4 {true} CONFIG.creg_3 {false} CONFIG.creg_4 {false} CONFIG.creg_5 {false} CONFIG.mreg_5 {true} CONFIG.preg_6 {true} CONFIG.b_width {18} CONFIG.p_full_width {42} CONFIG.p_width {42} CONFIG.p_binarywidth {0}] [get_bd_cells xbip_dsp48_macro_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.PartsPresent {Phase_Generator_and_SIN_COS_LUT} CONFIG.DDS_Clock_Rate {100} CONFIG.Channels {1} CONFIG.Frequency_Resolution {8789.06} CONFIG.Noise_Shaping {Auto} CONFIG.Phase_Width {14} CONFIG.Output_Width {8} CONFIG.Has_Phase_Out {true} CONFIG.DATA_Has_TLAST {Not_Required} CONFIG.S_PHASE_Has_TUSER {Not_Required} CONFIG.M_DATA_Has_TUSER {Not_Required} CONFIG.Latency {3} CONFIG.Output_Frequency1 {0} CONFIG.PINC1 {0} CONFIG.Output_Frequency2 {0} CONFIG.PINC2 {0}] [get_bd_cells dds_compiler_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Has_ARESETn {true}] [get_bd_cells dds_compiler_0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins dds_compiler_0/aresetn]
+endgroup
+save_bd_design
+set_property name rst [get_bd_ports aresetn_0]
+make_wrapper -files [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -top
+startgroup
+set_property -dict [list CONFIG.b_width {11} CONFIG.p_full_width {35} CONFIG.p_width {35} CONFIG.p_binarywidth {0}] [get_bd_cells xbip_dsp48_macro_0]
+endgroup
+delete_bd_objs [get_bd_nets A_0_2] [get_bd_cells xbip_dsp48_macro_1]
+copy_bd_objs /  [get_bd_cells {xbip_dsp48_macro_0}]
+connect_bd_net [get_bd_ports Salida_RRC_Q] [get_bd_pins xbip_dsp48_macro_1/A]
+connect_bd_net [get_bd_ports clk] [get_bd_pins xbip_dsp48_macro_1/CLK]
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.DDS_Clock_Rate {192} CONFIG.Output_Selection {Sine_and_Cosine} CONFIG.Negative_Sine {true} CONFIG.Has_TREADY {false} CONFIG.Output_Frequency1 {100} CONFIG.Frequency_Resolution {8789.06} CONFIG.Noise_Shaping {Auto} CONFIG.Phase_Width {15} CONFIG.Output_Width {8} CONFIG.Latency {3} CONFIG.PINC1 {100001010101010}] [get_bd_cells dds_compiler_0]
+endgroup
+delete_bd_objs [get_bd_nets A_0_1] [get_bd_ports Salida_RRC_I]
+startgroup
+make_bd_pins_external  [get_bd_pins xbip_dsp48_macro_0/A]
+endgroup
+set_property name Salida_RRC_I [get_bd_ports A_0]
+delete_bd_objs [get_bd_nets Salida_RRC_Q_1] [get_bd_ports Salida_RRC_Q]
+startgroup
+make_bd_pins_external  [get_bd_pins xbip_dsp48_macro_1/A]
+endgroup
+set_property name Salida_RRC_Q [get_bd_ports A_0]
+save_bd_design
+startgroup
+set_property -dict [list CONFIG.Channels {1} CONFIG.Output_Frequency1 {100} CONFIG.Frequency_Resolution {8789.06} CONFIG.Noise_Shaping {Auto} CONFIG.Phase_Width {15} CONFIG.Output_Width {8} CONFIG.DATA_Has_TLAST {Not_Required} CONFIG.S_PHASE_Has_TUSER {Not_Required} CONFIG.M_DATA_Has_TUSER {Not_Required} CONFIG.M_PHASE_Has_TUSER {Not_Required} CONFIG.PINC1 {100001010101010}] [get_bd_cells dds_compiler_0]
+endgroup
+startgroup
+endgroup
+startgroup
+set_property -dict [list CONFIG.PartsPresent {Phase_Generator_and_SIN_COS_LUT} CONFIG.DDS_Clock_Rate {192} CONFIG.PINC1 {100} CONFIG.Parameter_Entry {Hardware_Parameters} CONFIG.Noise_Shaping {None} CONFIG.Phase_Width {16} CONFIG.Output_Width {16} CONFIG.Has_Phase_Out {true} CONFIG.DATA_Has_TLAST {Not_Required} CONFIG.S_PHASE_Has_TUSER {Not_Required} CONFIG.M_DATA_Has_TUSER {Not_Required} CONFIG.Latency {7} CONFIG.Output_Frequency1 {0}] [get_bd_cells dds_compiler_0]
+endgroup
+connect_bd_net [get_bd_pins dds_compiler_0/m_axis_data_tdata] [get_bd_pins xbip_dsp48_macro_0/B]
+delete_bd_objs [get_bd_nets dds_compiler_0_m_axis_data_tdata]
+startgroup
+create_bd_port -dir I -from 10 -to 0 -type data coseno
+connect_bd_net [get_bd_pins /xbip_dsp48_macro_0/B] [get_bd_ports coseno]
+endgroup
+startgroup
+create_bd_port -dir I -from 10 -to 0 -type data seno
+connect_bd_net [get_bd_pins /xbip_dsp48_macro_1/B] [get_bd_ports seno]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins xbip_dsp48_macro_0/P]
+endgroup
+set_property name TX_I [get_bd_ports P_0]
+startgroup
+make_bd_pins_external  [get_bd_pins xbip_dsp48_macro_1/P]
+endgroup
+set_property name TX_Q [get_bd_ports P_0]
+regenerate_bd_layout
+make_wrapper -files [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -top
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {C:/Users/Paula/Downloads/mezclador/FIR_output_I.txt C:/Users/Paula/Downloads/mezclador/FIR_output_Q.txt}
+current_sim simulation_1
+close_sim
+generate_target Simulation [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files -ipstatic_source_dir C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/modelsim} {questa=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/questa} {riviera=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/riviera} {activehdl=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/mezclador/tb_design_1_wrapper_behav.wcfg
+source design_1_wrapper.tcl
+export_ip_user_files -of_objects  [get_files C:/Users/Paula/Downloads/mezclador/tb_design_1_wrapper_behav.wcfg] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/Paula/Downloads/mezclador/tb_design_1_wrapper_behav.wcfg
+close_sim
+launch_simulation
+source design_1_wrapper.tcl
+close_sim
+launch_simulation
+source design_1_wrapper.tcl
+create_wave_config
+restart
+run all
+run all
+run all
+run all
+run 1000 us
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_mezclador [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_mezclador.tcl
+open_bd_design {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd}
+make_wrapper -files [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -top
+set_property INCREMENTAL false [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_mezclador.tcl
+open_bd_design {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_intf_nets dds_compiler_0_M_AXIS_PHASE] [get_bd_intf_ports M_AXIS_PHASE_0]
+delete_bd_objs [get_bd_intf_nets dds_compiler_0_M_AXIS_DATA] [get_bd_intf_ports M_AXIS_DATA_0]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins dds_compiler_0/M_AXIS_DATA]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells dds_compiler_0]
+make_bd_intf_pins_external  [get_bd_cells dds_compiler_0]
+endgroup
+make_wrapper -files [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -top
+close_sim
+launch_simulation
+source tb_mezclador.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top design_1_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+current_sim simulation_5
+close_sim
+generate_target Simulation [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files -ipstatic_source_dir C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/modelsim} {questa=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/questa} {riviera=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/riviera} {activehdl=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source design_1_wrapper.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_mezclador [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+current_sim simulation_8
+close_sim
+launch_simulation
+source tb_mezclador.tcl
+open_bd_design {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd}
+current_sim simulation_2
+close_sim
+close_sim
+save_wave_config {C:/Users/Paula/Downloads/mezclador/tb_mezclador_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Paula/Downloads/mezclador/tb_mezclador_behav.wcfg
+set_property xsim.view {C:/Users/Paula/Downloads/mezclador/tb_design_1_wrapper_behav.wcfg C:/Users/Paula/Downloads/mezclador/tb_mezclador_behav.wcfg} [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/mezclador/tb_mezclador_behav.wcfg
+source tb_mezclador.tcl
+open_bd_design {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_register_slice:2.1 axi_register_slice_0
+endgroup
+delete_bd_objs [get_bd_cells axi_register_slice_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property -dict [list CONFIG.DIN_FROM {10} CONFIG.DIN_WIDTH {11} CONFIG.DIN_TO {0} CONFIG.DOUT_WIDTH {11}] [get_bd_cells xlslice_0]
+set_property location {1.5 562 -58} [get_bd_cells xlslice_0]
+copy_bd_objs /  [get_bd_cells {xlslice_0}]
+regenerate_bd_layout
+set_property -dict [list CONFIG.DIN_TO {16} CONFIG.DIN_FROM {26} CONFIG.DIN_WIDTH {32} CONFIG.DIN_TO {16} CONFIG.DIN_FROM {26}] [get_bd_cells xlslice_1]
+set_property -dict [list CONFIG.DIN_WIDTH {32} CONFIG.DIN_TO {0} CONFIG.DIN_FROM {10}] [get_bd_cells xlslice_0]
+delete_bd_objs [get_bd_nets coseno_1] [get_bd_ports coseno]
+connect_bd_net [get_bd_pins xlslice_0/Dout] [get_bd_pins xbip_dsp48_macro_0/B]
+connect_bd_net [get_bd_pins xlslice_0/Din] [get_bd_pins dds_compiler_0/m_axis_data_tdata]
+delete_bd_objs [get_bd_nets seno_1]
+connect_bd_net [get_bd_pins xlslice_1/Dout] [get_bd_pins xbip_dsp48_macro_1/B]
+delete_bd_objs [get_bd_ports seno]
+connect_bd_net [get_bd_pins xlslice_1/Din] [get_bd_pins dds_compiler_0/m_axis_data_tdata]
+regenerate_bd_layout
+set_property name seni [get_bd_cells xlslice_0]
+set_property name seno [get_bd_cells seni]
+set_property name coseno [get_bd_cells xlslice_1]
+set_property name sin [get_bd_cells coseno]
+set_property name cos [get_bd_cells seno]
+regenerate_bd_layout
+set_property name mult0 [get_bd_cells xbip_dsp48_macro_0]
+set_property name mult1 [get_bd_cells xbip_dsp48_macro_1]
+regenerate_bd_layout
+make_wrapper -files [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -top
+close_sim
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/mezclador/tb_mezclador_behav.wcfg
+source tb_mezclador.tcl
+save_wave_config {C:/Users/Paula/Downloads/mezclador/tb_mezclador_behav.wcfg}
+run 1000 us
+add_bp {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sim_1/new/tb_mezclador.vhd} 80
+restart
+run all
+run all
+run all
+add_bp {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sim_1/new/tb_mezclador.vhd} 100
+remove_bps -file {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sim_1/new/tb_mezclador.vhd} -line 100
+close_sim
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/mezclador/tb_mezclador_behav.wcfg
+source tb_mezclador.tcl
+save_wave_config {C:/Users/Paula/Downloads/mezclador/tb_mezclador_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/mezclador/tb_mezclador_behav.wcfg
+source tb_mezclador.tcl
+restart
+run all
+open_bd_design {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.Has_TREADY {false} CONFIG.PINC1 {0} CONFIG.Latency {7}] [get_bd_cells dds_compiler_0]
+endgroup
+make_wrapper -files [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -top
+close_sim
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/mezclador/tb_mezclador_behav.wcfg
+source tb_mezclador.tcl
+export_ip_user_files -of_objects  [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sim_1/new/tb_mezclador.vhd] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sim_1/new/tb_mezclador.vhd
+export_ip_user_files -of_objects  [get_files C:/Users/Paula/Downloads/mezclador/tb_mezclador_behav.wcfg] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/Paula/Downloads/mezclador/tb_mezclador_behav.wcfg
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sim_1/new/tb_mezclador.vhd
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_mezclador [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+close_sim
+generate_target Simulation [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files -ipstatic_source_dir C:/Users/Paula/Downloads/mezclador/mezclador.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/modelsim} {questa=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/questa} {riviera=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/riviera} {activehdl=C:/Users/Paula/Downloads/mezclador/mezclador.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_mezclador.tcl
+close_sim

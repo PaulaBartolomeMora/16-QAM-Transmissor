@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../mezclador.ip_user_files/bd/design_1/ip/design_1_dds_compiler_0_0/sim/design_1_dds_compiler_0_0.vhd" \
+"../../../../mezclador.ip_user_files/bd/design_1/sim/design_1.vhd" \
+"../../../../mezclador.ip_user_files/bd/design_1/ip/design_1_xbip_dsp48_macro_0_0/sim/design_1_xbip_dsp48_macro_0_0.vhd" \
+"../../../../mezclador.ip_user_files/bd/design_1/ip/design_1_xbip_dsp48_macro_0_2/sim/design_1_xbip_dsp48_macro_0_2.vhd" \
+"../../../../mezclador.srcs/sim_1/new/tb_mezclador.vhd" \
+
+# Do not sort compile order
+nosort
