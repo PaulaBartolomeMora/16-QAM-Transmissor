@@ -1,7 +1,7 @@
-Running: xsim.dir/tb_qam16_wrapper_behav/xsimk.exe -simmode gui -wdb tb_qam16_wrapper_behav.wdb -simrunnum 0 -socket 62207
+Running: xsim.dir/tb_qam16_wrapper_behav/xsimk.exe -simmode gui -wdb tb_qam16_wrapper_behav.wdb -simrunnum 0 -socket 62781
 Design successfully loaded
-Design Loading Memory Usage: 7628 KB (Peak: 7628 KB)
-Design Loading CPU Usage: 46 ms
+Design Loading Memory Usage: 7620 KB (Peak: 7620 KB)
+Design Loading CPU Usage: 31 ms
 Simulation completed
-Simulation Memory Usage: 16736 KB (Peak: 16736 KB)
-Simulation CPU Usage: 392327 ms
+Simulation Memory Usage: 11932 KB (Peak: 11932 KB)
+Simulation CPU Usage: 640749 ms

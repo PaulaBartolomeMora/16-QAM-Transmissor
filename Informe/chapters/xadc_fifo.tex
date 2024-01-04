@@ -56,7 +56,7 @@ Una vez configurado el bloque IP XADC se procede a simular la conversión de la 
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\textwidth]{img/simu/xadc.PNG}
-    \caption{Conversión analógico-digital de la señal triangular de entrada (I)}
+    \caption{Conversión analógico-digital de la señal triangular de entrada}
     \label{fig:xadc}
 \end{figure}
 
@@ -70,7 +70,7 @@ Por otro lado, en la Figura \ref{fig:xadc2} se aprecia de una forma más clara l
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{img/simu/xadc2.PNG}
-    \caption{Fin de conversión y dato preparado (III)}
+    \caption{Fin de conversión y dato preparado}
     \label{fig:xadc2}
 \end{figure}
 
@@ -94,6 +94,7 @@ end loop;
 \section{Lógica de control de lectura y escritura de los datos de la FIFO}
 
 \subsection{Configuración del bloque FIFO}
+\label{section:fifo}
 
 El bloque de memoria FIFO almacenará cada uno de los datos capturados por el bloque XADC. Consta de una capacidad de 256 posiciones de 12 bits cada una, por lo que a la entrada del bloque FIFO será precisa la configuración de un bloque auxiliar Slice para transformar los 16 bits de la señal de salida del XADC en sus 12 bits de mayor peso. 
 

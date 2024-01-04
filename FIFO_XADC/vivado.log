@@ -2,10 +2,10 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sat Dec 16 16:23:29 2023
-# Process ID: 12808
+# Start of session at: Wed Dec 20 11:44:00 2023
+# Process ID: 12232
 # Current directory: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12556 C:\Users\Paula\OneDrive - Universidad de Alcala\Todo\16_QAM_Transmissor\FIFO_XADC\P1_fifo_xadc.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22032 C:\Users\Paula\OneDrive - Universidad de Alcala\Todo\16_QAM_Transmissor\FIFO_XADC\P1_fifo_xadc.xpr
 # Log file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/vivado.log
 # Journal file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC\vivado.jou
 #-----------------------------------------------------------
@@ -13,13 +13,12 @@ start_gui
 open_project {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.xpr}
 INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
 Current project path is 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC'
-INFO: [Project 1-313] Project file moved from 'C:/Users/Paula/Downloads/FIFO_XADC' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
-open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 724.250 ; gain = 72.875
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 795.430 ; gain = 104.918
 update_compile_order -fileset sources_1
 launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
@@ -47,8 +46,8 @@ INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad d
 INFO: [VRFC 10-307] analyzing entity design_1
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity prueba_xadc_tb
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 724.680 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 839.426 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
 Vivado Simulator 2017.4
@@ -89,7 +88,7 @@ Compiling architecture behavioral of entity xil_defaultlib.prueba_xadc_tb
 Built simulation snapshot prueba_xadc_tb_behav
 ERROR: [Common 17-165] Too many positional options when parsing '-notrace', please type 'webtalk -help' for usage info.
 
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 724.680 ; gain = 0.000
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 839.426 ; gain = 0.000
 INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.sim/sim_1/behav/xsim'
@@ -111,14 +110,15 @@ source prueba_xadc_tb.tcl
 # }
 # run 1000ns
 WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 857.762 ; gain = 18.336
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'prueba_xadc_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 739.859 ; gain = 15.180
-run 1000 us
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 857.762 ; gain = 19.684
+run 1000 ms
 Failure: Fin simulacion
 Time: 202270855 ps  Iteration: 1  Process: /prueba_xadc_tb/stimulus  File: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd
 $finish called at time : 202270855 ps : File "C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/Documents/prueba_xadc_tb.vhd" Line 216
-run 1000 us
+run 1000 ms
 ***** XADC Simulation Analog Data File Format ******
 NAME: design.txt or user file name passed with generic sim_monitor_file
 FORMAT: First line is header line. Valid column name are: TIME TEMP VCCINT VCCAUX VCCBRAM VCCPINT VCCPAUX VCCDDRO VP VN VAUXP[0] VAUXN[0] ....
@@ -135,12 +135,12 @@ TIME TEMP VCCINT  VP VN VAUXP[0] VAUXN[0]
 Failure:  Analog Data File Error : The time value should be integer in ns scale and the last time value needs bigger than simulation time.
 Time: 492308 ns  Iteration: 0  Process: /prueba_xadc_tb/uut/xadc_wiz_0/U0/READFILE_P  File: D:\Xilinx\Vivado\2017.4\data/vhdl/src/unisims/primitive/XADC.vhd
 $finish called at time : 492308 ns
-run 1000 us
+run 1000 ms
 Failure: *** Analog Data File Error: The data type should be REAL, e.g. 3.0  0.0  -0.5 
 Time: 492308 ns  Iteration: 0  Process: /prueba_xadc_tb/uut/xadc_wiz_0/U0/READFILE_P  File: D:\Xilinx\Vivado\2017.4\data/vhdl/src/unisims/primitive/XADC.vhd
 $finish called at time : 492308 ns
+save_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg}
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 764.230 ; gain = 0.000
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 16 16:30:55 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 20 14:13:53 2023...

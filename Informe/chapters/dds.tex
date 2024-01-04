@@ -1,16 +1,28 @@
-\chapter{Bloque DDS}
-\label{section:dds}
+\chapter{Mezclador de Transmisión}
+\label{section:mezcla}
+
+En este Capítulo se describe el bloque de mezclador de transmisión.
+
+generación de componenes
+
+
+encargado de la modulación 16-QAM. Este bloque se compone de tres procesos: mapeado 16-QAM, aplicación de Zero Padding y filtrado \textit{Root Raised Cosine}. En la Figura \ref{fig:qam_fir} se puede visualizar la estructura de los bloques IP que se han incluido en este segundo proyecto de Vivado. 
+
+%Para generar las componentes I/Q de transmisión se multiplican los datos I/Q generados anteriormente por los valores de las funciones coseno/-seno obtenidas por un sistema DDS. Las muestras del DDS y Salidas_RRC se procesan y multiplicand a 3x192 MHz, esto es 576 MHz Se generan señales sinusoidales coseno/-seno de frecuencia 100 MHz (5 / 6 muestras por ciclo) Para la multiplicación se hará uso de un bloque IP multiplicador. El número de bits de cada bloque es una consideración global del diseño realizado.
+
+
+\section{Generación de las sinusoides coseno/-seno mediante bloque DDS a 576 MHz}
 
 
 
-\section*{Generación de las sinusoides coseno/-seno mediante bloque DDS a 576 MHz }
-
-%5.	Generación de las sinusoides coseno/-seno mediante bloque DDS a 576 MHz 
-%6.	Bloque de multiplicación y suma de señales de transmisión I/Q. Comprobación de datos. 
-%7.	Configuración y uso del bloque MMCM en el diseño
+\section{Bloque de multiplicación y suma de señales de transmisión I/Q. Comprobación de datos}
 
 
 
-%8.	Codificación de ficheros testbench y pruebas realizadas para la verificación del funcionamiento junto con el simulador Matlab. 
-%9. Realización de un diseño modular que funcione correctamente en su conjunto 
-%10. Inclusión de otras alternativas/opciones adicionales en el diseño planteado
+\section{Configuración y uso del bloque MMCM en el diseño}
+
+
+
+
+
+

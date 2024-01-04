@@ -23,8 +23,6 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
 Compiling package ieee.std_logic_textio
 Compiling package unisim.vcomponents
 Compiling package xbip_utils_v3_0_8.xbip_utils_v3_0_8_pkg
@@ -34,6 +32,7 @@ Compiling package fir_compiler_v7_2_10.components
 Compiling package ieee.math_real
 Compiling package axi_utils_v2_0_4.global_util_pkg
 Compiling package axi_utils_v2_0_4.axi_utils_comps
+Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_signed
 Compiling package ieee.vital_timing
 Compiling package ieee.vital_primitives

@@ -1,1 +1,2 @@
 Breakpoint File Version 1.0
+105 true C:/Users/Paula/Downloads/map_qam_enviado/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd

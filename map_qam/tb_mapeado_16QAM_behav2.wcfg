@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="96763338000fs"></ZoomStartTime>
-      <ZoomEndTime time="631908774001fs"></ZoomEndTime>
-      <Cursor1Time time="542717868000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="153900000001fs"></ZoomEndTime>
+      <Cursor1Time time="140000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="221"></NameColumnWidth>
-      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+      <NameColumnWidth column_width="184"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="17" />
    <wvobject fp_name="/tb_qam16_wrapper/ce" type="logic">
       <obj_property name="ElementShortName">ce</obj_property>
       <obj_property name="ObjectShortName">ce</obj_property>
@@ -35,17 +35,31 @@
       <obj_property name="ElementShortName">entrada[11:0]</obj_property>
       <obj_property name="ObjectShortName">entrada[11:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_qam16_wrapper/eof" type="other">
+      <obj_property name="ElementShortName">eof</obj_property>
+      <obj_property name="ObjectShortName">eof</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_qam16_wrapper/salida_I" type="array">
       <obj_property name="ElementShortName">salida_I[7:0]</obj_property>
       <obj_property name="ObjectShortName">salida_I[7:0]</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_qam16_wrapper/salida_I" type="array">
+      <obj_property name="ElementShortName">salida_I[7:0]</obj_property>
+      <obj_property name="ObjectShortName">salida_I[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_qam16_wrapper/salida_Q" type="array">
       <obj_property name="ElementShortName">salida_Q[7:0]</obj_property>
       <obj_property name="ObjectShortName">salida_Q[7:0]</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_qam16_wrapper/salida_Q" type="array">
+      <obj_property name="ElementShortName">salida_Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">salida_Q[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_qam16_wrapper/s_axis_data_tready_0" type="logic">
       <obj_property name="ElementShortName">s_axis_data_tready_0</obj_property>
