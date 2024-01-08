@@ -8,7 +8,7 @@ Como se ha introducido anteriormente, en este capítulo se definirá el proceso 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/diseno/xadc_fifo.PNG}
+    \includegraphics[width=1\textwidth]{img/diseno/xadc_fifo.PNG}
     \caption{Diseño del bloque XADC+FIFO}
     \label{fig:xadc_fifo}
 \end{figure}
@@ -40,13 +40,6 @@ Como se puede ver en la Figura \ref*{fig:design} se definen valores de tensión 
 
 El XADC se configura en modo continuo y con un único canal de entrada para capturar las muestras, por lo que se ha seleccionado el canal 3 para registrar el valor convertido de tensión (\textit{s\_drp\_daddr}). La conversión se realizará a una velocidad de 1 MS/seg con un reloj de 52 MHz y se establecerá un tiempo de adquisición igual a 4 para que la señal de captura sea estable.
 
-%hablar de la configuración del xadc
-%poner foto del esquema de la documentación
-%hablar del 192mhz
-%repetir capturas
-%meter codigo
-
-
 \subsection{Simulación de la señal de entrada}
 
 Una vez configurado el bloque IP XADC se procede a simular la conversión de la señal de entrada. En la figura \ref{fig:xadc} se puede visualizar cómo se obtiene la salida digital de 16 bits por el puerto \textit{do\_out}.
@@ -55,7 +48,7 @@ Una vez configurado el bloque IP XADC se procede a simular la conversión de la 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{img/simu/xadc.PNG}
+    \includegraphics[width=1\textwidth, height=8cm]{img/simu/xadc.PNG}
     \caption{Conversión analógico-digital de la señal triangular de entrada}
     \label{fig:xadc}
 \end{figure}
@@ -189,7 +182,7 @@ En las Figuras \ref{fig:fifo_wr} y \ref{fig:fifo_rd} se pueden visualizar los pr
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{img/simu/fifo_wr.PNG}
+    \includegraphics[width=1\textwidth,height=7cm]{img/simu/fifo_wr.PNG}
     \caption{Simulación del proceso de escritura en la memoria FIFO}
     \label{fig:fifo_wr}
 \end{figure}
@@ -198,7 +191,7 @@ En las Figuras \ref{fig:fifo_wr} y \ref{fig:fifo_rd} se pueden visualizar los pr
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{img/simu/fifo_rd.PNG}
+    \includegraphics[width=1\textwidth,height=7cm]{img/simu/fifo_rd.PNG}
     \caption{Simulación del proceso de lectura en la memoria FIFO}
     \label{fig:fifo_rd}
 \end{figure}

@@ -4,11 +4,11 @@
 
 En este Capítulo se muestra el bloque encargado de la modulación 16-QAM. Este bloque se compone de tres procesos: mapeado 16-QAM, aplicación de Zero Padding y filtrado \textit{Root Raised Cosine}. En la Figura \ref{fig:qam_fir} se puede visualizar la estructura de los bloques IP que se han incluido en este segundo proyecto de Vivado. 
 
-\vspace{2mm}
+\vspace{1mm}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{img/diseno/qam_fir.PNG}
+	\includegraphics[width=1\textwidth,height=9cm]{img/diseno/qam_fir.PNG}
 	\caption{Diseño de los bloques mapeado 16-QAM + ZP y filtrado RRC}
 	\label{fig:qam_fir}
 \end{figure}
@@ -21,11 +21,9 @@ En este Capítulo se muestra el bloque encargado de la modulación 16-QAM. Este 
 
 Para implementar una modulación 16-QAM (Modulación de Amplitud en Cuadratura) lo primero que se debe realizar es el bloque de mapeado, con el fin de asignar patrones de amplitud y fase a cada símbolo y proporcionar una mayor eficiencia espectral. 
 
-\pagebreak
+\vspace{3mm}
 
-Para ello, se recibe una señal de entrada de 12 bits, obtenida a partir de la lectura de los 200 valores almacenados en la memoria FIFO. Se debe crear un proceso en el testbench que se ejecute en cada ciclo del reloj global, configurado a 192MHz, que realice la lectura del fichero \textit{FIFO\_out.txt}. 
-
-Como se había descrito en el Apartado \ref{section:fifo}, se escriben en dicho fichero los valores almacenados en la memoria FIFO para emplearlo como la entrada del bloque de mapeado 16-QAM y optimizar así los proyectos de Vivado.
+Para ello, se recibe una señal de entrada de 12 bits, obtenida a partir de la lectura de los 200 valores almacenados en la memoria FIFO. Se debe crear un proceso en el testbench que se ejecute en cada ciclo del reloj global, configurado a 192MHz, que realice la lectura del fichero \textit{FIFO\_out.txt}. Como se había descrito en el Apartado \ref{section:fifo}, se escriben en dicho fichero los valores almacenados en la memoria FIFO para emplearlo como la entrada del bloque de mapeado 16-QAM y optimizar así los proyectos de Vivado.
 
 \vspace{5mm}
 
@@ -56,17 +54,17 @@ Como se había descrito en el Apartado \ref{section:fifo}, se escriben en dicho 
 end process;  
 \end{lstlisting}
 
-\vspace{3mm}
+\vspace{2mm}
 
 Es importante tener en cuenta que la lectura se produce a una frecuencia de 2MHz, por lo que se debe añadir un contador de 96 ciclos en el proceso, además de comprobar si el fichero ha llegado al final. Según las especificaciones de este proyecto, la salida del mapeado debe funcionar a una frecuencia de 6MHz, es decir, el triple de la anterior porque por cada valor a la entrada de 12 bits se obtendrán 3 símbolos 16-QAM. En otros términos, se tratarán los bits de entrada de 4 en 4 para mapear cada símbolo 16-QAM. 
 
 El mapeado de cada símbolo 16-QAM supone la generación a la salida de dos caminos independientes: uno para la componente en Fase (I) y otro para la de Cuadratura (Q). Cada símbolo es de 3 bits con signo y puede tomar los valores (-3,-1,+1,+3) como se puede visualizar en la Figura \ref{fig:qam}, procedente del ejemplo simulado en Matlab.
 
-\pagebreak
+\vspace{3mm}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.45\textwidth]{img/matlab/qam.PNG}
+	\includegraphics[width=0.4\textwidth]{img/matlab/qam.PNG}
 	\caption{Constelación 16-QAM}
 	\label{fig:qam}
 \end{figure}
@@ -75,7 +73,7 @@ El mapeado de cada símbolo 16-QAM supone la generación a la salida de dos cami
    
 En este caso, se han decidido ajustar las tablas Q e I para establecer una codificación Gray. Esta se trata de una técnica específica que garantiza que solo un bit cambie entre dos valores consecutivos. Además, consigue minimizar la posibilidad de errores producidos por cambios de múltiples bits en la transmisión. A continuación, se puede visualizar la definición de cada una de las tablas:
 
-\vspace{3mm}
+\vspace{4mm}
 
 \begin{lstlisting}[language=VHDL, style=mystyle, caption={Definición de la tabla de mapeado Q}]
 type Array3Bit is array (0 to 15) of STD_LOGIC_VECTOR(2 downto 0);
@@ -147,14 +145,48 @@ end process;
 Como se puede visualizar, el proceso emplea dos contadores: uno para extraer en cada flanco los bits capturados de 4 en 4 e implementar el mapeado QAM para obtener los símbolos de 3 bits y otro para implementar la relación 1:32 respectiva al Zero Padding.
 
 \subsection{Comprobación del proceso de mapeado + Zero Padding}
+\label{sec:map}
 
-En las Figuras \ref{fig:proc2}, \ref{fig:proc3} y \ref{fig:proc1} se puede apreciar cómo se implementa el bloque de mapeado 16-QAM + zero-padding a través del proceso expuesto anteriormente.
+En el testbench se incluye el proceso de estimulación de las señales de habilitación (\textit{clock enable}) y de reset del bloque de mapeado. También, se pueden apreciar las líneas de código dedicadas a la activación de las señales de validación de datos del filtro (\textit{s\_axis\_data\_tvalid}), pero esto se detallará en el Apartado \ref{sec:fir}. 
 
 \vspace{3mm}
 
+Además, se deben abrir los ficheros correspondientes a la lectura y escritura de datos para cada uno de los bloques: para lectura de las muestras almacenadas en la FIFO y para escritura de las salidas de las ramas de filtrado.
+
+\vspace{3mm}
+
+\begin{lstlisting}[language=VHDL, style=mystyle, caption={Proceso de estimulación de señales de reset y clock enable}]
+process
+begin
+   file_open(file_handle, ".\FIFO_output.txt", READ_MODE);
+   file_open(file_handle_I, ".\FIR_output_I.txt", WRITE_MODE);
+   file_open(file_handle_Q, ".\FIR_output_Q.txt", WRITE_MODE);
+	
+   ce <= '0';
+   rst_0 <= '1';        
+  
+   s_axis_data_tvalid_0 <= '0';
+   s_axis_data_tvalid_1 <= '0';
+	
+   wait for 32*clk_period;
+   rst_0 <= '0';
+
+   wait for 32*clk_period;
+   ce <= '1';
+   s_axis_data_tvalid_0 <= '1';
+   s_axis_data_tvalid_1 <= '1';  
+		  
+   wait;
+end process;  
+\end{lstlisting}
+
+\vspace{3mm}
+
+A continuación, en las Figuras \ref{fig:proc2}, \ref{fig:proc3} y \ref{fig:proc1} se puede apreciar cómo se implementa el bloque de mapeado 16-QAM + zero-padding a través del proceso expuesto anteriormente.
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{img/simu/process_qam_2.PNG}
+	\includegraphics[width=1\textwidth,height=5cm]{img/simu/process_qam_2.PNG}
 	\caption{Simulación completa del proceso de mapeado 16-QAM + ZP}
 	\label{fig:proc2}
 \end{figure}
@@ -163,29 +195,29 @@ En las Figuras \ref{fig:proc2}, \ref{fig:proc3} y \ref{fig:proc1} se puede aprec
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{img/simu/process_qam_3.PNG}
+	\includegraphics[width=1\textwidth,height=5cm]{img/simu/process_qam_3.PNG}
 	\caption{Simulación del proceso de mapeado 16-QAM + ZP (II) (zoom medio)}
 	\label{fig:proc3}
 \end{figure}
 
 \vspace{3mm}
 
-\begin{figure}[h]
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\textwidth]{img/simu/process_qam.PNG}
+	\includegraphics[width=1\textwidth,height=5cm]{img/simu/process_qam.PNG}
 	\caption{Simulación del proceso de mapeado 16-QAM + ZP (III) (zoom alto)}
 	\label{fig:proc1}
 \end{figure}
 
-\pagebreak
-
-\vspace{3mm}
+\clearpage
 
 \section{Bloque de filtrado pulse shaping - RRC}
 
 \subsection{Configuración del filtro RRC}
 
 El filtro pulse shaping del \textit{Root Raised Cosine} (RRC) es un tipo de filtro denominado de coseno elevado. Se emplea en sistemas de comunicación digital para dar forma de onda a los pulsos que se transmiten. Minimiza la interferencia entre símbolos adyacentes y maximiza la eficiencia del espectro.
+
+\vspace{3mm}
 
 El primer paso a seguir para crear el filtro RRC es obtener los coeficientes del mismo. Para ello, se va a emplear Matlab, estableciendo de la siguiente forma las especificaciones del filtro a diseñar:
 
@@ -217,8 +249,6 @@ Tras ejecutar el código, se obtendrán en total 193 coeficientes. Esto tiene co
 
 Mediante la herramienta gráfica \textit{fvtool} que proporciona Matlab se puede obtener la respuesta impulsiva del filtro RRC tal y como se muestra en la Figura \ref{fig:fvtool}.
 
-\pagebreak
-
 Para añadir el bloque del filtro en Vivado se requiere conocer el número de bits de los coeficientes, tanto de la parte entera como de la parte fraccionaria. Para ello, se emplea el comando de MatLab \textit{sfi(rrcFilter)} y se obtiene la salida de la Figura \ref{fig:fvtool2}
 
 \vspace{3mm}
@@ -238,7 +268,7 @@ Como los coeficientes se encuentran dentro de un rango de valores entre 0 y 1, s
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.65\textwidth]{img/diseno/fir.PNG}
+	\includegraphics[width=0.6\textwidth]{img/diseno/fir.PNG}
 	\caption{Configuración del filtro en Vivado}
 	\label{fig:fvtool2}
 \end{figure}
@@ -296,12 +326,17 @@ end process;
 \pagebreak
 
 \subsection{Comprobación del filtrado RRC}
+\label{sec:fir}
 
 En las Figuras \ref{fig:rrc1} y \ref{fig:rrc2} se visualiza la simulación completa del proyecto que incluye los bloques de mapeado 16-QAM + zero-padding y filtrado RRC. Se puede comprobar cómo el filtro da forma de onda a los pulsos que se transmiten y que provienen del proceso de mapeado previo.
 
+Como se había adelantado en el Apartado \ref{sec:map}, en el testbench se deben activar las señales de validación de datos del filtro (\textit{s\_axis\_data\_tvalid}) a la vez que se produce la habilitación del \textit{clock enable} del mapeado. Esto es imprescindible añadirlo para que no se realice el filtrado si no existen nuevas muestras de entrada. 
+
+\vspace{3mm}
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{img/simu/rrc.PNG}
+	\includegraphics[width=1\textwidth, height=10cm]{img/simu/rrc.PNG}
 	\caption{Simulación de los bloques de mapeado 16-QAM + ZP y filtrado RRC (I)}
 	\label{fig:rrc1}
 \end{figure}
@@ -310,7 +345,7 @@ En las Figuras \ref{fig:rrc1} y \ref{fig:rrc2} se visualiza la simulación compl
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{img/simu/rrc2.PNG}
+	\includegraphics[width=1\textwidth,height=10cm]{img/simu/rrc2.PNG}
 	\caption{Simulación de los bloques de mapeado 16-QAM + ZP y filtrado RRC (II)}
 	\label{fig:rrc2}
 \end{figure}
