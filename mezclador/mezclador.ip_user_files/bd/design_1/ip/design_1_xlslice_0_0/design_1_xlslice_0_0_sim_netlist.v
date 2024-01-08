@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Wed Jan  3 13:03:19 2024
+// Date        : Fri Jan  5 14:11:00 2024
 // Host        : DESKTOP-Q5AUOQS running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/design_1_xlslice_0_0_sim_netlist.v
+//               c:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/design_1_xlslice_0_0_sim_netlist.v
 // Design      : design_1_xlslice_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,12 +17,12 @@
 module design_1_xlslice_0_0
    (Din,
     Dout);
-  input [31:0]Din;
-  output [10:0]Dout;
+  input [15:0]Din;
+  output [7:0]Dout;
 
-  wire [31:0]Din;
+  wire [15:0]Din;
 
-  assign Dout[10:0] = Din[10:0];
+  assign Dout[7:0] = Din[15:8];
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Wed Jan  3 13:04:40 2024
+-- Date        : Sun Jan  7 11:55:24 2024
 -- Host        : DESKTOP-Q5AUOQS running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_0/design_1_dds_compiler_0_0_stub.vhdl
@@ -17,9 +17,9 @@ entity design_1_dds_compiler_0_0 is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
     m_axis_data_tvalid : out STD_LOGIC;
-    m_axis_data_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axis_data_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 );
     m_axis_phase_tvalid : out STD_LOGIC;
-    m_axis_phase_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    m_axis_phase_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
 
 end design_1_dds_compiler_0_0;
@@ -28,7 +28,7 @@ architecture stub of design_1_dds_compiler_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "aclk,aresetn,m_axis_data_tvalid,m_axis_data_tdata[31:0],m_axis_phase_tvalid,m_axis_phase_tdata[15:0]";
+attribute black_box_pad_pin of stub : architecture is "aclk,aresetn,m_axis_data_tvalid,m_axis_data_tdata[15:0],m_axis_phase_tvalid,m_axis_phase_tdata[31:0]";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "dds_compiler_v6_0_15,Vivado 2017.4";
 begin

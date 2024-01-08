@@ -6,30 +6,33 @@ preplace port M_AXIS_PHASE_0 -pg 1 -y 410 -defaultsOSRD
 preplace port rst -pg 1 -y 390 -defaultsOSRD
 preplace port m_axis_data_tvalid_0 -pg 1 -y 390 -defaultsOSRD
 preplace port clk -pg 1 -y 50 -defaultsOSRD
-preplace portBus TX_I -pg 1 -y 70 -defaultsOSRD
-preplace portBus Salida_RRC_Q -pg 1 -y 200 -defaultsOSRD
-preplace portBus m_axis_data_tdata_0 -pg 1 -y 310 -defaultsOSRD
-preplace portBus seno -pg 1 -y 290 -defaultsOSRD
-preplace portBus TX_Q -pg 1 -y 200 -defaultsOSRD
-preplace portBus coseno -pg 1 -y 270 -defaultsOSRD
+preplace portBus antena -pg 1 -y 120 -defaultsOSRD
+preplace portBus TX_I -pg 1 -y 40 -defaultsOSRD
+preplace portBus Salida_RRC_Q -pg 1 -y 310 -defaultsOSRD
+preplace portBus m_axis_data_tdata_0 -pg 1 -y 370 -defaultsOSRD
+preplace portBus seno -pg 1 -y 510 -defaultsOSRD
+preplace portBus TX_Q -pg 1 -y 230 -defaultsOSRD
+preplace portBus coseno -pg 1 -y 190 -defaultsOSRD
 preplace portBus Salida_RRC_I -pg 1 -y 70 -defaultsOSRD
 preplace inst dds_compiler_0 -pg 1 -lvl 2 -y 380 -defaultsOSRD
-preplace inst sin -pg 1 -lvl 1 -y 250 -defaultsOSRD
-preplace inst mult0 -pg 1 -lvl 2 -y 70 -defaultsOSRD
-preplace inst mult1 -pg 1 -lvl 2 -y 200 -defaultsOSRD
-preplace inst cos -pg 1 -lvl 1 -y 150 -defaultsOSRD
-preplace netloc xbip_dsp48_macro_1_P 1 2 1 NJ
-preplace netloc xlslice_1_Dout 1 1 2 240 290 NJ
-preplace netloc xbip_dsp48_macro_0_P 1 2 1 NJ
-preplace netloc A_0_1 1 0 2 NJ 70 NJ
-preplace netloc A_0_2 1 0 2 NJ 200 NJ
-preplace netloc dds_compiler_0_m_axis_data_tdata 1 0 3 20 300 NJ 300 540
+preplace inst mult_gen_0 -pg 1 -lvl 1 -y 70 -defaultsOSRD
+preplace inst mult_gen_1 -pg 1 -lvl 1 -y 310 -defaultsOSRD
+preplace inst sumador -pg 1 -lvl 2 -y 120 -defaultsOSRD
+preplace inst seno -pg 1 -lvl 1 -y 510 -defaultsOSRD
+preplace inst coseno -pg 1 -lvl 1 -y 190 -defaultsOSRD
+preplace netloc xbip_dsp48_macro_1_P 1 1 2 250 230 NJ
+preplace netloc xbip_dsp48_macro_0_P 1 1 2 240 40 NJ
+preplace netloc A_0_1 1 0 1 NJ
+preplace netloc A_0_2 1 0 1 NJ
+preplace netloc sumador_P 1 2 1 NJ
+preplace netloc dds_compiler_0_m_axis_data_tdata 1 0 3 30 380 260J 300 570
+preplace netloc coseno_Dout 1 0 3 30 140 240 190 NJ
+preplace netloc seno_Dout 1 0 3 40 420 250 510 NJ
 preplace netloc dds_compiler_0_m_axis_data_tvalid 1 2 1 NJ
 preplace netloc dds_compiler_0_M_AXIS_PHASE 1 2 1 NJ
 preplace netloc aresetn_0_1 1 0 2 NJ 390 NJ
-preplace netloc aclk_0_1 1 0 2 NJ 50 220
-preplace netloc xlslice_0_Dout 1 1 2 230 270 NJ
-levelinfo -pg 1 0 120 390 560 -top 0 -bot 460
+preplace netloc aclk_0_1 1 0 2 20 240 270
+levelinfo -pg 1 0 140 420 590 -top 0 -bot 560
 ",
 }
 0

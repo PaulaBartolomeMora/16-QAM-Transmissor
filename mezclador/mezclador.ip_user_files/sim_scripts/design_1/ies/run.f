@@ -29,19 +29,20 @@
   "../../../bd/design_1/ip/design_1_dds_compiler_0_0/sim/design_1_dds_compiler_0_0.vhd" \
   "../../../bd/design_1/sim/design_1.vhd" \
 -endlib
--makelib ies_lib/xbip_dsp48_macro_v3_0_15 \
-  "../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/c423/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_xbip_dsp48_macro_0_0/sim/design_1_xbip_dsp48_macro_0_0.vhd" \
-  "../../../bd/design_1/ip/design_1_xbip_dsp48_macro_0_2/sim/design_1_xbip_dsp48_macro_0_2.vhd" \
--endlib
 -makelib ies_lib/xlslice_v1_0_1 \
   "../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_xlslice_0_0/sim/design_1_xlslice_0_0.v" \
   "../../../bd/design_1/ip/design_1_xlslice_0_1/sim/design_1_xlslice_0_1.v" \
+-endlib
+-makelib ies_lib/xbip_dsp48_macro_v3_0_15 \
+  "../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/c423/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_xbip_dsp48_macro_0_1/sim/design_1_xbip_dsp48_macro_0_1.vhd" \
+  "../../../bd/design_1/ip/design_1_mult_gen_0_0/sim/design_1_mult_gen_0_0.vhd" \
+  "../../../bd/design_1/ip/design_1_mult_gen_0_1/sim/design_1_mult_gen_0_1.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

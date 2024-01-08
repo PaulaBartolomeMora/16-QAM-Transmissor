@@ -163,119 +163,126 @@ proc create_root_design { parentCell } {
   # Create ports
   set Salida_RRC_I [ create_bd_port -dir I -from 23 -to 0 -type data Salida_RRC_I ]
   set Salida_RRC_Q [ create_bd_port -dir I -from 23 -to 0 -type data Salida_RRC_Q ]
-  set TX_I [ create_bd_port -dir O -from 34 -to 0 -type data TX_I ]
-  set TX_Q [ create_bd_port -dir O -from 34 -to 0 -type data TX_Q ]
+  set TX_I [ create_bd_port -dir O -from 31 -to 0 -type data TX_I ]
+  set TX_Q [ create_bd_port -dir O -from 31 -to 0 -type data TX_Q ]
+  set antena [ create_bd_port -dir O -from 32 -to 0 -type data antena ]
   set clk [ create_bd_port -dir I -type clk clk ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {192000000} \
  ] $clk
-  set coseno [ create_bd_port -dir O -from 10 -to 0 coseno ]
-  set m_axis_data_tdata_0 [ create_bd_port -dir O -from 31 -to 0 m_axis_data_tdata_0 ]
+  set coseno [ create_bd_port -dir O -from 7 -to 0 coseno ]
+  set m_axis_data_tdata_0 [ create_bd_port -dir O -from 15 -to 0 m_axis_data_tdata_0 ]
   set m_axis_data_tvalid_0 [ create_bd_port -dir O m_axis_data_tvalid_0 ]
   set rst [ create_bd_port -dir I -type rst rst ]
-  set seno [ create_bd_port -dir O -from 10 -to 0 seno ]
+  set seno [ create_bd_port -dir O -from 7 -to 0 seno ]
 
-  # Create instance: cos, and set properties
-  set cos [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 cos ]
+  # Create instance: coseno, and set properties
+  set coseno [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 coseno ]
   set_property -dict [ list \
-   CONFIG.DIN_FROM {10} \
+   CONFIG.DIN_FROM {7} \
    CONFIG.DIN_TO {0} \
-   CONFIG.DIN_WIDTH {32} \
-   CONFIG.DOUT_WIDTH {11} \
- ] $cos
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {8} \
+ ] $coseno
 
   # Create instance: dds_compiler_0, and set properties
   set dds_compiler_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:dds_compiler:6.0 dds_compiler_0 ]
   set_property -dict [ list \
    CONFIG.Channels {1} \
    CONFIG.DATA_Has_TLAST {Not_Required} \
-   CONFIG.DDS_Clock_Rate {192} \
-   CONFIG.Frequency_Resolution {8789.06} \
+   CONFIG.DDS_Clock_Rate {576} \
+   CONFIG.Frequency_Resolution {1} \
    CONFIG.Has_ARESETn {true} \
    CONFIG.Has_Phase_Out {true} \
    CONFIG.Has_TREADY {false} \
-   CONFIG.Latency {8} \
+   CONFIG.Latency {6} \
    CONFIG.M_DATA_Has_TUSER {Not_Required} \
    CONFIG.M_PHASE_Has_TUSER {Not_Required} \
    CONFIG.Negative_Sine {true} \
-   CONFIG.Noise_Shaping {None} \
-   CONFIG.Output_Frequency1 {0} \
+   CONFIG.Noise_Shaping {Auto} \
+   CONFIG.Output_Frequency1 {100} \
    CONFIG.Output_Frequency2 {0} \
    CONFIG.Output_Selection {Sine_and_Cosine} \
-   CONFIG.Output_Width {16} \
-   CONFIG.PINC1 {0} \
+   CONFIG.Output_Width {8} \
+   CONFIG.PINC1 {1011000111000111000111000111} \
    CONFIG.PINC2 {0} \
-   CONFIG.Parameter_Entry {Hardware_Parameters} \
+   CONFIG.POFF1 {1000000000000000000000000000} \
+   CONFIG.Parameter_Entry {System_Parameters} \
    CONFIG.PartsPresent {Phase_Generator_and_SIN_COS_LUT} \
    CONFIG.Phase_Increment {Fixed} \
-   CONFIG.Phase_Width {16} \
+   CONFIG.Phase_Offset_Angles1 {0.125} \
+   CONFIG.Phase_Width {30} \
    CONFIG.Phase_offset {Fixed} \
    CONFIG.S_PHASE_Has_TUSER {Not_Required} \
  ] $dds_compiler_0
 
-  # Create instance: mult0, and set properties
-  set mult0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xbip_dsp48_macro:3.0 mult0 ]
+  # Create instance: mult_gen_0, and set properties
+  set mult_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:mult_gen:12.0 mult_gen_0 ]
   set_property -dict [ list \
-   CONFIG.a_width {24} \
-   CONFIG.areg_3 {true} \
-   CONFIG.areg_4 {true} \
-   CONFIG.b_width {11} \
-   CONFIG.breg_3 {true} \
-   CONFIG.breg_4 {true} \
-   CONFIG.creg_3 {false} \
-   CONFIG.creg_4 {false} \
-   CONFIG.creg_5 {false} \
-   CONFIG.instruction1 {A*B} \
-   CONFIG.mreg_5 {true} \
-   CONFIG.p_binarywidth {0} \
-   CONFIG.p_full_width {35} \
-   CONFIG.p_width {35} \
-   CONFIG.preg_6 {true} \
- ] $mult0
+   CONFIG.OutputWidthHigh {31} \
+   CONFIG.PortAWidth {24} \
+   CONFIG.PortBWidth {8} \
+ ] $mult_gen_0
 
-  # Create instance: mult1, and set properties
-  set mult1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xbip_dsp48_macro:3.0 mult1 ]
+  # Create instance: mult_gen_1, and set properties
+  set mult_gen_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:mult_gen:12.0 mult_gen_1 ]
   set_property -dict [ list \
-   CONFIG.a_width {24} \
-   CONFIG.areg_3 {true} \
-   CONFIG.areg_4 {true} \
-   CONFIG.b_width {11} \
-   CONFIG.breg_3 {true} \
-   CONFIG.breg_4 {true} \
-   CONFIG.creg_3 {false} \
-   CONFIG.creg_4 {false} \
-   CONFIG.creg_5 {false} \
-   CONFIG.instruction1 {A*B} \
-   CONFIG.mreg_5 {true} \
-   CONFIG.p_binarywidth {0} \
-   CONFIG.p_full_width {35} \
-   CONFIG.p_width {35} \
-   CONFIG.preg_6 {true} \
- ] $mult1
+   CONFIG.OutputWidthHigh {31} \
+   CONFIG.PortAWidth {24} \
+   CONFIG.PortBWidth {8} \
+ ] $mult_gen_1
 
-  # Create instance: sin, and set properties
-  set sin [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 sin ]
+  # Create instance: seno, and set properties
+  set seno [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 seno ]
   set_property -dict [ list \
-   CONFIG.DIN_FROM {26} \
-   CONFIG.DIN_TO {16} \
-   CONFIG.DIN_WIDTH {32} \
-   CONFIG.DOUT_WIDTH {11} \
- ] $sin
+   CONFIG.DIN_FROM {15} \
+   CONFIG.DIN_TO {8} \
+   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DOUT_WIDTH {8} \
+ ] $seno
+
+  # Create instance: sumador, and set properties
+  set sumador [ create_bd_cell -type ip -vlnv xilinx.com:ip:xbip_dsp48_macro:3.0 sumador ]
+  set_property -dict [ list \
+   CONFIG.areg_1 {false} \
+   CONFIG.areg_2 {false} \
+   CONFIG.areg_3 {false} \
+   CONFIG.areg_4 {false} \
+   CONFIG.breg_3 {false} \
+   CONFIG.breg_4 {false} \
+   CONFIG.c_width {32} \
+   CONFIG.concat_width {32} \
+   CONFIG.concatreg_3 {true} \
+   CONFIG.concatreg_4 {true} \
+   CONFIG.concatreg_5 {true} \
+   CONFIG.creg_1 {false} \
+   CONFIG.creg_2 {false} \
+   CONFIG.creg_3 {true} \
+   CONFIG.creg_4 {true} \
+   CONFIG.creg_5 {true} \
+   CONFIG.instruction1 {C+CONCAT} \
+   CONFIG.mreg_5 {false} \
+   CONFIG.p_binarywidth {0} \
+   CONFIG.p_full_width {33} \
+   CONFIG.p_width {33} \
+   CONFIG.preg_6 {true} \
+ ] $sumador
 
   # Create interface connections
   connect_bd_intf_net -intf_net dds_compiler_0_M_AXIS_PHASE [get_bd_intf_ports M_AXIS_PHASE_0] [get_bd_intf_pins dds_compiler_0/M_AXIS_PHASE]
 
   # Create port connections
-  connect_bd_net -net A_0_1 [get_bd_ports Salida_RRC_I] [get_bd_pins mult0/A]
-  connect_bd_net -net A_0_2 [get_bd_ports Salida_RRC_Q] [get_bd_pins mult1/A]
-  connect_bd_net -net aclk_0_1 [get_bd_ports clk] [get_bd_pins dds_compiler_0/aclk] [get_bd_pins mult0/CLK] [get_bd_pins mult1/CLK]
+  connect_bd_net -net A_0_1 [get_bd_ports Salida_RRC_I] [get_bd_pins mult_gen_0/A]
+  connect_bd_net -net A_0_2 [get_bd_ports Salida_RRC_Q] [get_bd_pins mult_gen_1/A]
+  connect_bd_net -net aclk_0_1 [get_bd_ports clk] [get_bd_pins dds_compiler_0/aclk] [get_bd_pins mult_gen_0/CLK] [get_bd_pins mult_gen_1/CLK] [get_bd_pins sumador/CLK]
   connect_bd_net -net aresetn_0_1 [get_bd_ports rst] [get_bd_pins dds_compiler_0/aresetn]
-  connect_bd_net -net dds_compiler_0_m_axis_data_tdata [get_bd_ports m_axis_data_tdata_0] [get_bd_pins cos/Din] [get_bd_pins dds_compiler_0/m_axis_data_tdata] [get_bd_pins sin/Din]
+  connect_bd_net -net coseno_Dout [get_bd_ports coseno] [get_bd_pins coseno/Dout] [get_bd_pins mult_gen_0/B]
+  connect_bd_net -net dds_compiler_0_m_axis_data_tdata [get_bd_ports m_axis_data_tdata_0] [get_bd_pins coseno/Din] [get_bd_pins dds_compiler_0/m_axis_data_tdata] [get_bd_pins seno/Din]
   connect_bd_net -net dds_compiler_0_m_axis_data_tvalid [get_bd_ports m_axis_data_tvalid_0] [get_bd_pins dds_compiler_0/m_axis_data_tvalid]
-  connect_bd_net -net xbip_dsp48_macro_0_P [get_bd_ports TX_I] [get_bd_pins mult0/P]
-  connect_bd_net -net xbip_dsp48_macro_1_P [get_bd_ports TX_Q] [get_bd_pins mult1/P]
-  connect_bd_net -net xlslice_0_Dout [get_bd_ports coseno] [get_bd_pins cos/Dout] [get_bd_pins mult0/B]
-  connect_bd_net -net xlslice_1_Dout [get_bd_ports seno] [get_bd_pins mult1/B] [get_bd_pins sin/Dout]
+  connect_bd_net -net seno_Dout [get_bd_ports seno] [get_bd_pins mult_gen_1/B] [get_bd_pins seno/Dout]
+  connect_bd_net -net sumador_P [get_bd_ports antena] [get_bd_pins sumador/P]
+  connect_bd_net -net xbip_dsp48_macro_0_P [get_bd_ports TX_I] [get_bd_pins mult_gen_0/P] [get_bd_pins sumador/C]
+  connect_bd_net -net xbip_dsp48_macro_1_P [get_bd_ports TX_Q] [get_bd_pins mult_gen_1/P] [get_bd_pins sumador/CONCAT]
 
   # Create address segments
 

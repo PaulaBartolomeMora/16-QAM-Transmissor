@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Wed Jan  3 13:03:19 2024
+-- Date        : Fri Jan  5 14:11:00 2024
 -- Host        : DESKTOP-Q5AUOQS running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               C:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/design_1_xlslice_0_1_sim_netlist.vhdl
+--               c:/Users/Paula/Downloads/mezclador/mezclador.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/design_1_xlslice_0_1_sim_netlist.vhdl
 -- Design      : design_1_xlslice_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,8 +16,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_xlslice_0_1 is
   port (
-    Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
+    Din : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    Dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_1_xlslice_0_1 : entity is true;
@@ -30,8 +30,8 @@ entity design_1_xlslice_0_1 is
 end design_1_xlslice_0_1;
 
 architecture STRUCTURE of design_1_xlslice_0_1 is
-  signal \^din\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \^din\ : STD_LOGIC_VECTOR ( 15 downto 0 );
 begin
-  Dout(10 downto 0) <= \^din\(26 downto 16);
-  \^din\(26 downto 16) <= Din(26 downto 16);
+  Dout(7 downto 0) <= \^din\(7 downto 0);
+  \^din\(7 downto 0) <= Din(7 downto 0);
 end STRUCTURE;
