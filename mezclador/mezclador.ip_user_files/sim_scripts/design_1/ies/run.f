@@ -1,3 +1,9 @@
+-makelib ies_lib/xil_defaultlib -sv \
+  "D:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+-endlib
+-makelib ies_lib/xpm \
+  "D:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_VCOMP.vhd" \
+-endlib
 -makelib ies_lib/xbip_utils_v3_0_8 \
   "../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/4173/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
 -endlib
@@ -43,6 +49,12 @@
   "../../../bd/design_1/ip/design_1_xbip_dsp48_macro_0_1/sim/design_1_xbip_dsp48_macro_0_1.vhd" \
   "../../../bd/design_1/ip/design_1_mult_gen_0_0/sim/design_1_mult_gen_0_0.vhd" \
   "../../../bd/design_1/ip/design_1_mult_gen_0_1/sim/design_1_mult_gen_0_1.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
+  "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
+  "../../../bd/design_1/ipshared/68f7/hdl/sim_clk_gen.v" \
+  "../../../bd/design_1/ip/design_1_sim_clk_gen_0_0/sim/design_1_sim_clk_gen_0_0.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

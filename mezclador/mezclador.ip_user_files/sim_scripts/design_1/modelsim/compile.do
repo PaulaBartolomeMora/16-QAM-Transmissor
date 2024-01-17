@@ -1,6 +1,8 @@
 vlib modelsim_lib/work
 vlib modelsim_lib/msim
 
+vlib modelsim_lib/msim/xil_defaultlib
+vlib modelsim_lib/msim/xpm
 vlib modelsim_lib/msim/xbip_utils_v3_0_8
 vlib modelsim_lib/msim/axi_utils_v2_0_4
 vlib modelsim_lib/msim/xbip_pipe_v3_0_4
@@ -10,10 +12,11 @@ vlib modelsim_lib/msim/xbip_dsp48_wrapper_v3_0_4
 vlib modelsim_lib/msim/xbip_dsp48_addsub_v3_0_4
 vlib modelsim_lib/msim/xbip_dsp48_multadd_v3_0_4
 vlib modelsim_lib/msim/dds_compiler_v6_0_15
-vlib modelsim_lib/msim/xil_defaultlib
 vlib modelsim_lib/msim/xlslice_v1_0_1
 vlib modelsim_lib/msim/xbip_dsp48_macro_v3_0_15
 
+vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
+vmap xpm modelsim_lib/msim/xpm
 vmap xbip_utils_v3_0_8 modelsim_lib/msim/xbip_utils_v3_0_8
 vmap axi_utils_v2_0_4 modelsim_lib/msim/axi_utils_v2_0_4
 vmap xbip_pipe_v3_0_4 modelsim_lib/msim/xbip_pipe_v3_0_4
@@ -23,9 +26,14 @@ vmap xbip_dsp48_wrapper_v3_0_4 modelsim_lib/msim/xbip_dsp48_wrapper_v3_0_4
 vmap xbip_dsp48_addsub_v3_0_4 modelsim_lib/msim/xbip_dsp48_addsub_v3_0_4
 vmap xbip_dsp48_multadd_v3_0_4 modelsim_lib/msim/xbip_dsp48_multadd_v3_0_4
 vmap dds_compiler_v6_0_15 modelsim_lib/msim/dds_compiler_v6_0_15
-vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 vmap xlslice_v1_0_1 modelsim_lib/msim/xlslice_v1_0_1
 vmap xbip_dsp48_macro_v3_0_15 modelsim_lib/msim/xbip_dsp48_macro_v3_0_15
+
+vlog -work xil_defaultlib -64 -incr -sv "+incdir+../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/4868" "+incdir+../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/4868" \
+"D:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+
+vcom -work xpm -64 -93 \
+"D:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vcom -work xbip_utils_v3_0_8 -64 -93 \
 "../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/4173/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
@@ -58,10 +66,10 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/design_1/ip/design_1_dds_compiler_0_0/sim/design_1_dds_compiler_0_0.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
-vlog -work xlslice_v1_0_1 -64 -incr \
+vlog -work xlslice_v1_0_1 -64 -incr "+incdir+../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/4868" "+incdir+../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/4868" \
 "../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v" \
 
-vlog -work xil_defaultlib -64 -incr \
+vlog -work xil_defaultlib -64 -incr "+incdir+../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/4868" "+incdir+../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/4868" \
 "../../../bd/design_1/ip/design_1_xlslice_0_0/sim/design_1_xlslice_0_0.v" \
 "../../../bd/design_1/ip/design_1_xlslice_0_1/sim/design_1_xlslice_0_1.v" \
 
@@ -72,6 +80,12 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/design_1/ip/design_1_xbip_dsp48_macro_0_1/sim/design_1_xbip_dsp48_macro_0_1.vhd" \
 "../../../bd/design_1/ip/design_1_mult_gen_0_0/sim/design_1_mult_gen_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_mult_gen_0_1/sim/design_1_mult_gen_0_1.vhd" \
+
+vlog -work xil_defaultlib -64 -incr "+incdir+../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/4868" "+incdir+../../../../mezclador.srcs/sources_1/bd/design_1/ipshared/4868" \
+"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
+"../../../bd/design_1/ipshared/68f7/hdl/sim_clk_gen.v" \
+"../../../bd/design_1/ip/design_1_sim_clk_gen_0_0/sim/design_1_sim_clk_gen_0_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

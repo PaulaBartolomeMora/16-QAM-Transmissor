@@ -69,6 +69,10 @@ Como proceso final, se deben combinar las dos componentes I/Q generadas a la sal
 
 \section{Comprobación de funcionamiento del mezclador}
 
+En el testbench se añade el proceso principal para activar y desactivar la señal de reset, que irá conectada al bloque DDS y de la cual también dependerá el comienzo de lectura de los ficheros de datos del filtro. Es imprescindible configurarlo de esta manera para que se realice tanto la generación de las ondas sinusoidales como la lectura del filtrado de forma simultánea para poder operar.
+
+\vspace{3mm}
+
 \begin{lstlisting}[language=VHDL, style=mystyle, caption={Proceso de estimulación}]
 process
 begin
@@ -83,6 +87,8 @@ begin
     wait;
 end process;
 \end{lstlisting}
+
+%%AQUI FIGURAS FINALES
 
 
 
