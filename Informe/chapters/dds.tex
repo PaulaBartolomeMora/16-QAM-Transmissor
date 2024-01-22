@@ -14,30 +14,68 @@ En este Capítulo se describe el último bloque del sistema, correspondiente al 
 
 \section{Generación de las sinusoides}
 
-Se deben generar dos señales sinusoidales, en particular una función coseno y otra -seno, a partir de un bloque DDS (\textit{Direct Digital Synthesis}). Este bloque es capaz de generar señales analógicas de forma directa mediante un oscilador controlado numéricamente (NCO) y para ello, es preciso configurar internamente la frecuencia de salida deseada de las señales. En el caso de este proyecto será de 100MHz y el reloj del sistema tendrá una frecuencia de 576MHz (3x192MHz), por lo que se obtendrán 5/6 muestras por ciclo.
+\subsection{Configuración del DDS}
+
+Se deben generar dos señales sinusoidales, en particular una función coseno y otra -seno, a partir de un bloque DDS (\textit{Direct Digital Synthesis}). Este bloque es capaz de generar señales analógicas de forma directa mediante un oscilador controlado numéricamente (NCO) y para ello, es preciso configurar internamente la frecuencia de salida deseada de las señales. 
 
 \vspace{3mm}
 
-La salida del bloque DDS (\textit{m\_axis\_data\_tdata}) esta constituida por 16 bits, de los cuales 8 corresponderán a la señal de seno y los otros 8, a la de coseno como se puede apreciar en la Figura \ref{fig:dds}. Es por ello que se requiere dividir la salida y definir los bits que se dirigirán a la entrada de cada multiplicador mediante dos bloques slice.
+En el caso de este proyecto será de 100MHz y el reloj del sistema tendrá una frecuencia de 576MHz (3x192MHz), por lo que se obtendrán 5/6 muestras por ciclo. Como se expondrá en detalle en el Capítulo \ref{cha:mmcm}, se incorporará en este proyecto un bloque MMCM para extraer la señal de reloj de 576MHz que se requiere.
+
+\vspace{3mm}
+
+La salida del bloque DDS (\textit{m\_axis\_data\_tdata}) esta constituida por 16 bits, de los cuales 8 corresponderán a la señal de -seno y los otros 8, a la de coseno. Esto se puede comprobar en la configuración realizada en la Figura \ref{fig:dds_sinu} y en la pestaña de información del bloque, que se muestra en la Figura \ref{fig:dds}. Es por ello que se requiere dividir la salida y definir los bits que se dirigirán a la entrada de cada multiplicador mediante dos bloques \textit{slice}.
+
+\vspace{3mm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/diseno/dds_sinu.PNG}
+    \caption{Configuración de salida de las señales sinusoidales en el bloque DDS}
+    \label{fig:dds}
+\end{figure}
 
 \vspace{3mm}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.45\textwidth]{img/diseno/dds.PNG}
-    \caption{Configuración de salida de las señales sinusoidales en el bloque DDS}
-    \label{fig:dds}
+    \caption{Información sobre las señales sinusoidales a la salida del bloque DDS}
+    \label{fig:dds_sinu}
 \end{figure}
 
-\section{Generación de las componentes I/Q y suma}
+\subsection{Comprobación del DDS}
 
-Para generar las componentes I/Q de transmisión se deben multiplicar las salidas I/Q del filtrado realizado anteriormente por las funciones coseno/-seno generadas en el bloque DDS. Como se ha introducido, el procesamiento de los datos del filtro y el bloque de multiplicación trabajarán a una frecuencia de 576 MHz, siendo el triple de la empleada en los bloques anteriores. 
+En la Figura \ref{fig:dds2} se puede visualizar por un lado, la salida de 16 bits obtenida del bloque DDS y, por otro lado, las dos ondas sinusoidales (coseno/-seno) de 8 bits obtenidas a partir de la selección de bits expuesta en la Figura \ref{fig:dds_sinu}.
 
 \vspace{3mm}
 
-Para las salidas I/Q del filtrado (\textit{Salida\_RRC\_I} y \textit{Salida\_RRC\_Q}), es preciso extraer los datos a partir de la lectura de los ficheros \textit{FIR\_output\_I.txt} y \textit{FIR\_output\_Q.txt}, generados anteriormente. A continuación, se muestra el proceso de lectura en el caso de la rama I.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\textwidth,height=7cm]{img/simu/dds.PNG}
+    \caption{Simulación de la salida del bloque DDS (\textit{m\_axis\_data\_tdata}) y de las ondas sinusoidales como resultado de la incorporación de los dos bloques \textit{slice}}
+    \label{fig:dds2}
+\end{figure}
+
+\vspace{2mm}
+
+\section{Generación de las componentes I/Q y suma}
+
+\subsection{Configuración del proceso de multiplicación y suma}
+
+Para generar las componentes I/Q de transmisión se deben multiplicar (con un bloque IP multiplicador) las salidas I/Q del filtrado realizado anteriormente por las funciones coseno/-seno generadas en el bloque DDS. Como se ha introducido, el procesamiento de los datos del filtro y el bloque de multiplicación trabajarán a una frecuencia de 576 MHz, siendo el triple de la empleada en los bloques anteriores. 
+
+\vspace{3mm}
+
+Como proceso final, se deben combinar las dos componentes I/Q generadas a la salida de los multiplicadores en un bloque sumador. Este se configurará con dos entradas de 32 bits (C y CONCAT) y una salida de 33 bits.
+
+\vspace{3mm}
+
+En cuanto a las salidas I/Q del filtrado (\textit{Salida\_RRC\_I} y \textit{Salida\_RRC\_Q}), es preciso extraer los datos a partir de la lectura de los ficheros \textit{FIR\_output\_I.txt} y \textit{FIR\_output\_Q.txt}, que fueron generados en el proyecto anterior. A continuación, se muestra el proceso de lectura en el caso de la rama I, siendo análogo para la rama Q.
 
 \pagebreak
+
+\vspace{3mm}
 
 \begin{lstlisting}[language=VHDL, style=mystyle, caption={Proceso de lectura del fichero de salida del filtrado (rama I)}]
 process(clk) 
@@ -62,12 +100,9 @@ process(clk)
 end process;  
 \end{lstlisting}
 
-\vspace{3mm}
+\vspace{1mm}
 
-Como proceso final, se deben combinar las dos componentes I/Q generadas a la salida de los multiplicadores en un bloque sumador. Este se configurará con dos entradas de 32 bits (C y CONCAT) y una salida de 33 bits.
-
-
-\section{Comprobación de funcionamiento del mezclador}
+\subsection{Comprobación del proceso de multiplicación y suma}
 
 En el testbench se añade el proceso principal para activar y desactivar la señal de reset, que irá conectada al bloque DDS y de la cual también dependerá el comienzo de lectura de los ficheros de datos del filtro. Es imprescindible configurarlo de esta manera para que se realice tanto la generación de las ondas sinusoidales como la lectura del filtrado de forma simultánea para poder operar.
 
@@ -88,12 +123,35 @@ begin
 end process;
 \end{lstlisting}
 
-%%AQUI FIGURAS FINALES
+\vspace{1mm}
 
+A continuación, en las Figuras \ref{fig:mult} y \ref{fig:mult2} se muestran los resultados de la simulación de los bloques multiplicadores tanto para la rama I como para la Q. Las salidas obtenidas de estos bloques multiplicadores (TX\_I y TX\_Q) supondrán las entradas del bloque sumador. En la Figura \ref{fig:suma} se puede visualizar cómo se obtiene de la suma la salida final \textit{antena} de 33 bits.
 
+\pagebreak
 
+\begin{sidewaysfigure}
+    \centering
+    \includegraphics[width=1\textwidth,height=10cm]{img/simu/mult.PNG}
+    \caption{Simulación de la operación de multiplicación (I) (sin zoom)}
+    \label{fig:mult}
+\end{sidewaysfigure}
 
+\clearpage
 
+\begin{sidewaysfigure}
+    \centering
+    \includegraphics[width=1\textwidth,height=10cm]{img/simu/mult2.PNG}
+    \caption{Simulación de la operación de multiplicación (II) (con zoom)}
+    \label{fig:mult2}
+\end{sidewaysfigure}
 
+\clearpage
 
+\begin{sidewaysfigure}
+    \centering
+    \includegraphics[width=1\textwidth,height=9cm]{img/simu/suma.PNG}
+    \caption{Simulación de la operación de suma}
+    \label{fig:suma}
+\end{sidewaysfigure}
 
+ 

@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Dec 21 12:54:05 2023
+# Process ID: 17292
+# Current directory: C:/Users/Paula/Downloads/map_qam_enviado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9724 C:\Users\Paula\Downloads\map_qam_enviado\map_qam.xpr
+# Log file: C:/Users/Paula/Downloads/map_qam_enviado/vivado.log
+# Journal file: C:/Users/Paula/Downloads/map_qam_enviado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Paula/Downloads/map_qam_enviado/map_qam.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/Paula/Downloads/map_qam_enviado/FIR_output_I.txt C:/Users/Paula/Downloads/map_qam_enviado/FIR_output_Q.txt}
+export_ip_user_files -of_objects  [get_files C:/Users/Paula/Downloads/map_qam_enviado/FIR_output_Q.txt] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Paula/Downloads/map_qam_enviado/FIR_output_I.txt] -no_script -reset -force -quiet
+remove_files  {C:/Users/Paula/Downloads/map_qam_enviado/FIR_output_Q.txt C:/Users/Paula/Downloads/map_qam_enviado/FIR_output_I.txt}
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {C:/Users/Paula/Downloads/map_qam_enviado/FIR_output_I.txt C:/Users/Paula/Downloads/map_qam_enviado/FIR_output_Q.txt}
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
+source tb_qam16_wrapper.tcl
+run 1000 ms
+close_sim
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
+source tb_qam16_wrapper.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg
+source tb_qam16_wrapper.tcl
+run 1 s
+save_wave_config {C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}
+save_wave_config {C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}
+save_wave_config {C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}
+restart
+restart
+run all
+save_wave_config {C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}
+add_bp {C:/Users/Paula/Downloads/map_qam_enviado/map_qam.srcs/sim_1/new/tb_mapeado_16QAM.vhd} 105
+run all
+save_wave_config {C:/Users/Paula/Downloads/map_qam_enviado/tb_mapeado_16QAM_behav2.wcfg}
+close_sim

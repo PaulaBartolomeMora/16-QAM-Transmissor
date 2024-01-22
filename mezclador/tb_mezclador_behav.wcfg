@@ -11,64 +11,31 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="36804113001fs"></ZoomEndTime>
-      <Cursor1Time time="36804113000fs"></Cursor1Time>
+      <ZoomStartTime time="29838199334fs"></ZoomStartTime>
+      <ZoomEndTime time="29981099335fs"></ZoomEndTime>
+      <Cursor1Time time="29862016000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="194"></NameColumnWidth>
+      <NameColumnWidth column_width="190"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
-   <wvobject fp_name="/tb_mezclador/dut/clk_52" type="logic">
-      <obj_property name="ElementShortName">clk_52</obj_property>
-      <obj_property name="ObjectShortName">clk_52</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_mezclador/dut/clk_192" type="logic">
-      <obj_property name="ElementShortName">clk_192</obj_property>
-      <obj_property name="ObjectShortName">clk_192</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_mezclador/dut/clk_576" type="logic">
-      <obj_property name="ElementShortName">clk_576</obj_property>
-      <obj_property name="ObjectShortName">clk_576</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_mezclador/m_axis_data_tdata_0" type="array">
-      <obj_property name="ElementShortName">m_axis_data_tdata_0[15:0]</obj_property>
-      <obj_property name="ObjectShortName">m_axis_data_tdata_0[15:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_mezclador/m_axis_data_tvalid_0" type="logic">
-      <obj_property name="ElementShortName">m_axis_data_tvalid_0</obj_property>
-      <obj_property name="ObjectShortName">m_axis_data_tvalid_0</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_mezclador/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_mezclador/Salida_RRC_I" type="array">
-      <obj_property name="ElementShortName">Salida_RRC_I[23:0]</obj_property>
-      <obj_property name="ObjectShortName">Salida_RRC_I[23:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_mezclador/Salida_RRC_Q" type="array">
-      <obj_property name="ElementShortName">Salida_RRC_Q[23:0]</obj_property>
-      <obj_property name="ObjectShortName">Salida_RRC_Q[23:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_mezclador/coseno" type="array">
-      <obj_property name="ElementShortName">coseno[7:0]</obj_property>
-      <obj_property name="ObjectShortName">coseno[7:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_mezclador/seno" type="array">
-      <obj_property name="ElementShortName">seno[7:0]</obj_property>
-      <obj_property name="ObjectShortName">seno[7:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="group17" type="group">
+      <obj_property name="label">MMCM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_mezclador/dut/clk_52" type="logic">
+         <obj_property name="ElementShortName">clk_52</obj_property>
+         <obj_property name="ObjectShortName">clk_52</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_mezclador/dut/clk_192" type="logic">
+         <obj_property name="ElementShortName">clk_192</obj_property>
+         <obj_property name="ObjectShortName">clk_192</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_mezclador/dut/clk_576" type="logic">
+         <obj_property name="ElementShortName">clk_576</obj_property>
+         <obj_property name="ObjectShortName">clk_576</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="/tb_mezclador/TX_I" type="array">
       <obj_property name="ElementShortName">TX_I[31:0]</obj_property>
@@ -82,15 +49,73 @@
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_mezclador/TbPeriod" type="other">
-      <obj_property name="ElementShortName">TbPeriod</obj_property>
-      <obj_property name="ObjectShortName">TbPeriod</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_mezclador/dut/antena" type="array">
       <obj_property name="ElementShortName">antena[32:0]</obj_property>
       <obj_property name="ObjectShortName">antena[32:0]</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="group20" type="group">
+      <obj_property name="label">MULTIPLICADOR RAMA I</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_mezclador/coseno" type="array">
+         <obj_property name="ElementShortName">coseno[7:0]</obj_property>
+         <obj_property name="ObjectShortName">coseno[7:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_mezclador/Salida_RRC_I" type="array">
+         <obj_property name="ElementShortName">Salida_RRC_I[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Salida_RRC_I[23:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group21" type="group">
+      <obj_property name="label">MULTIPLICADOR RAMA Q</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_mezclador/seno" type="array">
+         <obj_property name="ElementShortName">seno[7:0]</obj_property>
+         <obj_property name="ObjectShortName">seno[7:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_mezclador/Salida_RRC_Q" type="array">
+         <obj_property name="ElementShortName">Salida_RRC_Q[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Salida_RRC_Q[23:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/tb_mezclador/m_axis_data_tdata_0" type="array">
+      <obj_property name="ElementShortName">m_axis_data_tdata_0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tdata_0[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">53</obj_property>
+      <obj_property name="radix_otherWidth">11</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mezclador/m_axis_data_tvalid_0" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_tvalid_0</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tvalid_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mezclador/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mezclador/TbPeriod" type="other">
+      <obj_property name="ElementShortName">TbPeriod</obj_property>
+      <obj_property name="ObjectShortName">TbPeriod</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_mezclador/eof_Q" type="other">
       <obj_property name="ElementShortName">eof_Q</obj_property>

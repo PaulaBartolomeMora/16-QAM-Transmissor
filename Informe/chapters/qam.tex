@@ -103,7 +103,7 @@ constant tabla_mapeado_I: Array3Bit :=
 
 Además de implementar el mapeado 16-QAM, se añade en el bloque el zero-padding para optimizar el sistema de comunicación. Se insertan ceros a la señal original y se extiende su duración, aplicando en este caso una relación 1:32. Por lo tanto, por cada flanco en el que se transmita información, le seguirán 31 flancos en los que se transmitan bits con valor cero.
 
-Por tanto, siguiendo las especificaciones anteriores, se decide combinar el mapeado 16-QAM con el zero-padding en un mismo bloque, para así obtener a la salida del mismo los símbolos 16-QAM con el Zero Padding ya aplicado. Así, se garantiza que la señal tenga una duración suficiente para conseguir una respuesta de frecuencia óptima, además de minimizar la interferencia entre símbolos. De forma adicional, se ajusta la salida a una longitud de 8 bits para dejarla preparada para la entrada del filtro pulse shaping del \textit{Root Raised Cosine} (RRC). 
+Siguiendo las especificaciones anteriores, se decide combinar el mapeado 16-QAM con el zero-padding en un mismo bloque, para así obtener a la salida del mismo los símbolos 16-QAM con el Zero Padding ya aplicado. Así, se garantiza que la señal tenga una duración suficiente para conseguir una respuesta de frecuencia óptima, además de minimizar la interferencia entre símbolos. De forma adicional, se ajusta la salida a una longitud de 8 bits para dejarla preparada para la entrada del filtro pulse shaping del \textit{Root Raised Cosine} (RRC). 
 
 \vspace{3mm}
 
@@ -142,7 +142,7 @@ end process;
 
 \pagebreak
 
-Como se puede visualizar, el proceso emplea dos contadores: uno para extraer en cada flanco los bits capturados de 4 en 4 e implementar el mapeado QAM para obtener los símbolos de 3 bits y otro para implementar la relación 1:32 respectiva al Zero Padding.
+Como se puede visualizar, el proceso emplea dos contadores: uno para extraer en cada flanco los bits capturados de 4 en 4 e implementar el mapeado QAM para obtener los símbolos de 3 bits y otro, para implementar la relación 1:32 respectiva al Zero Padding.
 
 \subsection{Comprobación del proceso de mapeado + Zero Padding}
 \label{sec:map}
@@ -184,30 +184,30 @@ end process;
 
 A continuación, en las Figuras \ref{fig:proc2}, \ref{fig:proc3} y \ref{fig:proc1} se puede apreciar cómo se implementa el bloque de mapeado 16-QAM + zero-padding a través del proceso expuesto anteriormente.
 
-\begin{figure}[h]
+\begin{sidewaysfigure}
 	\centering
-	\includegraphics[width=1\textwidth,height=5cm]{img/simu/process_qam_2.PNG}
+	\includegraphics[width=1\textwidth, height=7cm]{img/simu/process_qam_2.PNG}
 	\caption{Simulación completa del proceso de mapeado 16-QAM + ZP}
 	\label{fig:proc2}
-\end{figure}
+\end{sidewaysfigure}
 
-\vspace{3mm}
+\clearpage
 
-\begin{figure}[h]
+\begin{sidewaysfigure}
 	\centering
-	\includegraphics[width=1\textwidth,height=5cm]{img/simu/process_qam_3.PNG}
+	\includegraphics[width=1\textwidth, height=7cm]{img/simu/process_qam_3.PNG}
 	\caption{Simulación del proceso de mapeado 16-QAM + ZP (II) (zoom medio)}
 	\label{fig:proc3}
-\end{figure}
+\end{sidewaysfigure}
 
-\vspace{3mm}
+\clearpage
 
-\begin{figure}[!h]
+\begin{sidewaysfigure}
 	\centering
-	\includegraphics[width=1\textwidth,height=5cm]{img/simu/process_qam.PNG}
+	\includegraphics[width=1\textwidth, height=7cm]{img/simu/process_qam.PNG}
 	\caption{Simulación del proceso de mapeado 16-QAM + ZP (III) (zoom alto)}
 	\label{fig:proc1}
-\end{figure}
+\end{sidewaysfigure}
 
 \clearpage
 
@@ -262,7 +262,7 @@ Para añadir el bloque del filtro en Vivado se requiere conocer el número de bi
     
 \vspace{3mm}
 
-Como los coeficientes se encuentran dentro de un rango de valores entre 0 y 1, se establecen 16 bits para la logitud total y 17 bits, para la parte fraccionaria. Por otro lado, se configura el modo de truncamiento, una salida de filtrado de 24 bits y una entrada de 8 bits, que ya ha sido previamente ajustada en el bloque anterior, por lo que no se requieren procesos adicionales.
+Como los coeficientes se encuentran dentro de un rango de valores entre 0 y 1, se establecen 16 bits para la logitud total y 17 bits, para la parte fraccionaria. Por otro lado, se configura el modo de truncamiento, una salida de filtrado de 24 bits y una entrada de 8 bits, que ya ha sido previamente ajustada en el bloque anterior, por lo que no se requieren procesos adicionales (ver Figura \ref{fig:fvtool3}).
 
 \vspace{3mm}
 
@@ -270,7 +270,7 @@ Como los coeficientes se encuentran dentro de un rango de valores entre 0 y 1, s
 	\centering
 	\includegraphics[width=0.6\textwidth]{img/diseno/fir.PNG}
 	\caption{Configuración del filtro en Vivado}
-	\label{fig:fvtool2}
+	\label{fig:fvtool3}
 \end{figure}
     
 \pagebreak
@@ -343,11 +343,9 @@ Como se había adelantado en el Apartado \ref{sec:map}, en el testbench se deben
 
 \vspace{3mm}
 
-\begin{figure}[h]
+\begin{sidewaysfigure}
 	\centering
-	\includegraphics[width=1\textwidth,height=10cm]{img/simu/rrc2.PNG}
+	\includegraphics[width=1\textwidth,height=12cm]{img/simu/rrc2.PNG}
 	\caption{Simulación de los bloques de mapeado 16-QAM + ZP y filtrado RRC (II)}
 	\label{fig:rrc2}
-\end{figure}
-
-\vspace{3mm}
+\end{sidewaysfigure}

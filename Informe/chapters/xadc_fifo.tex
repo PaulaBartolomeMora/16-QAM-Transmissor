@@ -21,7 +21,7 @@ Como se ha introducido anteriormente, en este capítulo se definirá el proceso 
 
 En primer lugar, teniendo en cuenta que mi puesto de laboratorio es el 8, se debe generar a la entrada una señal triangular con un valor de frecuencia igual a 13KHz y que opere en un rango de valores de tensión entre 0 y 0.596 voltios. Los valores que toma en cada instante temporal serán definidos en el fichero design.txt, el cual tendrá que ser importado al proyecto para llevar a cabo la conversión.
 
-Como se puede ver en la Figura \ref*{fig:design} se definen valores de tensión para dos entradas (VP y VN), que corresponden a las entradas analógicas diferenciales del XADC. Por simplificación, se configura el valor absoluto de tensión para la entrada positiva (VP) y un valor nulo para la negativa (VN). 
+Como se puede ver en la Figura \ref{fig:design}, se definen valores de tensión para dos entradas (VP y VN), que corresponden a las entradas analógicas diferenciales del XADC. Por simplificación, se configura el valor absoluto de tensión para la entrada positiva (VP) y un valor nulo para la negativa (VN). 
 
 \vspace{3mm}
 
@@ -89,7 +89,7 @@ end loop;
 \subsection{Configuración del bloque FIFO}
 \label{section:fifo}
 
-El bloque de memoria FIFO almacenará cada uno de los datos capturados por el bloque XADC. Consta de una capacidad de 256 posiciones de 12 bits cada una, por lo que a la entrada del bloque FIFO será precisa la configuración de un bloque auxiliar Slice para transformar los 16 bits de la señal de salida del XADC en sus 12 bits de mayor peso. 
+El bloque de memoria FIFO almacenará cada uno de los datos capturados por el bloque XADC. Consta de una capacidad de 256 posiciones de 12 bits cada una, por lo que a la entrada del bloque FIFO será precisa la configuración de un bloque auxiliar \textit{Slice} para transformar los 16 bits de la señal de salida del XADC en sus 12 bits de mayor peso. 
 
 \vspace{3mm}
 
@@ -102,7 +102,7 @@ El bloque de memoria FIFO almacenará cada uno de los datos capturados por el bl
     
 \vspace{3mm}
 
-Se trata de un paso necesario porque el XADC en el fondo maneja una precisión de 12 bits a la salida. En la Figura \ref*{fig:xadc_fifo} se puede apreciar esta conversión, además de la estructura completa del bloque a implementar.
+Se trata de un paso necesario porque el XADC en el fondo maneja una precisión de 12 bits a la salida. En la Figura \ref{fig:xadc_fifo} se puede apreciar esta conversión, además de la estructura completa del bloque a implementar.
 
 \vspace{5mm}
 
@@ -131,7 +131,7 @@ wr_en <= s_drp_0_drdy; -- se escribe en la FIFO nuevo dato
 
 Entrando en el proceso de escritura, el funcionamiento sería el siguiente: cada vez que exista un nuevo dato proporcionado por el XADC se escribirá en la memoria FIFO de forma continua a 1 MS/s y con un reloj de 52 MHz (\textit{wr\_clk}) hasta llegar a la capacidad máxima.
 
-Una vez la memoria FIFO está llena, comenzará el proceso de lectura de 200 datos a una frecuencia de lectura de 2MHz (\textit{rd\_clk}) mediante la activación de la señal (\textit{rd\_enable}). En este caso, al desear leer un número de datos menor a la capacidad máxima (256), será necesario configurar una señal auxiliar programable (\textit{programable\_full}).
+Una vez la memoria FIFO este llena, comenzará el proceso de lectura de 200 datos a una frecuencia de lectura de 2MHz (\textit{rd\_clk}) mediante la activación de la señal (\textit{rd\_enable}). En este caso, al desear leer un número de datos menor a la capacidad máxima (256), será necesario configurar una señal auxiliar programable (\textit{programable\_full}).
 
 \vspace{5mm}
 

@@ -2,21 +2,14 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Dec 20 11:44:00 2023
-# Process ID: 12232
+# Start of session at: Fri Jan 19 13:28:16 2024
+# Process ID: 5500
 # Current directory: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22032 C:\Users\Paula\OneDrive - Universidad de Alcala\Todo\16_QAM_Transmissor\FIFO_XADC\P1_fifo_xadc.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5104 C:\Users\Paula\OneDrive - Universidad de Alcala\Todo\16_QAM_Transmissor\FIFO_XADC\P1_fifo_xadc.xpr
 # Log file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/vivado.log
 # Journal file: C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.xpr}
 update_compile_order -fileset sources_1
-launch_simulation
-open_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg}
-source prueba_xadc_tb.tcl
-run 1000 ms
-run 1000 ms
-run 1000 ms
-save_wave_config {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.srcs/sim_1/imports/xadc_2017v4/prueba_xadc_tb_behav.wcfg}
-close_sim
+open_bd_design {C:/Users/Paula/OneDrive - Universidad de Alcala/Todo/16_QAM_Transmissor/FIFO_XADC/P1_fifo_xadc.srcs/sources_1/bd/design_1/design_1.bd}

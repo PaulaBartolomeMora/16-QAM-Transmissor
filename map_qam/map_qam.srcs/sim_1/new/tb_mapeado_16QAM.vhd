@@ -118,8 +118,8 @@ begin
     
        file_open(file_handle, ".\FIFO_output.txt", READ_MODE);
        --file_open(file_handle, ".\QAM_output.txt", WRITE_MODE); --salida mapeado+ZP
-       file_open(file_handle_I, "C:\Users\Paula\Downloads\FIR_output_I.txt", WRITE_MODE);
-       file_open(file_handle_Q, "C:\Users\Paula\Downloads\FIR_output_Q.txt", WRITE_MODE);
+       --file_open(file_handle_I, "C:\Users\Paula\Downloads\FIR_output_I.txt", WRITE_MODE);
+       --file_open(file_handle_Q, "C:\Users\Paula\Downloads\FIR_output_Q.txt", WRITE_MODE);
         
        ce <= '0';
        rst_0 <= '1';        

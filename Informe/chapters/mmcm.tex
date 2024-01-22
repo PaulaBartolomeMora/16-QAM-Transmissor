@@ -1,5 +1,5 @@
 \chapter{Generación de relojes}
-\label{section:mmcm}
+\label{cha:mmcm}
 
 En relación a la generación de señales de reloj, se ha decidido implementar un bloque MMCM en el último proyecto de Vivado, perteneciente al bloque del mezclador (ver Capítulo \ref{section:mezcla}).
 
@@ -18,14 +18,14 @@ Para ello, se añaden al proyecto dos bloques IP: \textit{Simulation Clock Gener
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth, height=6.5cm]{img/diseno/mmcm.PNG}
+	\includegraphics[width=1\textwidth, height=6cm]{img/diseno/mmcm.PNG}
 	\caption{Resumen de configuración del bloque IP \textit{Clocking Wizard}}
 	\label{fig:mmcm}
 \end{figure}
 
 \pagebreak
 
-Como se implementa en el módulo del mezclador se cogerá la salida con frecuencia 576 MHz y se conectará la misma a todos los bloques.
+Como se implementa en el módulo del mezclador, se cogerá la salida con frecuencia 576 MHz y se conectará la misma a todos los bloques.
 
 \vspace{3mm}
 
